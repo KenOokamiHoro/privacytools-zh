@@ -930,37 +930,37 @@
 		<ol>
 			<li>privacy.firstparty.isolate = true</li>
 			<ul>
-				<li><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a>效用的结果, 它可隔绝主要访问网域中所有浏览器辨识器来源 (如 cookies), 并期能可阻挡跨域名的追踪。</li>
-			</ul>
+				<li><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a>效用的结果，它可隔绝主要访问网域中所有浏览器辨识器来源（如 cookies），并期能可阻挡跨域名的追踪。</li>
+			</ul>             
 			<li>privacy.resistFingerprinting = true</li>
 			<ul>
 				<li><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 效用的结果, 此偏好可让 Firefox m更能抵抗指纹辨识。</li>
 			</ul>
-			<li>privacy.trackingprotection.enabled = true</li>
-			<ul>
-				<li>Mozilla新内建的追踪保护功能，其利用 Disconnect.me 过滤名单, 但如果你已使用其它第三方的屏滤器如 uBlock Origin,其效能就会重复多余，因此你可以将之设为关闭。</li>
-			</ul>
+            <li>privacy.trackingprotection.enabled = true</li>
+			 <ul>
+				<li>Mozilla新內建的追踪保护功能，其利用 Disconnect.me 过滤名单，但如果你已使用其它第三方的屏滤器如 uBlock Origin，其效能就会重复多余，因此你可以将之设为关闭。</li>
+ 			</ul>
 			<li>browser.cache.offline.enable = false</li>
 			<ul>
 				<li>取消离线的缓存快取资料</li>
 			</ul>
-			 <li>browser.safebrowsing.malware = false</li>
+            <li>browser.safebrowsing.malware = false</li>
 			<ul>
-				<li>取消Google安全浏览的恶意软件检查。这会有安全上的风险，但可改善隐私。</li>
+				<li>取消 Google 安全浏览的恶意软件检查。这会有安全上的风险，但可改善隐私。</li>
 			</ul>
 			<li>browser.safebrowsing.phishing.enabled = false</li>
 			<ul>
 				<li>取消Google安全浏览与防钓鱼保护。这会有安全上的风险，但可改善隐私。</li>
 			</ul>
-                        <li>browser.send_pings = false</li>
+	        <li>browser.send_pings = false</li>
 			<ul>
 				<li>这个性能可让网站追踪访客的点击情況。</li>
 			</ul>
-                        <li>browser.sessionstore.max_tabs_undo = 0</li>
+            <li>browser.sessionstore.max_tabs_undo = 0</li>
  			<ul>
  				<li>尽管 Firefox 设定为不记录浏览资讯，但在用户关闭浏览器分页之前，这些资讯仍会暂存在选单 -&gt; 浏览历史 -&gt; 近期关闭的分页 底下</li>
  			</ul>
-			<li>browser.urlbar.speculativeConnect.enabled = false</li>
+            <li>browser.urlbar.speculativeConnect.enabled = false</li>
  			<ul>
  				<li>关闭自动完成的 URLs 预载， 当用户在网址列输入资讯时，Firefox 会自行预载，有人担心这些浏览器自动建议的网址并非是用户想要连上的网站。 <a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">来源</a></li>
  			</ul>
@@ -972,14 +972,14 @@
 			<ul>
 				<li>取消让网站在让你从某网页中复制、贴上是剪下任何内容時，会发出通知。这会让他们知道网页的哪一部份被挑选。</li>
 			</ul>
-			<li>geo.enabled = false</li>
-			<ul>
+            <li>geo.enabled = false</li>
+			 <ul>
 				<li>取消地理定位资料</li>
-			</ul>
-                        <li>media.navigator.enabled = false</li>
+			</ul>    
+            <li>media.navigator.enabled = false</li>
 			<ul>
-                               <li>网站可以跟踪用户上网设备里的麦克风和摄影机状态</li>
-                        </ul>
+                <li>网站可以跟踪用户上网设备里的麦克风和摄影机状态</li>
+            </ul>   
 			<li>network.cookie.cookieBehavior = 1</li>
 			<ul>
 				<li>取消cookies</li>
@@ -989,16 +989,18 @@
 			</ul>
 			<li>network.cookie.lifetimePolicy = 2</li>
 			<ul>
-				<li>cookies在期间结束后会被刪除</li>
+				<li>cookies 在期间结束后会被刪除</li>
 				<li>0 = Accept cookies normally</li>
 				<li>1 = Prompt for each cookie</li>
 				<li>2 = Accept for current session only</li>
 				<li>3 = Accept for N days</li>
 			</ul>
+
 			<li>webgl.disabled = true</li>
 			<ul>
 				<li>WebGL 有潜在的安全风险<a href="http://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">来源</a></li>
 			</ul>
+
 		</ol>
 
 		<!-- related information -->
@@ -1025,7 +1027,7 @@
 			<thead>
 				<tr>
 					<th data-sortable="true">电邮服务</th>
-					<th data-sortable="true">URL</th>
+                                        <th data-sortable="true">URL</th>
 					<th data-sortable="true">成立时间</th>
 					<th data-sortable="true">服务器位置</th>
 					<th data-sortable="true">空间容量</th>
@@ -1043,8 +1045,8 @@
 					<img src="img/provider/ProtonMail.ch.gif" width="200" height="70">
 					</td>
 					<td>
-						<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://www.protonmail.ch" href="https://www.protonmail.ch"><img src="img/layout/www.png" width="40"></img></a>
-						<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://protonirockerxow.onion. Requires specific software to access: torproject.org" href="https://protonirockerxow.onion"><img src="img/layout/tor.png" width="35"></img></a>
+						<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://www.protonmail.ch" href="https://www.protonmail.ch"><img src="img/layout/www.png" width="35"></img></a>
+						<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://protonirockerxow.onion. Requires specific software to access: torproject.org" href="https://protonirockerxow.onion"><img src="img/layout/tor.png" width="40"></img></a>
 					</td>
 					<td data-value="2013">2013</td>
 					<td><span class="flag-icon flag-icon-ch"></span> 瑞士</td>
@@ -1054,6 +1056,7 @@
 					<td data-value="1"><span class="label label-success">内建</span></td>
 					<td data-value="1"><span class="label label-success">有</span></td>
 				</tr>
+
                                 <tr>
 					<td data-value="disroot.org">
 						<img src="img/provider/disroot.org.gif" width="200" height="70">
@@ -1069,12 +1072,14 @@
 					<td data-value="1"><span class="label label-success">内建</span></td>
 					<td data-value="1"><span class="label label-warning">无</span></td>
 				</tr>
+
+
 				<tr>
 					<td data-value="Tutanota">
 					<img src="img/provider/Tutanota.gif" width="200" height="70">
 					</td>
 					<td>
-				<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://www.tutanota.com" href="https://www.tutanota.com"><img src="img/layout/www.png" width="40"></img></a>
+				<a data-toggle="tooltip" data-placement="bottom" data-original-title="https://www.tutanota.com" href="https://www.tutanota.com"><img src="img/layout/www.png" width="35"></img></a>
 					</td>
 					<td data-value="2011">2011</td>
 					<td><span class="flag-icon flag-icon-de"></span> 德国</td>
@@ -1169,6 +1174,7 @@
 							<td data-value="1"><span class="label label-success">内建</span></td>
 							<td data-value="1"><span class="label label-success">有</span></td>
 						</tr>
+
 						<tr>
 							<td data-value="StartMail">
 								<img src="img/provider/StartMail.gif" width="200" height="70">
@@ -1209,29 +1215,29 @@
 
 		<h3>尚在开发阶段的有趣电子邮件提供商</h3>
 		<ul>
-			<li><a href="https://www.confidantmail.org/">Confidant Mail</a> - 开源，非-SMTP 的密码式电邮系统，可以最佳化大型档案附件。对一般电邮与网络档案下载，它是另一个安全且防范垃圾邮件的替代选项。其利用GNU Privacy Guard (GPG) 进行内容加密与认证，利用TLS 1.2 产生的暂用密钥来进行传输加密。</li>
+			<li><a href="https://www.confidantmail.org/">Confidant Mail</a> - 开源，非-SMTP 的密码式电邮系统，可以最佳化大型档案附件。对一般电邮与网络档案下载，它是另一个安全且防范垃圾邮件的替代选项。其利用 GNU Privacy Guard (GPG) 进行内容加密与认证，利用 TLS 1.2 产生的暂用密钥来进行传输加密。</li>
 		</ul>
 
 
-		<h3>利用Mail-in-a-Box来打造自家电邮供应</h3>
+		<h3>利用 Mail-in-a-Box 来打造自家电邮供应</h3>
 		<a href="https://mailinabox.email/"><img src="img/provider/Mail-in-a-Box.gif" class="img-responsive pull-left" alt="Mail-in-a-Box" style="margin-right:10px;"></a>
-		<p>利用这个易于布署的邮件服务器工具箱，更进一步地掌控自己的电子邮件安全。 Mail-in-a-Box让你透过一些简单的步骤来设置自己的电邮服务器，就有点像是打造一个自己专属的gmail,但可以完全由自己从头到尾掌控。技术上来看, Mail-in-a-Box把新兴的云端电脑变成了一个可工作的邮件服务器。并不需要技术专家才能作好设置。<strong>进一步资讯请见: <a href="https://mailinabox.email/">https://mailinabox.email/</a></strong></p>
+		<p>利用这个易于布署的邮件服务器工具箱，更进一步地掌控自己的电子邮件安全。 Mail-in-a-Box 让你透过一些简单的步骤来设置自己的电邮服务器，就有点像是打造一个自己专属的 gmail,但可以完全由自己从头到尾掌控。技术上来看，Mail-in-a-Box 把新兴的云端电脑变成了一个可工作的邮件服务器。并不需要技术专家才能作好设置。<strong>进一步资讯请见: <a href="https://mailinabox.email/">https://mailinabox.email/</a></strong></p>
 
 		<h3>私密的电邮工具</h3>
 		<ul>
-			<li><a href="http://www.gpg4usb.org/">gpg4usb</a> - 容易使用的小型随身编辑器软件，可用来加密与解密任何文字讯息或档案。 Windows 与Linux可用。</li>
-			<li><a href="https://www.mailvelope.com/">Mailvelope</a> - 一个浏览器外挂元件，依循OpenPGP 加密标准，可以进行网页电邮的加密通讯。</li>
-			<li><a href="https://www.enigmail.net/">Enigmail</a> - Thunderbird/Seamonkey电邮软件上的安全外挂元件。依循OpenPGP 加密标准，让用户可作为电邮撰写、接收邮件上加密或签章功能。</li>
-			<li><a href="https://addons.mozilla.org/thunderbird/addon/torbirdy/">TorBirdy</a> - 这个外挂元件可让Thunderbird邮件设定以连上Tor匿名网络。</li>
+			<li><a href="http://www.gpg4usb.org/">gpg4usb</a> - 容易使用的小型随身编辑器软件，可用来加密与解密任何文字讯息或档案。 Windows 与 Linux 可用。</li>
+			<li><a href="https://www.mailvelope.com/">Mailvelope</a> - 一个浏览器外挂元件，依循 OpenPGP 加密标准，可以进行网页电邮的加密通讯。</li>
+			<li><a href="https://www.enigmail.net/">Enigmail</a> - Thunderbird/Seamonkey 电邮软件上的安全外挂元件。依循 OpenPGP 加密标准，让用户可作为电邮撰写、接收邮件上加密或签章功能。</li>
+			<li><a href="https://addons.mozilla.org/thunderbird/addon/torbirdy/">TorBirdy</a> - 这个外挂元件可让 Thunderbird 邮件设定以连上 Tor 匿名网络。</li>
 			<li><a href="https://emailprivacytester.com/">Email Privacy Tester</a> - 这个工具会传送一封电邮到你的地址以进行相关安全隐私测试。</li>
 		</ul>
 
 		<h3>相关资讯</h3>
 		<ul>
-			<li><a href="http://www.wired.com/2011/10/ecpa-turns-twenty-five/">Aging ‘Privacy’ Law Leaves Cloud E-Mail Open to Cops</a> - 存放在云端超过6个月以上的电邮资料被视为弃置，故情资单位可在无法院令状下取调。使用外部的电子邮件软件如Thunderbird 或 Enigmail,把电邮下载到本地端电脑储存，不要把它们存留在邮件服务器上</li>
+			<li><a href="http://www.wired.com/2011/10/ecpa-turns-twenty-five/">Aging ‘Privacy’ Law Leaves Cloud E-Mail Open to Cops</a> - 存放在云端超过6个月以上的电邮资料被视为弃置，故情资单位可在无法院令状下取调。使用外部的电子邮件软件如 Thunderbird 或 Enigmail,把电邮下载到本地端电脑储存，不要把它们存留在邮件服务器上</li>
 			<li><a href="https://forum.openmailbox.org/viewtopic.php?id=390">OpenMailBox keeps one year logs of meta-data</a> - Forum discussion, reply of the server admin.</li>
 			<li><a href="https://www.eff.org/deeplinks/2012/04/may-firstriseup-server-seizure-fbi-overreaches-yet-again">With May First/Riseup Server Seizure, FBI Overreaches Yet Again</a></li>
-			<li><a href="http://www.autistici.org/ai/crackdown/">Autistici/Inventati server compromised</a> - The cryptographic services offered by the Autistici/Inventatio服务器所提供的密码服务曾在15th June 2004年6月15日受到破坏，但到一年后2005年6月21日才被发现。这段期间，任何一个邮箱的查询, 邮件警察可能已监看了autistici.org/inventati.org.上整整一年当中每一位用户的私人通讯状况。</li>
+			<li><a href="http://www.autistici.org/ai/crackdown/">Autistici/Inventati server compromised</a> - The cryptographic services offered by the Autistici/Inventatio 服务器所提供的密码服务曾在 2004 年 6 月 15 日受到破坏，但到一年后 2005 年 6 月 21 日才被发现。这段期间，任何一个邮箱的查询，邮件警察可能已监看了autistici.org/inventati.org.上整整一年当中每一位用户的私人通讯状况。</li>
 		</ul>
 
 		<a class="anchor" name="clients"></a>
@@ -1246,13 +1252,13 @@
 						<h3 class="panel-title">Thunderbird雷鸟</h3>
 					</div>
 					<div class="panel-body">
-						<p><img src="img/tools/Thunderbird.png" alt="Thunderbird" align="right" style="margin-left:5px;">Mozilla Thunderbird是一个免费、开源、跨平台的电邮、新闻与聊天软件，由Mozilla 基金会开发维护。 Thunderbird 是电子邮件、新闻群组、新闻推送订阅与聊天(支援XMPP, IRC, Twitter)的客户端软件.</p>
+						<p><img src="img/tools/Thunderbird.png" alt="Thunderbird" align="right" style="margin-left:5px;">Mozilla Thunderbird 是一个免费、开源、跨平台的电邮、新闻与聊天软件，由 Mozilla 基金会开发维护。 Thunderbird 是电子邮件、新闻群组、新闻推送订阅与聊天(支援XMPP, IRC, Twitter)的客户端软件.</p>
 						<p>
 							<a href="https://mozilla.org/thunderbird">
-								<button type="button" class="btn btn-success">网站: mozilla.org</button>
+								<button type="button" class="btn btn-success">网站： mozilla.org</button>
 							</a>
 						</p>
-						<p>OS操作系统: Windows, Mac, Linux, BSD.</p>
+						<p>OS 操作系统： Windows, Mac, Linux, BSD.</p>
 					</div>
 				</div>
 			</div>
@@ -1263,13 +1269,13 @@
 						<h3 class="panel-title">Claws Mail</h3>
 					</div>
 					<div class="panel-body">
-						<p><img src="img/tools/Claws-Mail.png" alt="Claws Mail" align="right" style="margin-left:5px;">Claws Mail是一个免费开源, 使用GTK+桌面环境为基础的电邮与新闻软件。它提供了简单的设定和丰富的功能，也包括Windows底下的加密套件包。</p>
+						<p><img src="img/tools/Claws-Mail.png" alt="Claws Mail" align="right" style="margin-left:5px;">Claws Mail 是一个免费开源，使用 GTK 桌面环境为基础的电邮与新闻软件。它提供了简单的设定和丰富的功能，也包括 Windows 底下的加密套件包。</p>
 						<p>
 							<a href="http://www.claws-mail.org/">
-								<button type="button" class="btn btn-info">网站: claws-mail.org</button>
+								<button type="button" class="btn btn-info">网站： claws-mail.org</button>
 							</a>
 						</p>
-						<p>OS操作系统: Windows, Mac, Linux, BSD, Solaris, Unix.</p>
+						<p>OS 操作系统： Windows, Mac, Linux, BSD, Solaris, Unix.</p>
 					</div>
 				</div>
 			</div>
@@ -1294,9 +1300,9 @@
 
 		<h3>值得一提</h3>
 		<ul>
-			<li><a href="https://github.com/k9mail/k-9/releases">K-9 Mail</a> - 安卓手机上的独立电邮应用程式，其同时支持POP3与IMAP协议的邮箱, 但目前只支持IMAP的推送邮件功能.</li>
-			<li><a href="https://www.gnupg.org/">GNU Privacy Guard</a> - 电邮加密， GnuPG 为基于GPL 授权版本的PGP密码套件软件的替代选择。Mac OS X操作系统<a href="https://gpgtools.org/">可使用GPGTools。</a></li>
-			<li><a href="https://www.mailpile.is/">Mailpile (Beta)</a> - 一个现代, 快速的网页用户端软件，提供友善的加密与隐私功能。</li>
+			<li><a href="https://github.com/k9mail/k-9/releases">K-9 Mail</a> - 安卓手机上的独立电邮应用程式，其同时支持 POP3 与 IMAP 协议的邮箱, 但目前只支持 IMAP 的推送邮件功能.</li>
+			<li><a href="https://www.gnupg.org/">GNU Privacy Guard</a> - 电邮加密， GnuPG 为基于 GPL 授权版本的 PGP 密码套件软件的替代选择。Mac OS X 操作系统<a href="https://gpgtools.org/">可使用GPGTools。</a></li>
+			<li><a href="https://www.mailpile.is/">Mailpile (Beta)</a> - 一个现代、快速的网页用户端软件，提供友善的加密与隐私功能。</li>
 		</ul>
 
 		<a class="anchor" name="messaging"></a>
