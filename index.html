@@ -788,7 +788,7 @@
 		<h3>如何在火狐浏览器下取消 WebRTC?</h3>
 
 		<!-- steps on manually disabling WRTC in Firefox -->
-        <p>简单说：在 "about:config" 内，将 "media.peerconnection.enabled" 设为 "false"。</p>
+		<p>简单说：在 "about:config" 内，将 "media.peerconnection.enabled" 设为 "false"。</p>
 		<p><strong>说明：</strong></p>
 		<ol>
 			<li>在浏览器的网址列輸入 "about:config" 并点击 enter 键.</li>
@@ -816,7 +816,7 @@
 
 		<!-- steps to manually disable WebRTC in Chrome -->
 		<h3>如何来解决 Google Chrome 底下的 WebRTC 漏洞呢？</h3>
-		<p>目前还找不到解決方法，虽然有一个外挂工具但它很容易被躲過。还是使用火狐浏览器吧。</p>
+        <p>Chrome 浏览器下无法完全取消 WebRTC，但可以透过扩展变更其路由设定（与防止洩漏）。有两种开源的方案为：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a>（需依情况来调整设定选项）和 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a> （请选 "Prevent WebRTC from leaking local IP addresses"）。</p>
 
 		<h3>那其它的浏览器呢?</h3>
 		<p>苹果 iOS 操作系统下的 Chrome、Internet Explorer 与 Safari 目前尚未采用 WebRTC。 <a href="#browser"><span class="glyphicon glyphicon-link"></span> 不过我们还是建议在各种设备上最好还是使用火狐浏览器。</a></p>
@@ -832,27 +832,26 @@
 		<div class="alert alert-success" role="alert">
 			<strong>利用优质的火狐浏览器附加组件来改善隐私保护</strong>
 		</div>
-        <h3>安装 "Privacy Badger" 阻止被追踪</h3>
+		<h3>安装 "Privacy Badger" 阻止被追踪</h3>
 		<img src="img/addons/Privacy-Badger.gif" class="img-responsive pull-left" alt="Privacy Badger" style="margin-right:30px;">
-        <p><strong>Privacy Badger</strong> 是一个浏览器附加组件，可用来阻止广告商或其它第三方追踪器偷偷地追踪用户浏览哪些网站网页。当你浏览网站时 Privacy Badger 透过检查外部网站资源的请求了解追踪器状况。当用户浏览网站时，Privacy Badger 会检查外部的网站请求。请注意，Google Analytics 被 Privacy Badger 视为首先相关者（first-party），这表示如果你未用其它封锁器（例如 uBlock Origin），则 Google Analytics 就不会遭到封锁。
+		<p><strong>Privacy Badger</strong> 可用来阻止广告商或其它第三方追踪器偷偷地追踪用户浏览哪些网站网页。当你浏览网站时 Privacy Badger 透过检查外部网站资源的请求了解追踪器状况。当用户浏览网站时，Privacy Badger 会检查外部的网站请求。请注意，Google Analytics 被 Privacy Badger 视为首先相关者（first-party），这表示如果你未用其它封锁器（例如 uBlock Origin），则 Google Analytics 就不会遭到封锁。
 		<br />
+
 		<a href="https://www.eff.org/privacybadger">https://www.eff.org/privacybadger/</a></p>
 
-<!--
-		<img src="img/addons/Disconnect.gif" class="img-responsive pull-left" alt="Disconnect" style="margin-right:30px;">
-		<p>Founded in 2011 by former Google engineers and a consumer-and privacy-rights attorney. The addon is open source and loads the pages you go to 27% faster and stops tracking by 2,000 third-party sites. It also keeps your searches private. If you are planning to install "uBlock Origin" make sure to install "Disconnect" first. <strong>Alternative to Disconnect:</strong> <a href="https://addons.mozilla.org/firefox/addon/privacy-badger-firefox/">Privacy Badger by EFF</a>
-			<br />
-			<a href="https://addons.mozilla.org/firefox/addon/disconnect/">https://addons.mozilla.org/firefox/addon/disconnect/</a>
-			</p>
--->
 		<h3>利用 "uBlock Origin" 来封锁广告与追踪器</h3>
 		<img src="img/addons/uBlock.gif" class="img-responsive pull-left" alt="uBlock" style="margin-right:30px;">
 		<p>它是一个有效 <a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode">靠谱的过滤器</a> 容易在内存上执行，也比一般市面上的过滤器更可负载入上千个过滤器当中。这套软件并没有商业化的打算而且是完全<a href="https://github.com/gorhill/uBlock/">开源</a>。不只在火狐，uBlock Origin 也可以用在其它的浏览器如 Safari、Opera、Chromium 等等。不像 AdBlock Plus，uBlock 并没有所谓<a href="https://adblockplus.org/acceptable-ads">「可接受的广告」</a>。
 			<br />
 			<a href="https://addons.mozilla.org/firefox/addon/ublock-origin/">https://addons.mozilla.org/firefox/addon/ublock-origin/</a>
 		</p>
-
-
+<!--
+		<img src="img/addons/Disconnect.gif" class="img-responsive pull-left" alt="Disconnect" style="margin-right:30px;">
+		<p>Founded in 2011 by former Google engineers and a consumer-and privacy-rights attorney. The addon is open source and loads the pages you go to 27% faster and stops tracking by 2,000 third-party sites. It also keeps your searches private. If you are planning to install "uBlock Origin" make sure to install "Disconnect" first. <strong>Alternative to Disconnect:</strong> <a href="https://addons.mozilla.org/firefox/addon/privacy-badger-firefox/">Privacy Badger by EFF</a>
+			<br />
+			<a href="https://addons.mozilla.org/firefox/addon/disconnect/">https://addons.mozilla.org/firefox/addon/disconnect/</a>
+			</p>
+-->		
 <!--
 		<h3>Hinder Browser Fingerprinting with "Random Agent Spoofer"</h3>
 		<img src="img/addons/Random-Agent-Spoofer.gif" class="img-responsive pull-left" alt="Random Agent Spoofer" style="margin-right:30px;">
@@ -865,9 +864,9 @@
 		<img src="img/addons/Cookie-AutoDelete.gif" class="img-responsive pull-left" alt="Cookie AutoDelete" style="margin-right:30px;">
 		<p>自动地移除储存在已开启分页中不需再用到的 cookies。连同徘来回期间、以及用来监视用户的资讯都会被清除。
 			<br />
-            <a href="https://addons.mozilla.org/firefox/addon/cookie-autodelete">https://addons.mozilla.org/firefox/addon/cookie-autodelete/</a></p>
+                        <a href="https://addons.mozilla.org/firefox/addon/cookie-autodelete">https://addons.mozilla.org/firefox/addon/cookie-autodelete/</a></p>
 
-
+      
 		<h3>使用 "HTTPS Everywhere" 加密连接</h3>
 		<img src="img/addons/HTTPS-Everywhere.gif" class="img-responsive pull-left" alt="HTTPS Everywhere" style="margin-right:30px;">
 		<p>Firefox, Chrome, Opera 都支持的浏览器附加组件，可以对一些主要网站之间的网络连接予以加密，让你的浏览更为安全。它是 Tor 计划与电子前线基金会 EFF 的一个合作专案。
@@ -876,7 +875,7 @@
 
 		<h3>利用 "Decentraleyes" 来关闭内容传递网络</h3>
 		<img src="img/addons/Decentraleyes.gif" class="img-responsive pull-left" alt="HTTPS Everywhere" style="margin-right:30px;">
-        <p>在本地机器上仿效内容传递网络以拦截对外请求，找出所需的资源再将其注入环境下。这些步骤会同时自发自动地发生而不必事前的设置。源代码：<a href="https://github.com/Synzvato/decentraleyes">GitHub。</a>
+		<p>在本地机器上仿效内容传递网络以拦截对外请求，找出所需的资源再将其注入环境下。这些步骤会同时自发自动地发生而不必事前的设置。源代码：<a href="https://github.com/Synzvato/decentraleyes">GitHub。</a></a>
 			<br />
 			<a href="https://addons.mozilla.org/firefox/addon/decentraleyes/">https://addons.mozilla.org/firefox/addon/decentraleyes/</a></p>
 
@@ -1497,7 +1496,7 @@
 							<button type="button" class="btn btn-success">Download: signal.org</button>
 							</a>
 						</p>
-						<p>OS 操作系统：Android, iOS。</p>
+						<p>OS 操作系统：Android, iOS、macOS, Windows, Debian-based Linux。</p>
 					</div>
 				</div>
 			</div>
@@ -2364,7 +2363,7 @@
 								<button type="button" class="btn btn-success">网站： laverna.cc</button>
 							</a>
 						</p>
-						<p>OS 操作系统：Windows, Mac, Linux.</p>
+						<p>OS 操作系统：Windows, Mac, Linux, 网页。</p>
 					</div>
 				</div>
 			</div>
