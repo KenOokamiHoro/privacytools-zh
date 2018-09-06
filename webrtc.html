@@ -21,30 +21,28 @@
 <h2>WebRTC IP Leak VPN / Tor IP Test</h2>
 
 <p>
-	WebRTC is a communication protocol that relies on JavaScript that can leak your actual IP address from behind your VPN. While software like NoScript prevents this, it's probably a good idea to block this protocol directly as well, just to be safe. This page will test if your internet browser is affected by the <strong>WebRTC Leak.</strong>
+	WebRTC 是一个通讯协议，即便通过 VPN 上网，其使用的 JavaScript 可能会泄露你真实的IP地址。有些软件，如 NoScript 可以阻止这个漏洞。但为了安全起见，也许直接关闭这个协议也是不错的作法。这里可以测试你的网页浏览器是否受到 <strong> WebRTC 漏洞</strong>的影响。
 </p>
 
 <p>
-This demo secretly makes requests to STUN servers that can log your
-request. These requests do not show up in developer consoles and
-cannot be blocked by browser plugins like AdBlock, Ghostery, etc.
+这个示例秘密地把请求送到 STUN 服务器，它会记录下你的对外请求。这些对外的动作并不会显示在开发者控制台，也不能利用浏览器扩展（例如 AdBlock, Ghostery等）对其进行封锁。
 </p>
 
 <p>&nbsp;</p>
-<strong>Your local IP addresses:</strong>
+<strong>你的本地 IP 地址:</strong>
 <ul></ul>
-<strong>Your public IP addresses:</strong>
+<strong>你的网络 IP 地址:</strong>
 <ul></ul>
 
 <p>&nbsp;</p>
 
-<p>Your browser is not safe and will show your real IP even though you are using a VPN service if you can see your real IP addresses here.</p>
+<p>如果你在此可以看到你的真实 IP 地址，表示所使用的浏览器并不安全，它会显示出你真实的 IP 地址，即便你利用了 VPN 服务。</p>
 
-<p><strong><a href="https://www.privacytools.io/#webrtc">How to fix the WebRTC Leak?</a></strong></p>
+<p><strong><a href="https://www.privacytools.io/#webrtc">如何修补 WebRTC 漏洞?</a></strong></p>
 
 <p>&nbsp;</p>
 
-<p>Source Code: <a href="https://github.com/diafygi/webrtc-ips" target="_blank">GitHub</a>
+<p>源代码: <a href="https://github.com/diafygi/webrtc-ips" target="_blank">GitHub</a>
 <br>Script Version: Jul 20, 2015</a></p>
 
         <iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
