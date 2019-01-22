@@ -1,50 +1,48 @@
-<h1 id="calendar_contacts" class="anchor"><a href="#calendar_contacts"><i class="fas fa-link anchor-icon"></i></a> Calendar and Contacts Sync</h1>
+ 
+  <h1 id="calendar_contacts" class="anchor"><a href="#calendar_contacts"><i class="fas fa-link anchor-icon"></i></a> 行事历与联络人同步</h1>
+  <div class="alert alert-warning" role="alert">
+    <strong>若目前有使用行事历与联络人同步服务，如 Google Sync 或 iCloud，这里有其它替代的选项。</strong>
+  </div>
+  <div class="row mb-2">
 
-<div class="alert alert-warning" role="alert">
-  <strong>If you are currently using a calendar and or contacts synchronization service like Google Sync or iCloud, you should pick an alternative here.</strong>
-</div>
+    {% include card.html color='primary'
+    title='Email Providers'
+    image='assets/img/misc/email.png'
+    url='#email'
+    website='Email Providers section'
+    footer='支援作业系统： depends on email provider." description="许多电邮供应商亦提供行事历和联络人同步服务。可参考<a href=\"#email\">电邮供应商</a> 电邮供应商部份的介绍来查看他们是否也有提供此类服务。'
+    %}
 
-<div class="row mb-2">
+    {% include card.html color="primary"
+    title="Email Providers"
+    image="assets/img/misc/email.png"
+    url="#email"
+    website="Email Providers section"
+    footer="OS: depends on email provider."
+    description="Many email providers also offer calendar and or contacts sync services. Refer to the <a href=\"#email\">Email Providers section</a> to choose an email provider and check if they also offer calendar and or contacts sync."
+    %}
 
-  {% include card.html color="success"
-  title="Nextcloud"
-  image="assets/img/provider/Nextcloud.png"
-  url="https://nextcloud.com/"
-  footer="Client OS: Windows, macOS, Linux, BSD, Unix, iOS, Android, Fire OS. Server: Linux."
-  description="NextCloud is a suite of client-server software for creating and using file hosting services. This includes calendar sync via CalDAV and contacts sync via CardDAV. Nextcloud is free and open-source, thereby allowing anyone to install and operate it without charge on a private server."
-  %}
+    {% include card.html color='warning'
+    title='EteSync'
+    image='assets/img/provider/etesync.png'
+    url='https://www.etesync.com/'
+    footer='Client OS: Android, Web. Server OS: Linux.'
+    description='EteSync EteSync 是执行在 Android 或任何支援 CalDAV/CardDAV 作业系统底下的一个安全，端对端加密的日志型个人资讯（例如：行事历与联络人）云端同步备份工具。它的费用是一年 $14 或可免费架在自己的伺服器。'
+    %}
 
-  {% include card.html color="primary"
-  title="Email Providers"
-  image="assets/img/misc/email.png"
-  url="#email"
-  website="Email Providers section"
-  footer="OS: depends on email provider."
-  description="Many email providers also offer calendar and or contacts sync services. Refer to the <a href=\"#email\">Email Providers section</a> to choose an email provider and check if they also offer calendar and or contacts sync."
-  %}
+  </div>
+  <h3>值得一提</h3>
+  <ul>
+    <li>
+      <a href="https://fruux.com/">fruux</a> - 结合了联络人和行事历系统，可跨不同平台与多台设备。 
+    </li>
 
-  {% include card.html color="warning"
-  title="EteSync"
-  image="assets/img/provider/etesync.png"
-  url="https://www.etesync.com/"
-  footer="Client OS: Android, Web. Server OS: Linux."
-  description="EteSync is a secure, end-to-end encrypted and journaled personal information (e.g. contacts and calendar) cloud synchronization and backup for Android and any OS that supports CalDAV/CardDAV. It costs $14 per year to use, or you can host the server yourself for free."
-  %}
+    <li>
+      <a href="https://signal.org/blog/flock/">Flock</a> - 由 Open Whisper Systems 开始，已未再继续进行的行事历联络人同步服务。虽然它已不同更新，但<a href="https://github.com/signalapp/Flock">其原始码 </a> 仍可在 GitHub 找到。
+    </li>
 
-</div>
+    <li>
+      <a href="#cloud">cloud backups</a> - 请考处定期汇出行事历与联络人资料备份到不同的储存硬碟或是上传到云端储存  （最好是先<a href="#encrypt">予以加密</a>）。
+    </li>
+  </ul>
 
-<h3>Worth Mentioning</h3>
-
-<ul>
-  <li>
-    <a href="https://fruux.com/">fruux</a> - a unified contacts/calendaring system that works across platforms and devices.
-  </li>
-
-  <li>
-    <a href="https://signal.org/blog/flock/">Flock</a> - a discontinued calendar and contacts sync service by Open Whisper Systems. Despite being shut down the <a href="https://github.com/signalapp/Flock">source code</a> is still available on GitHub.
-  </li>
-
-  <li>
-    <a href="#cloud">cloud backups</a> - consider regularly exporting your calendar and or contacts and backing them up on a separate storage drive or uploading them to cloud storage (ideally after <a href="#encrypt">encrypting</a> them).
-  </li>
-</ul>

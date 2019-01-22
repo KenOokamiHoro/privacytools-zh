@@ -27,7 +27,7 @@ You can submit your suggestions here on GitHub [(Issues)](https://github.com/pri
 - View and edit our website source code here on GitHub.
 
 # Community Translations
-- [繁体中文 / Chinese](https://privacytools.twngo.xyz/) - [GitHub](https://github.com/twngo/privacytools-zh)
+- [繁體中文 / Chinese](https://privacytools.twngo.xyz/) - [GitHub](https://github.com/twngo/privacytools-zh)
 - [Español / Spanish](https://victorhck.gitlab.io/privacytools-es/) - [GitLab](https://gitlab.com/victorhck/privacytools-es)
 - [Deutsch / German](https://privacytools.it-sec.rocks/) - [GitHub](https://github.com/Anon215/privacytools.it-sec.rocks)
 - [Italiano / Italian](https://privacytools-it.github.io/) - [GitHub](https://github.com/privacytools-it/privacytools-it.github.io)
@@ -35,3 +35,4 @@ You can submit your suggestions here on GitHub [(Issues)](https://github.com/pri
 
 # License
 [Do What The Fuck You Want To Public License](https://github.com/privacytoolsIO/privacytools.io/blob/master/LICENSE.txt)
+

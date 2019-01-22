@@ -29,11 +29,11 @@
             <p><img src="{{include.image}}" alt="{{include.title}}" class="panel-item">{{include.description}}</p>
             <div>
             <p>
-                <a class="btn btn-{{include.color}} mb-1" href="{{include.url}}">Website:
+                <a class="btn btn-{{include.color}} mb-1" href="{{include.url}}">网站:
                     {% if include.website %}
                         {{include.website}}
                     {% else %}
-                        {{ include.url | remove: "https://" | remove: "http://" | remove: "www." | remove: "/" | remove: "github.com" }}
+                        {{ include.url | remove: "https://" | remove: "http://" | remove: "www." | remove: "github.com" }}
                     {% endif %}
                 </a>
                 {% if include.tor %}

@@ -1,144 +1,192 @@
-<h1 id="about_config" class="anchor"><a href="#about_config"><i class="fas fa-link anchor-icon"></i></a> Firefox: Privacy Related "about:config" Tweaks</h1>
+  <!-- about:config tweaks for Firefox -->
+  <h1 id="about_config" class="anchor"><a href="#about_config"><i class="fas fa-link anchor-icon"></i></a> FireFox: about:config 的隐私设定调整</h1>
 
-<div class="alert alert-success" role="alert">This is a collection of privacy-related <strong>about:config</strong> tweaks. We'll show you how to enhance the privacy of your Firefox browser.</div>
+  <div class="alert alert-success" role="alert">这部份是 Firefox 关于<strong>about:config</strong> 的隐私设定调整整理。我们将示范如何强化 Firefox 的隐私保护。</div>
 
-<h3>Preparation:</h3>
+  <!-- preparation list -->
+  <h3>准备:</h3>
+  <ol>
+    <li>在浏览器的网址列输入 "about:config" 并点击 enter 键</li>
+    <li>点击"I accept the risks!"（“我接受上列风险并继续”）按钮</li>
+    <li>依照下方的指示操作...</li>
+  </ol>
+  
+  <!-- Getting started list -->
+  <h3>开始动手:</h3>
 
-<ol>
-  <li>Enter "about:config" in the firefox address bar and press enter.</li>
-  <li>Press the button "I'll be careful, I promise!"</li>
-  <li>Follow the instructions below...</li>
-</ol>
+  <ol class="long-string-list">
+    <li>privacy.firstparty.isolate = true
+      <ul>
+        <li>来自 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 的贡献，它可隔离主要访问网域中所有浏览器标识的来源（如 cookies），并可以阻档跨域名的追踪。（如果已经使用了 "Cookie AutoDelete" 附加组件或使用 Firefox v58 之前的版本，请不要打开此功能。）</li>
+      </ul>
+    </li>
 
-<h3>Getting started:</h3>
+    <li>privacy.resistFingerprinting = true
+      <ul>
+        <li>来自 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 的贡献，可让 Firefox 更能抵抗指纹辨识。</li>
+      </ul>
+    </li>
 
-<dl class="long-string-list">
-  <dt>privacy.firstparty.isolate = true</dt>
-  <dd>A result of the <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> effort, this preference isolates all browser identifier sources (e.g. cookies) to the first party domain, with the goal of preventing tracking across different domains. (Don't do this if you are using the Firefox Addon "Cookie AutoDelete" with Firefox v58 or below.)</dd>
+    <li>privacy.trackingprotection.enabled = true
+      <ul>
+        <li>Mozilla 新内建的追踪保护功能，其利用 Disconnect.me 过滤名单，但是你已经在使用 uBlock Origin 一类的屏蔽器，这个功能就略显多余，因此你可以把它关闭。</li>
+      </ul>
+    </li>
 
-  <dt>privacy.resistFingerprinting = true</dt>
-  <dd>A result of the <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> effort, this preference makes Firefox more resistant to browser fingerprinting.</dd>
+    <li>browser.cache.offline.enable = false
+      <ul>
+        <li>停用缓存功能</li>
+      </ul>
+    </li>
 
-  <dt>privacy.trackingprotection.enabled = true</dt>
-  <dd>This is Mozilla's new built-in tracking protection. It uses Disconnect.me filter list, which is redundant if you are already using uBlock Origin 3rd party filters, therefore you should set it to false if you are using the add-on functionalities.</dd>
+    <li>browser.safebrowsing.malware.enabled = false
+      <ul>
+        <li>取消 Google 安全浏览提供的恶意软件检查。这会有安全上的风险，但可改善隐私</li>
+      </ul>
+    </li>
 
-  <dt>browser.cache.offline.enable = false</dt>
-  <dd>Disables offline cache.</dd>
+    <li>browser.safebrowsing.phishing.enabled = false
+      <ul>
+        <li>取消 Google 安全浏览和防钓鱼保护。这会有安全上的风险，但可改善隐私</li>
+      </ul>
+    </li>
 
-  <dt>browser.safebrowsing.malware.enabled = false</dt>
-  <dd>Disable Google Safe Browsing malware checks. Security risk, but privacy improvement.</dd>
+    <li>browser.send_pings = false
+      <ul>
+        <li>这个选项可阻止网站追踪访客的点击情况。</li>
+      </ul>
+    </li>
 
-  <dt>browser.safebrowsing.phishing.enabled = false</dt>
-  <dd>Disable Google Safe Browsing and phishing protection. Security risk, but privacy improvement.</dd>
+    <li>browser.sessionstore.max_tabs_undo = 0
+      <ul>
+        <li>尽管 Firefox 设定不记录浏览资讯，但在用户关闭标签之前，这些资讯仍会暂存在选单 &gt; 我的足迹 &gt; 最近关闭的标签页中。此选项可以关闭这一功能。 </li>
+      </ul>
+    </li>
 
-  <dt>browser.send_pings = false</dt>
-  <dd>The attribute would be useful for letting websites track visitors' clicks.</dd>
+    <li>browser.urlbar.speculativeConnect.enabled = false
+      <ul>
+        <li>关闭自动完成的 URLs 预读取，当用户在网址列输入资讯时，Firefox 会自行预先加载，有人担心这些浏览器自动建议的网址并非是用户想要连上的网站。<a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">出处来源</a></li>
+      </ul>
+    </li>
 
-  <dt>browser.sessionstore.max_tabs_undo = 0</dt>
-  <dd>Even with Firefox set to not remember history, your closed tabs are stored temporarily at Menu -&gt; History -&gt; Recently Closed Tabs.</dd>
+    <li>dom.battery.enabled = false
+      <ul>
+        <li>阻止网站追踪用户的电池使用状况<a href="https://www.reddit.com/r/privacytoolsIO/comments/3fzbgy/you_may_be_tracked_by_your_battery_status_of_your/">出处来源</a></li>
+      </ul>
+    </li>
 
-  <dt>browser.urlbar.speculativeConnect.enabled = false</dt>
-  <dd>Disable preloading of autocomplete URLs. Firefox preloads URLs that autocomplete when a user types into the address bar, which is a concern if URLs are suggested that the user does not want to connect to. <a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">Source</a></dd>
+    <li>dom.event.clipboardevents.enabled = false
+      <ul>
+        <li>阻止向网站发送和剪贴板相关的通知
 
-  <dt>dom.battery.enabled = false</dt>
-  <dd>Website owners can track the battery status of your device. <a href="https://www.reddit.com/r/privacytoolsIO/comments/3fzbgy/you_may_be_tracked_by_your_battery_status_of_your/">Source</a></dd>
+        </li>
+      </ul>
+    </li>
 
-  <dt>dom.event.clipboardevents.enabled = false</dt>
-  <dd>Disable that websites can get notifications if you copy, paste, or cut something from a web page, and it lets them know which part of the page had been selected.</dd>
+    <li>geo.enabled = false
+      <ul>
+        <li>停用地理位置信息功能</li>
+      </ul>
+    </li>
 
-  <dt>geo.enabled = false</dt>
-  <dd>Disables geolocation.</dd>
+    <li>media.eme.enabled = false
+      <ul>
+        <li>关闭由Disables playback of DRM 保护的 HTML5 内容播放功能。如果启动，会自动地载入 Google 公司提供的 Widevine Content Decryption Module<a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">详情</a></li>
+      </ul>
+    </li>
 
-  <dt>media.eme.enabled = false</dt>
-  <dd>
-  <p>Disables playback of DRM-controlled HTML5 content, which, if enabled, automatically downloads the Widevine Content Decryption Module provided by Google Inc. <a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">Details</a></p>
-  <p>DRM-controlled content that requires the Adobe Flash or Microsoft Silverlight NPAPI plugins will still play, if installed and enabled in Firefox.</p>
-  </dd>
+    <li>media.gmp-widevinecdm.enabled = false
+      <ul>
+        <li>关闭 Google 公司提供的 Widevine Content Decryption 模组，它是用来播放 DRM 保护的内容。<a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">详情</a></li>
+      </ul>
+    </li>
 
-  <dt>media.gmp-widevinecdm.enabled = false</dt>
-  <dd>Disables the Widevine Content Decryption Module provided by Google Inc., used for the playback of DRM-controlled HTML5 content. <a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">Details</a></dd>
+    <li>media.navigator.enabled = false
+      <ul>
+        <li>阻止网站追踪用户设备中的麦克风和相机状态</li>
+      </ul>
+    </li>
 
-  <dt>media.navigator.enabled = false</dt>
-  <dd>Websites can track the microphone and camera status of your device.</dd>
+    <li>network.cookie.cookieBehavior = 1
+      <ul>
+        <li>控制 Cookies 的行为：</li>
+        <li>0 = 默认打开所有 cookies</li>
+        <li>1 = 仅接受访问过网站的 cookies (阻止第三方网站 cookies)</li>
+        <li>2 = 默认关闭所有 cookies</li>
+      </ul>
+    </li>
 
-  <dt>network.cookie.cookieBehavior = 1</dt>
-  <dd>
-  Disable cookies
+    <li>network.cookie.lifetimePolicy = 2
+      <ul>
+        <li>cookies 在期间结束后被删除：</li>
+        <li>0 = 默认行为（直到它们过期）</li>
+        <li>1 = 对每一个 Cookie 手动确认</li>
+        <li>2 = 只在此会话中接受 Cookie</li>
+        <li>3 = 接受 Cookie N 天</li>
+      </ul>
+    </li>
+
+    <li>network.http.referer.trimmingPolicy = 2
+      <ul>
+        <li>限制 <code>Referer</code> 头中传递的信息：</li>
+        <li>0 = 在 <code>Referer</code> 中传递网站的完整 URL</li>
+        <li>1 = 在 <code>Referer</code> 中传递网站不含 Query 字符串的完整 URL</li>
+        <li>2 = 在 <code>Referer</code> 中只传递协议主机和端口</li>
+      </ul>
+    </li>
+
+    <li>network.http.referer.XOriginPolicy = 2
+      <ul>
+        <li>控制何时传送 Referer 头：</li>
+        <li>0 = 所有情况下都传送 <code>Referer</code></li>
+        <li>1 = 只向相同 eTLD 传送 <code>Referer</code></li>
+        <li>2 = 只有当主机名完全相符时才会传送 <code>Referer</code> 头。(请注意：如果察觉有明显的泄露状况，也许可以试试<code>1</code> 结合下方的 <code>XOriginTrimmingPolicy</code> 微调。) <a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">来源出处</a></li>
+      </ul>
+    </li>
+
+    <li>network.http.referer.XOriginTrimmingPolicy = 2
+      <ul>
+        <li>当在不同的网站来源间传送 <code>Referer</code> 时：</li>
+        <li>0 = 在 <code>Referer</code> 中传递网站的完整 URL</li>
+        <li>1 = 在 <code>Referer</code> 中传递网站不含 Query 字符串的完整 URL</li>
+        <li>2 = 在 <code>Referer</code> 中只传递协议主机和端口 <a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">Source</a></li>
+      </ul>
+    </li>
+
+    <li>webgl.disabled = true
+      <ul>
+        <li>停用 WebGL 以避免潜在的安全风险<a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">来源出处</a></li>
+      </ul>
+    </li>
+
+    <li>browser.sessionstore.privacy_level = 2
+      <ul>
+        <li>此偏好控制用于储存一段期间的额外信息：含内容形式、滚动条位置、cookies 和上传数据资料。 <a href="http://kb.mozillazine.org/Browser.sessionstore.privacy_level">详情</a></li>
+        <li>0 = 存储所有网站会话的额外信息 (Firefox 4+ 的默认设置)</li>
+        <li>1 = 存储所有非 HTTPS 网站会话的额外信息 (Firefox 4 以前的默认设置)</li>
+        <li>2 = 不存储网站会话的额外信息</li>
+      </ul>
+    </li>
+
+    <li>network.IDN_show_punycode = true
+      <ul>
+        <li>不会呈现 IDN 和 Punycode 等元素，避免陷入难以察觉的钓鱼攻击。<a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">来源出处</a></li>
+      </ul>
+    </li>
+
+    <li>extensions.blocklist.url = https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%20/%20/
+      <ul>
+        <li>在请求封锁列表清单时，限制可识别的资讯总量。</li>
+        <li>可选择完全关闭封锁清单，将原本<code>extensions.blocklist.enabled</code> 切换为 false，以提高隐私，但它会降低安全性。<a href="https://old.reddit.com/r/privacytoolsIO/comments/9uqeew/firefox_tip_sanitize_firefox_blocklist_url_so_it/">来源</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <!-- 相关资讯 -->
+  <h3>相关信息</h3>
   <ul>
-    <li>0 = Accept all cookies by default</li>
-    <li>1 = Only accept from the originating site (block third-party cookies)</li>
-    <li>2 = Block all cookies by default</li>
-  </dd>
-
-  <dt>network.cookie.lifetimePolicy = 2</dt>
-  <dd>
-  cookies are deleted at the end of the session
-  <ul>
-    <li>0 = Accept cookies normally</li>
-    <li>1 = Prompt for each cookie</li>
-    <li>2 = Accept for current session only</li>
-    <li>3 = Accept for N days</li>
+    <li><a href="https://ffprofile.com/">ffprofile.com</a> - 帮你设置 Firefox 的默认配置文件.</li>
+    <li><a href="http://kb.mozillazine.org/Category:Security_and_privacy-related_preferences">mozillazine.org</a> - 安全和隐私相关的属性。 </li>
+    <li><a href="https://github.com/pyllyukko/user.js">user.js Firefox hardening stuff</a> - 通过 user.js 强化 Firefox 的安全性和隐私保护</li>
+    <li><a href="https://addons.mozilla.org/firefox/addon/privacy-settings/">Privacy Settings</a> - 一个简单调整隐私相关设置的 Firefox 附加组件</li>
   </ul>
-  </dd>
-
-  <dt>network.http.referer.trimmingPolicy = 2</dt>
-  <dd>
-  Send only the scheme, host, and port in the <code>Referer</code> header
-  <ul>
-    <li>0 = Send the full URL in the <code>Referer</code> header</li>
-    <li>1 = Send the URL without its query string in the <code>Referer</code> header</li>
-    <li>2 = Send only the scheme, host, and port in the <code>Referer</code> header</li>
-  </ul>
-  </dd>
-
-  <dt>network.http.referer.XOriginPolicy = 2</dt>
-  <dd>
-  Only send <code>Referer</code> header when the full hostnames match. (Note: if you notice significant breakage, you might try <code>1</code> combined with an <code>XOriginTrimmingPolicy</code> tweak below.) <a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">Source</a>
-  <ul>
-    <li>0 = Send <code>Referer</code> in all cases</li>
-    <li>1 = Send <code>Referer</code> to same eTLD sites</li>
-    <li>2 = Send <code>Referer</code> only when the full hostnames match</li>
-  </ul>
-  </dd>
-
-  <dt>network.http.referer.XOriginTrimmingPolicy = 2</dt>
-  <dd>
-  When sending <code>Referer</code> across origins, only send scheme, host, and port in the <code>Referer</code> header of cross-origin requests. <a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">Source</a>
-  <ul>
-    <li>0 = Send full url in <code>Referer</code></li>
-    <li>1 = Send url without query string in <code>Referer</code></li>
-    <li>2 = Only send scheme, host, and port in <code>Referer</code></li>
-  </ul>
-  </dd>
-
-  <dt>webgl.disabled = true</dt>
-  <dd>WebGL is a potential security risk. <a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">Source</a></dd>
-
-  <dt>browser.sessionstore.privacy_level = 2</dt>
-  <dd>
-  This preference controls when to store extra information about a session: contents of forms, scrollbar positions, cookies, and POST data. <a href="http://kb.mozillazine.org/Browser.sessionstore.privacy_level">Details</a>
-  <ul>
-    <li>0 = Store extra session data for any site. (Default starting with Firefox 4.)</li>
-    <li>1 = Store extra session data for unencrypted (non-HTTPS) sites only. (Default before Firefox 4.)</li>
-    <li>2 = Never store extra session data.</li>
-  </ul>
-  </dd>
-
-  <dt>network.IDN_show_punycode = true</dt>
-  <dd>Not rendering IDNs as their Punycode equivalent leaves you open to phishing attacks that can be very difficult to notice. <a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">Source</a></dd>
-
-  <dt>extensions.blocklist.url = https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%20/%20/</dt>
-  <dd>
-  <p>Limit the amount of identifiable information sent when requesting the Mozilla harmful extension blocklist.
-  <p>Optionally, the blocklist can be disabled entirely by setting <code>extensions.blocklist.enabled</code> to false for increased privacy, but decreased security. <a href="https://old.reddit.com/r/privacytoolsIO/comments/9uqeew/firefox_tip_sanitize_firefox_blocklist_url_so_it/">Source</a></p>
-  </dd>
-</dl>
-
-<h3>Related Information</h3>
-
-<ul>
-  <li><a href="https://ffprofile.com/">ffprofile.com</a> - Helps you to create a Firefox profile with the defaults you like.</li>
-  <li><a href="http://kb.mozillazine.org/Category:Security_and_privacy-related_preferences">mozillazine.org</a> - Security and privacy-related preferences. </li>
-  <li><a href="https://github.com/pyllyukko/user.js">user.js Firefox hardening stuff</a> - This is a user.js configuration file for Mozilla Firefox that's supposed to harden Firefox's settings and make it more secure.</li>
-  <li><a href="https://addons.mozilla.org/firefox/addon/privacy-settings/">Privacy Settings</a> - A Firefox add-on to alter built-in privacy settings easily with a toolbar panel.</li>
-</ul>

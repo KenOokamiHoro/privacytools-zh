@@ -1,46 +1,41 @@
-<h1 id="darknets" class="anchor"><a href="#darknets"><i class="fas fa-link anchor-icon"></i></a> Self-contained Networks</h1>
 
-<div class="alert alert-warning" role="alert">
-  <strong>If you are currently browsing <a href="https://en.wikipedia.org/wiki/Surface_Web">clearnet</a> and want to access the <a href="https://en.wikipedia.org/wiki/Dark_web">dark web</a>, this section is for you.</strong>
-</div>
+  <h1 id="darknets" class="anchor"><a href="#darknets"><i class="fas fa-link anchor-icon"></i></a> 自足网路</h1>
+  <div class="alert alert-warning" role="alert">
+    <strong>如果你现在浏览的都是<a href="https://en.wikipedia.org/wiki/Surface_Web">表网 clearnet</a>，希望能够连入 <a href="https://en.wikipedia.org/wiki/Dark_web">Dark web 深网</a>，这部份正是为你所准备的。</strong>
+  </div>
+  <div class="row mb-2">
 
-<div class="row mb-2">
+    {% include card.html color='success'
+    title='Tor Browser'
+    image='assets/img/tools/Tor-Project.png'
+    url='https://www.torproject.org/'
+    tor='http://expyuzz4wqqyqhjn.onion'
+    footer='支援作业系统： Windows, macOS, Linux, <a href="https://mike.tig.as/onionbrowser/">iOS</a>, <a href="https://www.torproject.org/docs/android.html.en">Android</a>, <a href="https://github.com/torbsd/openbsd-ports">OpenBSD.</a>'
+    description='Tor 网路是由一群自愿营运的伺服器社群，来让人们可以改善其在互联网上的隐私和安全。Tor 用户利用这个网路来连结到一系列虚拟的隧道而不是采直接的连接方式。这样可让组织和个人在公共网路上分享资讯而不会伤害自身的隐私。Tor 也是一个能有效避开网路审查的工具。'
+    %}
 
-  {% include card.html color="success"
-  title="Tor Browser"
-  image="assets/img/tools/Tor-Project.png"
-  url="https://www.torproject.org/"
-  tor="http://expyuzz4wqqyqhjn.onion"
-  footer='OS: Windows, macOS, Linux, <a href="https://mike.tig.as/onionbrowser/">iOS</a>, <a href="https://www.torproject.org/docs/android.html.en">Android</a>, <a href="https://github.com/torbsd/openbsd-ports">OpenBSD.</a>'
-  description="The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor's users employ this network by connecting through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy. Tor is an effective censorship circumvention tool."
-  %}
+    {% include card.html color='primary'
+    title='I2P Anonymous Network'
+    image='assets/img/tools/I2P.png'
+    url='https://geti2p.net/'
+    footer='支援作业系统： Windows, macOS, Linux, Android, BSD / Solaris.'
+    description='The Invisible Internet Project (I2P) 是一个电脑网路层，它可让应用程式相互安全化名地传送讯息。它可用匿名的网站浏览、聊天、网志和档案传送。这个软体所执行的这层叫作 I2P 路由，当电脑运行 I2P 时，即称之为 I2P 节点。它是免费开源的软体，其发布版本有多种授权方式。'
+    %}
 
-  {% include card.html color="primary"
-  title="I2P Anonymous Network"
-  image="assets/img/tools/I2P.png"
-  url="https://geti2p.net/"
-  footer="OS: Windows, macOS, Linux, Android, BSD / Solaris."
-  description="The Invisible Internet Project (I2P) is a computer network layer that allows applications to send messages to each other pseudonymously and securely. Uses include anonymous
-  Web surfing, chatting, blogging and file transfers. The software that implements this layer is called an I2P router and a computer running I2P is called an I2P node. The software is free and open source and is published under multiple licenses."
-  %}
+    {% include card.html color='warning'
+    title='The Freenet Project'
+    image='assets/img/tools/Freenet.png'
+    url='https://freenetproject.org/'
+    footer='支援作业系统： Windows, macOS, Linux.'
+	description='Freenet 是一个点对点的平台以进行内容审查的抵抗通讯。它采用去中心化的分散式资料储存来保存和传送资讯，也有自由免费软体套件可以用来在网路上进行发表或是通讯而不必担心审查。自由网和一些它的相关工具一开始是由 Ian Clarke 所设计，他认为自由网的目的乃在于透过顽强的匿名保护，提供互联网的言论自由空间。'
+    %}
 
-  {% include card.html color="warning"
-  title="The Freenet Project"
-  image="assets/img/tools/Freenet.png"
-  url="https://freenetproject.org/"
-  footer="OS: Windows, macOS, Linux."
-  description="Freenet is a peer-to-peer platform for censorship-resistant communication. It uses a decentralized distributed data store to keep and deliver information, and
-  has a suite of free software for publishing and communicating on the Web without fear of censorship. Both Freenet and some of its associated tools were originally designed by Ian Clarke, who defined Freenet's goal as providing freedom of speech
-  on the Internet with strong anonymity protection."
-  %}
+  </div>
 
-</div>
-
-<h3>Worth Mentioning</h3>
-
-<ul>
-  <li><a href="https://zeronet.io/">ZeroNet</a> - Open, free and uncensorable websites, using Bitcoin cryptography and BitTorrent network.</li>
-  <li><a href="http://retroshare.net/">RetroShare</a> - Open Source cross-platform, Friend-2-Friend and secure decentralized communication platform.</li>
-  <li><a href="https://gnunet.org/">GNUnet</a> - GNUnet provides a strong foundation of free software for a global, distributed network that provides security and privacy.</li>
-  <li><a href="https://ipfs.io/">IPFS</a> - A peer-to-peer hypermedia protocol to make the web faster, safer, and more open. (<a href="https://github.com/privacytoolsIO/privacytools.io/pull/361#issuecomment-344414022">important privacy warning</a>)</li>
-</ul>
+  <h3>值得一提</h3>
+  <ul>
+    <li><a href="https://zeronet.io/">ZeroNet</a> - 开放、自由与未经审查的网站，使用比特币密码学与 BT 协定网路。</li>
+    <li><a href="http://retroshare.net/">RetroShare</a> - 开源跨平台，朋友对朋友之间的安全，去中心式的通讯平台。</li>
+    <li><a href="https://gnunet.org/">GNUnet</a> - GNUnet 为全球分散式网路提供了一个坚实的基础，以确保其安全和隐私保护。</li>
+    <li><a href="https://ipfs.io/">IPFS</a> - 点对点的混合媒体协定，可让网页更快、安全和开放。(<a href="https://github.com/privacytoolsIO/privacytools.io/pull/361#issuecomment-344414022">(重要的隐私警告) </a>)</li>
+  </ul>  

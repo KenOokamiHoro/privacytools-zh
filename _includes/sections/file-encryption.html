@@ -1,49 +1,41 @@
-<h1 id="encrypt" class="anchor"><a href="#encrypt"><i class="fas fa-link anchor-icon"></i></a> File Encryption Software</h1>
 
-<div class="alert alert-warning" role="alert">
-  <strong>If you are currently not using encryption software for your hard disk, emails or file archives, you should pick an encryption software here.</strong>
-</div>
+  <h1 id="encrypt" class="anchor"><a href="#encrypt"><i class="fas fa-link anchor-icon"></i></a> 档案加密系统</h1>
+  <div class="alert alert-warning" role="alert">
+    <strong>如果你尚未对使用中的硬碟、电子邮件或档案库予以加密，你应该赶快从这挑选一个加密软体。</strong>
+  </div>
+  <div class="row mb-2">
 
-<div class="row mb-2">
+    {% include card.html color='success'
+    title='VeraCrypt - 磁碟加密'
+    image='assets/img/tools/VeraCrypt.png'
+    url='https://veracrypt.fr/'
+    footer='支援作业系统： Windows, macOS, Linux.'
+    description='VeraCrypt 可取得程式码的免费软体工具，用来进行快速加密。它可以为一个档案建立一个虚拟的加密磁碟、加密磁区或是在开机前授权设定整个设备的硬碟都予以加密。 VeraCrypt 源自目前已无进展的 TrueCrypt 专案。它最初的发布是 2013 年 6 月 23日。据开发者表示，原本 TrueCrypt 程式码在审查后发现的问题已经解决，大幅地改善了安全性。'
+    %}
 
-  {% include card.html color="success"
-  title="VeraCrypt - Disk Encryption"
-  image="assets/img/tools/VeraCrypt.png"
-  url="https://veracrypt.fr/"
-  footer="OS: Windows, macOS, Linux."
-  description="VeraCrypt is a source-available freeware utility used for on-the-fly encryption. It can create a virtual encrypted disk within a file or encrypt a partition
-  or the entire storage device with pre-boot authentication. VeraCrypt is a fork of the discontinued TrueCrypt project. It was initially released on June 22, 2013. According to its developers, security improvements have been implemented and issues
-  raised by the initial TrueCrypt code audit have been addressed."
-  %}
+    {% include card.html color="primary"
+    title="GNU Privacy Guard -  电邮加密"
+    image="assets/img/tools/GnuPG.png"
+    url="https://gpgtools.org/"
+    footer="支援作业系统： Windows, macOS, Linux, Android, BSD."
+    description="GnuPG 是采 GPL 授权，替代 PGP 密码学软体套件。GnuPG 可兼容 RFC 4880, 它是一个目前 IETF OpenPGP 标准轨道规格。目前 PGP (以及Veridis' Filecrypt)的版本可以和 GnuPG 以及其它 OpenPGP 兼容系统互交操作。GnuPG 是自由软体基金会GNU 软体专案中的一部份，曾接受德国政府的经费赞助。<a href=\"https://gpgtools.org/\">GPGTools for macOS</a>."
+    %}
 
-  {% include card.html color="primary"
-  title="GNU Privacy Guard - Email Encryption"
-  image="assets/img/tools/GnuPG.png"
-  url="https://gpgtools.org/"
-  footer="OS: Windows, macOS, Linux, Android, BSD."
-  description="GnuPG is a GPL Licensed alternative to the PGP suite of cryptographic software. GnuPG is compliant with RFC 4880, which is the current IETF standards track specification
-  of OpenPGP. Current versions of PGP (and Veridis' Filecrypt) are interoperable with GnuPG and other OpenPGP-compliant systems. GnuPG is a part of the Free Software Foundation's GNU software project, and has received major funding from the German
-  government. <a href=\"https://gpgtools.org/\">GPGTools for macOS</a>."
-  %}
+    {% include card.html color='warning'
+    title='PeaZip - 档案库加密'
+    image='assets/img/tools/PeaZip.png'
+    url='http://www.peazip.org/'
+    footer='支援作业系统： Windows, Linux, BSD.'
+    description='PeaZip 是由 Giorgio Tani 所开发的一套免费开源的档案管理与档案库软体。它支援原生的 PEA 档案库格式(特色为压缩、多组磁区分割、弹性化节授权加密和一致的检验格式)以及其它的主流格式。其特别关注在开放格式，目前有支援 181 档案延伸格式 (5.5.1版本).</p>
+    <p><strong>macOS 替代选项：</strong> <a href=\"https://www.keka.io/\">Keka</a> 是一个免费的档归建软体。'
+    %}
+  </div>
 
-  {% include card.html color="warning"
-  title="PeaZip - File Archive Encryption"
-  image="assets/img/tools/PeaZip.png"
-  url="http://www.peazip.org/"
-  footer="OS: Windows, Linux, BSD."
-  description="PeaZip is a free and open-source file manager and file archiver made by Giorgio Tani. It supports its native PEA archive format (featuring compression, multi volume
-  split and flexible authenticated encryption and integrity check schemes) and other mainstream formats, with special focus on handling open formats. It supports 181 file extensions (as of version 5.5.1).</p>
-  <p><strong>macOS alternative:</strong> <a href=\"https://www.keka.io/\">Keka</a> is a free file archiver."
-  %}
-
-</div>
-
-<h3>Worth Mentioning</h3>
-
-<ul>
-  <li><a href="https://cryptomator.org/">Cryptomator</a> - Free client-side AES encryption for your cloud files. Open source software: No backdoors, no registration.</li>
-  <li><a href="https://minilock.io/">miniLock</a> - Browser plugin for Google Chrome / Chromium to encrypt files using a secret passphrase. Easy to use. From the developer of Cryptocat.</li>
-  <li><a href="https://www.aescrypt.com/">AES Crypt</a> - Using a powerful 256-bit encryption algorithm, AES Crypt can safely secure your most sensitive files. For Windows, macOS, Linux and Android.</li>
-  <li><a href="https://diskcryptor.net/">DiskCryptor</a> - A full disk and partition encryption system for Windows including the ability to encrypt the partition and disk on which the OS is installed.</li>
-  <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - A full disk encryption system for Linux using dm-crypt as the disk encryption backend. Included by default in Ubuntu. Available for Windows and Linux.
-</ul>
+  <h3>值得一提</h3>
+  <ul>
+    <li><a href="https://cryptomator.org/">Cryptomator</a> - 免费客户端的云端档案 AES 加密工具。其为开源软体，没有后门也无须注册。</li>
+    <li><a href="https://minilock.io/">miniLock</a> - Google Chrome / Chromium 浏览器的外挂，可用一组密码来加密档案，其开发者来自 Cryptocat。</li>
+    <li><a href="https://www.aescrypt.com/">AES Crypt</a> - 使用强力 256-位元的加密演算法，AES Crypt 可以安全地保护最敏感的重要资料档案，可使用在Windows, macOS, Linux 与 Android 平台上。</li>
+    <li><a href="https://diskcryptor.net/">DiskCryptor</a> - 可为 Windows 系统作整颗硬碟或分割磁区的加密系统，包括加密某个分割磁区或是作业系统所安装的硬碟。</li>
+    <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - 使用 dm-crypt 为磁碟加密骨干，可为 Linux 全磁区加密系统。Ubuntu 作业环境提供其为默认设定，也有 Windows 与其它的 Linux 版本可用。
+  </ul>
