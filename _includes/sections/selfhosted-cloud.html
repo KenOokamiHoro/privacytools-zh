@@ -1,33 +1,42 @@
+<h1 id="mycloud" class="anchor"><a href="#mycloud"><i class="fas fa-link anchor-icon"></i></a> 自行架設的雲端伺服器軟體</h1>
 
-  <h1 id="mycloud" class="anchor"><a href="#mycloud"><i class="fas fa-link anchor-icon"></i></a> 自行架设的云端伺服器软体</h1>
-  <div class="alert alert-warning" role="alert">
-    <strong>如果你目前使用的是 Dropbox, Google Drive, Microsoft OneDrive 或 Apple iCloud 等云端储存服务，不妨从考虑自行架设自家的云端系统。</strong>
-  </div>
-  <div class="row mb-2">
+<div class="alert alert-warning" role="alert">
+  <strong>如果您目前使用 Dropbox, Google Drive, Microsoft OneDrive 或 Apple iCloud 等雲端儲存服務，不妨從考慮自行架設自家的雲端伺服器。</strong>
+</div>
 
-    {% include card.html color='success'
-    title='Pydio'
-    image='assets/img/tools/Pydio.png'
-    url='https://pydio.com/'
-    footer='支援作业系统： Windows, macOS, Linux, iOS, Android.'
-    description='Pydio 是一款开源的软体，可以立即将任何伺服器（on premise, NAS, cloud IaaS or PaaS）转变成档案共享平台。它可作为 SaaS Boxes/Drives 的替代品，给予用户更多的掌控、安全，隐私保护和有利的成本控管。'
-    %}
+{% include cardv2.html
+title="Nextcloud"
+image="/assets/img/svg/3rd-party/nextcloud.svg"
+description="<strong>Nextcloud</strong> 為伺服器與用戶端的套件軟體，可用於在私有控制的伺服器上建立自用的檔案存取服務。Nextcloud 免費開源，支援使用者之間的點對點加密。其容量與頻寛大小視所選的<a href=\"/providers/hosting\">伺服器主機</a>情況而定。"
+website="https://nextcloud.com/"
+forum="https://forum.privacytools.io/t/discussion-nextcloud/287"
+windows="https://nextcloud.com/install/#install-clients"
+mac="https://nextcloud.com/install/#install-clients"
+linux="https://nextcloud.com/install/#install-clients"
+freebsd="https://www.freshports.org/www/nextcloud/"
+openbsd="http://openports.se/www/nextcloud"
+netbsd="http://pkgsrc.se/www/php-nextcloud"
+fdroid="https://f-droid.org/packages/com.nextcloud.client/"
+googleplay="https://play.google.com/store/apps/details?id=com.nextcloud.client"
+ios="https://itunes.apple.com/us/app/nextcloud/id1125420102?mt=8"
+github="https://github.com/nextcloud"
+%}
 
-    {% include card.html color='primary'
-    title='Tahoe-LAFS'
-    image='assets/img/tools/Tahoe-LAFS.png'
-    url='https://www.tahoe-lafs.org/'
-    footer='支援作业系统： Windows, macOS, Linux.'
-    description='Tahoe-LAFS 是一套免费开放，去中心化的云端储存系统。它让用户的资料散布在多台伺服器上，所以即便其中有些伺服器故障出问题或是受到攻击，整个档案储存仍然会继续正常运行，保障用户的安全和隐私。'
-    %}
+{% include cardv2.html
+title="Tahoe-LAFS"
+image="/assets/img/svg/3rd-party/tahoe-lafs.svg"
+image-dark="/assets/img/svg/3rd-party/tahoe-lafs-dark.svg"
+website="https://www.tahoe-lafs.org/"
+forum="https://forum.privacytools.io/t/discussion-tahoe-lafs/1662"
+description="Tahoe-LAFS Tahoe-LAFS 免費開源，去中心化的雲端儲存系統。使用者的資料散佈在多台伺服器上，所以即便其中某個伺服器故障出問題或是受到攻擊，整個檔案儲存仍然會繼續正常運行，保障使用者的安全和隱私。"
+windows="https://github.com/tahoe-lafs/tahoe-lafs#via-pip"
+mac="https://github.com/tahoe-lafs/tahoe-lafs#via-pip"
+linux="https://github.com/tahoe-lafs/tahoe-lafs#using-os-packages"
+netbsd="http://pkgsrc.se/filesystems/tahoe-lafs"
+git="https://www.tahoe-lafs.org/trac/tahoe-lafs/browser"
+%}
 
-    {% include card.html color='warning'
-    title='Nextcloud'
-    image='assets/img/provider/Nextcloud.png'
-    url='https://nextcloud.com/'
-    footer='Client OS: Windows, macOS, Linux, BSD, Unix, iOS, Android, Fire OS. Server: Linux.'
-    description='和 Dropbox 有相同的功能，但最大的差异在Nextcloud 是一套免费而开源的软体，它可让任何人自行架设与操作而不必如私用伺服器那般地收取费用，也没有空间容量或连接客户端数量的限制。'
-    %}
-
-  </div>
-
+<h3>值得一提</h3>
+<ul>
+  <li><a href="https://github.com/xwiki-labs/cryptpad/">CryptPad</a> - 免費開源且具端對端加密功能的即時線上協同筆記，可分享資料夾、媒體及文件。</li>
+</ul>

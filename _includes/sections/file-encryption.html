@@ -1,41 +1,61 @@
+<h1 id="encrypt" class="anchor"><a href="#encrypt"><i class="fas fa-link anchor-icon"></i></a> 檔案加密軟體</h1>
 
-  <h1 id="encrypt" class="anchor"><a href="#encrypt"><i class="fas fa-link anchor-icon"></i></a> 档案加密系统</h1>
-  <div class="alert alert-warning" role="alert">
-    <strong>如果你尚未对使用中的硬碟、电子邮件或档案库予以加密，你应该赶快从这挑选一个加密软体。</strong>
-  </div>
-  <div class="row mb-2">
+<div class="alert alert-warning" role="alert">
+  <strong>如果你尚未對常用的硬碟、電子郵件或檔案庫予以加密，請趕快從這挑選一個加密軟體。</strong>
+</div>
 
-    {% include card.html color='success'
-    title='VeraCrypt - 磁碟加密'
-    image='assets/img/tools/VeraCrypt.png'
-    url='https://veracrypt.fr/'
-    footer='支援作业系统： Windows, macOS, Linux.'
-    description='VeraCrypt 可取得程式码的免费软体工具，用来进行快速加密。它可以为一个档案建立一个虚拟的加密磁碟、加密磁区或是在开机前授权设定整个设备的硬碟都予以加密。 VeraCrypt 源自目前已无进展的 TrueCrypt 专案。它最初的发布是 2013 年 6 月 23日。据开发者表示，原本 TrueCrypt 程式码在审查后发现的问题已经解决，大幅地改善了安全性。'
-    %}
+{%
+  include cardv2.html
+  title="VeraCrypt - Disk Encryption"
+  image="/assets/img/svg/3rd-party/veracrypt.svg"
+  image-dark="/assets/img/svg/3rd-party/veracrypt-dark.svg"
+  description="<strong>VeraCrypt</strong>開放程式碼的免費軟體工具，用來快速加密。它為檔案建立一個虛擬的加密磁碟、加密磁區或是在開機前授權設定整個設備的硬碟都予以加密。 VeraCrypt 源自目前已無進展的 TrueCrypt 專案，初次發佈日是 2013 年 6 月 23日。據開發者表示，原本 TrueCrypt 程式碼在審查後發現的問題已經解決，大幅地改善了安全性。"
+  website="https://veracrypt.fr/"
+  forum="https://forum.privacytools.io/t/discussion-veracrypt-file-encryption/1532"
+  git="https://www.veracrypt.fr/code/"
+  windows="https://www.veracrypt.fr/en/Downloads.html"
+  linux="https://www.veracrypt.fr/en/Downloads.html"
+  mac="https://www.veracrypt.fr/en/Downloads.html"
+%}
 
-    {% include card.html color="primary"
-    title="GNU Privacy Guard -  电邮加密"
-    image="assets/img/tools/GnuPG.png"
-    url="https://gpgtools.org/"
-    footer="支援作业系统： Windows, macOS, Linux, Android, BSD."
-    description="GnuPG 是采 GPL 授权，替代 PGP 密码学软体套件。GnuPG 可兼容 RFC 4880, 它是一个目前 IETF OpenPGP 标准轨道规格。目前 PGP (以及Veridis' Filecrypt)的版本可以和 GnuPG 以及其它 OpenPGP 兼容系统互交操作。GnuPG 是自由软体基金会GNU 软体专案中的一部份，曾接受德国政府的经费赞助。<a href=\"https://gpgtools.org/\">GPGTools for macOS</a>."
-    %}
+{%
+  include cardv2.html
+  title="GNU Privacy Guard - Email Encryption"
+  image="/assets/img/svg/3rd-party/gnupg.svg"
+  description="<strong>GnuPG</strong> 採 GPL 授權，替代 PGP 密碼學軟體套件。GnuPG 可兼容 RFC 4880，它是一個目前 IETF OpenPGP 標準追蹤規格。目前 PGP（以及 Veridis' Filecrypt）的版本可以和 GnuPG 以及其它 OpenPGP 兼容系統互相操作。GnuPG 是自由軟體基金會 GNU 軟體專案中的一部份，曾接受德國政府的經費贊助。"
+  website="https://gnupg.org/"
+  forum="https://forum.privacytools.io/t/discussion-gnupg-file-encryption/1533"
+  git="https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git"
+  windows="https://gpg4win.org/download.html"
+  linux="https://gnupg.org/download/index.html#binary"
+  freebsd="https://www.freshports.org/security/gnupg/"
+  openbsd="http://openports.se/security/gnupg"
+  netbsd="http://pkgsrc.se/security/gnupg"
+  mac="https://gpgtools.org/"
+  fdroid="https://f-droid.org/app/org.sufficientlysecure.keychain"
+  googleplay="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"
+%}
 
-    {% include card.html color='warning'
-    title='PeaZip - 档案库加密'
-    image='assets/img/tools/PeaZip.png'
-    url='http://www.peazip.org/'
-    footer='支援作业系统： Windows, Linux, BSD.'
-    description='PeaZip 是由 Giorgio Tani 所开发的一套免费开源的档案管理与档案库软体。它支援原生的 PEA 档案库格式(特色为压缩、多组磁区分割、弹性化节授权加密和一致的检验格式)以及其它的主流格式。其特别关注在开放格式，目前有支援 181 档案延伸格式 (5.5.1版本).</p>
-    <p><strong>macOS 替代选项：</strong> <a href=\"https://www.keka.io/\">Keka</a> 是一个免费的档归建软体。'
-    %}
-  </div>
+{%
+  include cardv2.html
+  title="PeaZip - File Archive Encryption"
+  image="/assets/img/svg/3rd-party/peazip.svg"
+  description="<strong>PeaZip</strong> 由 Giorgio Tani 所開發的一套免費開源的檔案管理與檔案庫軟體。它支援原生的 PEA 檔案庫格式（特色為壓縮、多組磁區分割、彈性化節授權加密和一致的檢驗格式）以及其它的主流格式。其特別關注在開放格式的處理，目前支援 180 多種 檔案延伸格式。"
+  website="http://www.peazip.org"
+  forum="https://forum.privacytools.io/t/discussion-peazip-file-encryption/1534"
+  source="https://osdn.net/projects/peazip"
+  windows="https://www.peazip.org/peazip-64bit.html"
+  linux="https://www.peazip.org/peazip-linux.html"
+  freebsd="https://www.freshports.org/archivers/peazip/"
+  openbsd="https://www.peazip.org/peazip-bsd.html"
+  netbsd="https://www.peazip.org/peazip-bsd.html"
+%}
 
-  <h3>值得一提</h3>
-  <ul>
-    <li><a href="https://cryptomator.org/">Cryptomator</a> - 免费客户端的云端档案 AES 加密工具。其为开源软体，没有后门也无须注册。</li>
-    <li><a href="https://minilock.io/">miniLock</a> - Google Chrome / Chromium 浏览器的外挂，可用一组密码来加密档案，其开发者来自 Cryptocat。</li>
-    <li><a href="https://www.aescrypt.com/">AES Crypt</a> - 使用强力 256-位元的加密演算法，AES Crypt 可以安全地保护最敏感的重要资料档案，可使用在Windows, macOS, Linux 与 Android 平台上。</li>
-    <li><a href="https://diskcryptor.net/">DiskCryptor</a> - 可为 Windows 系统作整颗硬碟或分割磁区的加密系统，包括加密某个分割磁区或是作业系统所安装的硬碟。</li>
-    <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - 使用 dm-crypt 为磁碟加密骨干，可为 Linux 全磁区加密系统。Ubuntu 作业环境提供其为默认设定，也有 Windows 与其它的 Linux 版本可用。
-  </ul>
+<h3>Worth Mentioning</h3>
+
+<ul>
+  <li><a href="https://cryptomator.org/">Cryptomator</a> - 免費客戶端的雲端檔案 AES 加密工具。其為開源軟體，沒有後門也無須註冊。<span class="badge badge-warning" data-toggle="tooltip" title="Cryptomator's mobile apps are not open-source."><a href="https://github.com/cryptomator/cryptomator-android/issues/1#issuecomment-257979375"><i class="fas fa-exclamation-triangle"></i></a></span></li>
+  <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - 使用 dm-crypt 為磁碟加密骨幹，可為 Linux 全磁區加密系統。Ubuntu 作業環境提供其為默認設定，也有 Windows 與其它的 Linux 版本可用。</li>
+  <li><a href="https://hat.sh/">Hat.sh</a> - 跨平台不用伺服器的 JavaScript 網頁應用，在瀏覽器上利用 AES-256-GCM 加密演算法，提供安全的檔案加密。可下載離線使用。</li>
+  <li><a href="https://www.keka.io/">Keka</a> - 只能用於 macOS，開源的檔案封存器且具加密功能。</li>
+</ul>

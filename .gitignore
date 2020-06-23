@@ -3,5 +3,3 @@ Gemfile
 Gemfile.lock
 .sass-cache/
 .DS_Store
-vendor/
-vender/

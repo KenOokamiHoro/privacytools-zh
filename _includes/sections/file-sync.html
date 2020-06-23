@@ -1,24 +1,41 @@
-<h1 id="sync" class="anchor"><a href="#sync"><i class="fas fa-link anchor-icon"></i></a>安全的档案同步软体</h1>
-<div class="row mb-2">
+<h1 id="sync" class="anchor">
+  <a href="#sync">
+    <i class="fas fa-link anchor-icon"></i>
+  </a>
+  檔案同步
+</h1>
 
-  {% include card.html color='success'
-  title='SparkleShare'
-  image='assets/img/tools/SparkleShare.png'
-  url='https://sparkleshare.org/'
-  footer='支援作业系统： Windows, macOS, Linux.'
-  description='SparkleShare 在自己的电脑上建立一个特别的资料夹，用户可把远端主机的资料夹（或专案）存放到这个资料夹底下。这些专案会保持自动与主机以及其它的加入的资料夹同群一起更新档案新增、移除或编辑等最新状态。'
-  %}    
-  {% include card.html color='primary'
-  title='Syncthing'
-  image='assets/img/tools/Syncthing.png'
-  url='https://syncthing.net/'
-  footer='支援作业系统： Windows, macOS, Linux.'
-  description='Syncthing 用来替换商用同步软体与云端服务，它开放、值得信任且去中心化。你的资料就是你的资料，当事人有权选择它要存放在哪里，是否要与其它第三者分享以及资料如何在网路上被传递。'
-  %} 
-</div>
+{%
+  include cardv2.html
+  title="Syncthing"
+  image="/assets/img/svg/3rd-party/syncthing.svg"
+  description="<strong>Syncthing</strong> 可替代商用同步軟體與雲端服務，它開放、值得信任且去中心化。您的資料就是您的，當事人有權選擇它要存放在哪裏，是否要與其它第三者分享以及資料如何在網路上被傳遞。"
+  website="https://syncthing.net/"
+  forum="https://forum.privacytools.io/t/discussion-syncthing/1627/2"
+  github="https://github.com/syncthing?type=source"
+  windows="https://github.com/syncthing/syncthing-gtk/releases/latest"
+  linux="https://github.com/syncthing/syncthing-gtk/releases/latest"
+  mac="https://github.com/syncthing/syncthing-macos/releases/latest"
+  fdroid="https://f-droid.org/packages/com.github.catfriend1.syncthingandroid/"
+  googleplay="https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid"
+%}
+
+{%
+  include cardv2.html
+  title="SparkleShare"
+  image="/assets/img/svg/3rd-party/sparkleshare.svg"
+  description="<strong>SparkleShare</strong>在電腦上建立一個特別資料夾，用戶可把遠端主機的資料夾（或專案）存放到本地電腦資料夾底下。這些專案會保持自動與主機以及其它的加入的資料夾同群一起更新檔案新增、移除或編輯等最新狀態。"
+  website="https://sparkleshare.org/"
+  forum="https://forum.privacytools.io/t/discussion-sparkleshare/1626"
+  github="https://github.com/hbons/SparkleShare"
+  linux="https://www.sparkleshare.org/"
+  mac="https://github.com/hbons/SparkleShare/releases/"
+%}
+
 <h3>值得一提</h3>
+
 <ul>
   <li>
-    <a href="https://git-annex.branchable.com/">git-annex</a> - 用 git 来管理档案，但不用 git 来检察档案内容。这听起来似乎有点矛盾，但当在处理大型档案上这方法就很好用，尤其是考虑到记忆体大小、时间和硬碟空间。 
+    <a href="https://git-annex.branchable.com/">git-annex</a> - 用 git 來管理檔案，但不用 git 來檢查檔案內容。這聽起來似乎有點矛盾，但當在處理大型檔案上這方法就很好用，尤其是考慮到記憶體大小、時間和硬碟空間。
   </li>
 </ul>

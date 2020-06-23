@@ -1,31 +1,40 @@
-<h1 id="firmware" class="anchor"><a href="#firmware"><i class="fas fa-link anchor-icon"></i></a> 开源的路由器轫体</h1>
-<div class="row mb-2">
+<h1 id="firmware" class="anchor"><a href="#firmware"><i class="fas fa-link anchor-icon"></i></a>開源的路由器軔體</h1>
 
-  {% include card.html color='success'
-  title='OpenWrt'
-  image='assets/img/tools/OpenWrt.png'
-  url='https://openwrt.org/'
-  description='OpenWrt 是一套利用 Linux 核心的作业系统(特别是一种「嵌入式」作业系统)，主要用于一些路由网路流量的设备上。它主要的构成是由 Linux 核心，util-linux、uClibc 和 BusyBox。这些元素都已经过尺寸的最佳调适，以符合家用路由器这类的小型设备与其有限的记忆体容量与储存空间。'
-  %}
+{% include cardv2.html
+title="OpenWrt"
+image="/assets/img/svg/3rd-party/openwrt.svg"
+image-dark="/assets/img/svg/3rd-party/openwrt-dark.svg"
+description="OpenWrt 為利用 Linux 核心開發的作業系統（或稱嵌入式作業系統），主要用於路由網路流量的設備上。主要的構成是 Linux 核心，util-linux、uClibc 和 BusyBox。這些元件都已經過尺寸最佳化，以符合家用路由器等小型設備，有限的記憶體容量與儲存空間。"
+badges="info:Linux"
+labels="warning:contrib:This software may depend on or recommend non-free software."
+website="https://openwrt.org/"
+git="https://git.openwrt.org/"
+%}
 
-  {% include card.html color='primary'
-  title='pfSense'
-  image='assets/img/tools/pfSense.png'
-  url='https://pfsense.org/'
-  description='pfSense 是利用 FreeBSD 所开发的一套用于防火墙/路由器上的开源轫体。它安装在电脑上可变成网路上防火墙/路由器功能，并以其可靠与不输给商用软体的强大功能而著称。pfSense 通常布署在周边的防火墙、路由器、无线接取器、DHCP 伺服器、DNS 伺服器以及 VPN 末端点。'
-  %}
+{% include cardv2.html
+title="pfSense"
+image="/assets/img/svg/3rd-party/pfsense.svg"
+image-dark="/assets/img/svg/3rd-party/pfsense-dark.svg"
+description="pfSense 是利用 FreeBSD 所開發在防火牆/路由器使用的開源軔體。若安裝在電腦上則可變成網路上防火牆/路由器功能，以其可靠與不輸給商用軟體的強大功能而著稱。pfSense 通常佈署在週邊的防火牆、路由器、無線存取器、DHCP 伺服器、DNS 伺服器以及 VPN 末端點。"
+badges="info:BSD"
+labels="warning:contrib:This software may depend on or recommend non-free software."
+website="https://www.pfsense.org/"
+github="https://github.com/pfsense/"
+%}
 
-  {% include card.html color='warning'
-  title='LibreCMC'
-  image='assets/img/tools/LibreCMC.png'
-  url='https://librecmc.org'
-  description='LibreCMC 是 GNU/Linux-libre 电脑版本，其资源需求小，例如像 Ben Nanonote, ath9k-based 无线路由器以及其它强调自由软体的硬体配件。本专案当前目标是依循 GNU 自由系统发布指南(GNU FSDG) 并确保符合自由软体基金会所设下的要求。'
-  %}
-
-</div>
+{% include cardv2.html
+title="LibreCMC"
+image="/assets/img/svg/3rd-party/librecmc.svg"
+image-dark="/assets/img/svg/3rd-party/librecmc-dark.svg"
+description="LibreCMC  GNU/Linux-libre 電腦版本授權，其資源需求小，例如像 Ben Nanonote, ath9k-based 無線路由器以及其它強調自由軟體的硬體配件。本專案當前目標是依循 GNU 自由系統發佈指南（GNU FSDG）並確保符合自由軟體基金會所設下的要求。"
+badges="info:GNU/Linux"
+website="https://librecmc.org"
+git="https://gogs.librecmc.org/libreCMC/libreCMC"
+%}
 
 <h3>值得一提</h3>
+
 <ul>
-  <li><a href="https://www.openbsd.org/">OpenBSD</a> - 此乃推动免费，多平台，类似像 4.4BSD-based UNIX 的作业系统开发专案。强调可移动性、标准化、正确性、主动安全与整合的密码学系统。</li>
-  <li><a href="https://dd-wrt.com/">DD-WRT</a> - 利用 Linux 为无线路由器与无线接取器所开发的轫体。它可和多种路由器和接取器模式相容。</li>
-</ul>  
+  <li><a href="https://www.openbsd.org/">OpenBSD</a> <span class="badge badge-info">BSD</span> -創造免費、多平台，類似像 4.4BSD-based UNIX 的作業系統開發專案。強調可攜帶性、標準化、正確性、主動安全與整合的密碼學系統。</li>
+  <li><a href="https://dd-wrt.com/">DD-WRT</a> <span class="badge badge-info">Linux</span> <span class="badge badge-warning" data-toggle="tooltip" title="This software may depend on or recommend non-free software.">contrib <i class="far fa-question-circle"></i></span> - 利用 Linux 為無線路由器與無線接取器所開發的軔體，可和多種路由器和接取器模式相容。A</li>
+</ul>

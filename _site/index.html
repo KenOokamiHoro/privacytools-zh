@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="privacy, anonymity, privacy tools, surveillance, encryption, NGO 推進器, TWNGO">
+  <meta name="description" content="您正被盯著。私人和國家支持的組織正在監控與記錄您的線上活動。這裏提供一些知識與工具以保護個人隱私抵抗全球大規模監控。">
+  <link rel="canonical" href="https://privacytools.twngo.xyz/">
+
+  <!-- title -->
+  
+  <title>PrivacyTools 網路隱私工具- 加密對抗全球大規模監控</title>
+  <meta property="og:title" content="PrivacyTools 網路隱私工具- 加密對抗全球大規模監控" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:4000" />
+  <meta property="og:image" content="https://privacytools.twngo.xyz/assets/img/svg/layout/brand/square-transparent.svg" />
+  <meta property="og:description" content="您正被盯著。私人和國家支持的組織正在監控與記錄您的線上活動。這裏提供一些知識與工具以保護個人隱私抵抗全球大規模監控。"/>
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="PrivacyTools" />
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PrivacyTools",
+    "description": "您正被盯著。私人和國家支持的組織正在監控與記錄您的線上活動。這裏提供一些知識與工具以保護個人隱私抵抗全球大規模監控。",
+    "alternateName": [
+      "Privacy Tools",
+      "網路隱私工具"
+    ],
+    "url": "https://privacytools.twngo.xyz",
+    "logo": "https://privacytools.twngo.xyz/assets/img/svg/layout/brand/square-transparent.svg",
+    "sameAs": [
+      "https://blog.privacytools.io",
+      "https://twitter.com/privacytoolsIO",
+      "https://social.privacytools.io/@privacytools",
+      "https://www.youtube.com/channel/UCen3taxHtzByXV8Da73B1Vg",
+      "https://github.com/privacytoolsIO"
+    ]
+  }
+  </script>
+  
+
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/png/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/png/favicons/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/png/favicons/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/assets/img/png/favicons/site.webmanifest?v=2">
+  <link rel="mask-icon" href="/assets/img/png/favicons/safari-pinned-tab.svg?v=2" color="#3498db">
+  <link rel="shortcut icon" href="/assets/img/png/favicons/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#3498db">
+  <meta name="msapplication-config" content="/assets/img/png/favicons/browserconfig.xml?v=2">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- CSS stylesheets -->
+  <link href="/assets/css/style.css?v=9" rel="stylesheet">
+  <link id="dark-css" href="/assets/css/dark.css?v=4" rel="stylesheet" media="(prefers-color-scheme: dark)">
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+  <script src="/assets/js/applytheme.js?v=1"></script>
+  <header>
+  <nav class="fixed-top bg-dark">
+  <div id="navbar" class="d-flex flex-wrap justify-content-between align-items-center">
+    <div class="w-50">
+      <a id="nav-home-mobile" class="nav-anchor" href="/index.html">
+        <img src="/assets/img/svg/layout/brand/horizontal-zh.svg" width="150px" />
+      </a>
+    </div>
+    <input type="checkbox" id="nav-toggle" checked />
+    <label for="nav-toggle" id="nav-toggle-label" class="fas fa-bars fa-lg"></label>
+
+    <div class="menu w-100">
+      <div id="nav-left" class="position-relative flex-col">
+        <a class="nav-anchor" href="/index.html">
+          <span id="nav-home" class="fas fa-home fa-fw"></span>
+        </a>
+
+        <!-- Provider -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              供應商
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/providers/#ukusa"><span class="fas fa-user-secret fa-fw"></span> 避兔以美國與英國為基地的網路服務</a>
+            <a class="dropdown-item" href="/providers/cloud-storage/"><span class="fas fa-cloud fa-fw"></span> 雲端儲存服務</a>
+            <a class="dropdown-item" href="/providers/dns/"><span class="fa fa-tasks fa-fw"></span>域名系統（DNS）</a>
+            <a class="dropdown-item" href="/providers/email/"><span class="fas fa-mail-bulk fa-fw"></span> 電子郵件</a>
+            <a class="dropdown-item" href="/providers/hosting/"><span class="fas fa-database fa-fw"></span> 架站服務商</a>
+            <a class="dropdown-item" href="/providers/paste/"><span class="fas fa-paste fa-fw"></span> 文字儲存服務</a>
+            <a class="dropdown-item" href="/providers/search-engines/"><span class="fas fa-search fa-fw"></span> 搜尋引擎</a>
+            <a class="dropdown-item" href="/providers/social-networks/"><span class="fas fa-expand-arrows-alt fa-fw"></span> 社交網絡</a>
+            <a class="dropdown-item" href="/providers/social-news-aggregator/"><span class="far fa-newspaper fa-fw"></span> 社交訊息聚合</a>
+            <a class="dropdown-item" href="/providers/vpn/"><span class="far fa-eye-slash fa-fw"></span> 虛擬私人網路（VPN）</a>
+          </span>
+        </details>
+
+        <!-- Browser -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              瀏覽器
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/browsers/#browser"><span class="fas fa-check fa-fw"></span> 推薦</a>
+            <a class="dropdown-item" href="/browsers/#fingerprint"><span class="fas fa-fingerprint fa-fw"></span> 指紋資訊</a>
+            <a class="dropdown-item" href="/browsers/#webrtc"><span class="far fa-eye fa-fw"></span> WebRTC IP 漏洞</a>
+            <a class="dropdown-item" href="/browsers/#addons"><span class="far fa-list-alt fa-fw"></span> 瀏覽器附加元件</a>
+            <a class="dropdown-item" href="/browsers/#about_config"><span class="fas fa-wrench fa-fw"></span> 火狐隱私調校技巧</a>
+          </span>
+        </details>
+
+        <!-- Software -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              應用軟體
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/software/calendar-contacts/"><span class="fas fa-calendar fa-fw"></span> 日曆/聯絡人同步工具</a>
+            <a class="dropdown-item" href="/software/notebooks/"><span class="far fa-sticky-note fa-fw"></span> 數位筆記簿</a>
+            <a class="dropdown-item" href="/software/email/"><span class="fas fa-envelope fa-fw"></span> 電子郵件客戶端軟體</a>
+            <a class="dropdown-item" href="/software/encryption-tools/"><span class="fas fa-lock fa-fw"></span> 檔案加密</a>
+            <a class="dropdown-item" href="/software/file-sharing/"><span class="fas fa-file-export fa-fw"></span> 檔案分享</a>
+            <a class="dropdown-item" href="/software/file-sync/"><span class="fas fa-copy fa-fw"></span> 檔案同步</a>
+            <a class="dropdown-item" href="/software/productivity/#metadata-removal-tools"><span class="far fa-eye-slash fa-fw"></span> 移除元數據工具</a>
+            <a class="dropdown-item" href="/software/passwords/"><span class="fas fa-user-lock fa-fw"></span> 密碼管理</a>
+            <a class="dropdown-item" href="/software/productivity/"><span class="fas fa-briefcase fa-fw"></span> 生產力工具</a>
+            <a class="dropdown-item" href="/software/real-time-communication/"><span class="fas fa-comments fa-fw"></span> 即時通訊</a>
+            <a class="dropdown-item" href="/software/networks/"><span class="fas fa-user-secret fa-fw"></span> 自足網路</a>
+            <a class="dropdown-item" href="/software/cloud/"><span class="fas fa-hdd fa-fw"></span> 自搭的雲端伺服器</a>
+          </span>
+        </details>
+
+        <!-- OS -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              作業系統
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/operating-systems/#os"><span class="fas fa-th-large fa-fw"></span> 個人電腦作業系統</a>
+            <a class="dropdown-item" href="/operating-systems/#live_os"><span class="fas fa-compact-disc fa-fw"></span> 可開機作業系統</a>
+            <a class="dropdown-item" href="/operating-systems/#mobile_os"><span class="fas fa-mobile-alt fa-fw"></span> 手機作業系統</a>
+            <a class="dropdown-item" href="/operating-systems/#aaddons"><span class="fas fa-th fa-fw"></span> Android 隱私附加元件</a>
+            <a class="dropdown-item" href="/operating-systems/#firmware"><span class="fas fa-signal fa-fw"></span> 路由器軔體</a>
+            <a class="dropdown-item" href="/operating-systems/#win10"><span class="far fa-thumbs-down fa-fw"></span> 不要使用 Windows 10</a>
+          </span>
+        </details>
+
+        <a class="nav-anchor" href="/index.html#participate">參與</a>
+      </div>
+
+      <!-- Language -->
+      <div id="nav-right">
+
+        <a href="/services/" class="nav-anchor">
+          其它服務
+        </a>
+        <a href="https://blog.privacytools.io/" class="nav-anchor">
+          部落格
+        </a>
+        <a href="/sponsors/" class="nav-anchor">
+          贊助者
+        </a>
+        <a href="/about/" class="nav-anchor">
+          關於本站
+        </a>
+        <span id="nav-switch-theme" class="nav-anchor">
+          <span class="nav-theme-icon fas fa-fw" aria-hidden="true" title="Theme"></span>
+          <span class="sr-only">Toggle Theme</span>
+        </span>
+
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              <span class="fas fa-language text-danger fa-fw" aria-hidden="true" title="Language"></span>
+              <span class="sr-only">其它語言版本</span>
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a href="https://www.privacytools.io/" class="dropdown-item">English</a>
+            <a href="https://victorhck.gitlab.io/privacytools-es/" rel="nofollow noopener" class="dropdown-item">Español</a>
+            <a href="https://pl.privacytools.io/" rel="nofollow noopener" class="dropdown-item">Polski</a>
+            <a href="https://www.privacidade.digital/" rel="nofollow noopener" class="dropdown-item">Português</a>
+            <a href="https://privacytools.it-sec.rocks/" rel="nofollow noopener" class="dropdown-item">Deutsch</a>
+            <a href="https://privacytools-it.github.io/" rel="nofollow noopener" class="dropdown-item">Italiano</a>
+            <a href="https://privacytools.ru" rel="nofollow noopener" class="dropdown-item">Русский</a>
+            <a href="https://privacytools.dreads-unlock.fr" rel="nofollow noopener" class="dropdown-item">Français</a>
+　　　　　　  <a href="https://cybermagicsec.github.io/privacytools-zh/" rel="nofollow noopener" class="dropdown-item">簡體中文</a>　　　　　
+          </span>
+        </details>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top" class="py-4"></div>
+  </header>
+  <div class="container" role="main">
+  <main>
+  <script src="/assets/js/redirects.js"></script>
+<div class="alert alert-success" role="alert">
+  <strong>好消息！</strong> 若您在美國 <a href="https://opencollective.com/privacytoolsio" class="alert-link">金錢捐贈</a> PrivacyTools，現在已可享有當地稅額扣抵優惠！<a href="https://blog.privacytools.io/privacytools-io-joins-the-open-collective-foundation" class="alert-link">了解詳情...</a>
+</div>
+
+<div class="jumbotron p-5">
+  <h1 class="display-4">
+    <a href="https://privacytools.twngo.xyz" title="PrivacyTools">
+      <img class="img-fluid d-none d-sm-block" src="/assets/img/svg/layout/brand/horizontal-zh.svg" width="500px" alt="PrivacyTools">
+        <div class="text-center">
+        <img class="img-fluid d-sm-none" src="/assets/img/svg/layout/brand/vertical-zh.svg" width="300px" alt="PrivacyTools">
+      </div>
+    </a>
+  </h1>
+  <p class="lead">您正被盯著。私人和國家支持的組織隨時監控與記錄您的線上活動。 PrivacyTools 提供一些知識與工具，保護個人隱私抵抗全球大規模監控。</p>
+</div>
+
+<form method="POST" action="https://search.privacytools.io/" id="search_form" role="search">
+<div class="input-group col-12 col-md-8 offset-md-2">
+<input type="search" name="q" class="form-control input-lg" id="q" placeholder="試試 PrivacyTools 尊重隱私的安全搜尋引擎" autocomplete="off" value="">
+<span class="input-group-btn">
+<button type="submit" class="btn btn-primary input-lg"><span class="hide_if_nojs"><i class="fas fa-search"></i> </span><span class="hidden active_if_nojs">開始搜尋</span></button>
+</span>
+</div>
+</form>
+
+<h1 id="os" class="anchor">網路隱私工具</h1>
+
+<p><a href="/classic/"><i class="fas fa-info-circle"></i> 偏好傳統式的網站？可檢視單一頁面格式。</a></p>
+
+<div class="row">
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-success">
+        
+        <div class="card-header text-white bg-success">
+        
+        <h3 class="h5">供應商</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="fas fa-server panel-icon text-dark"></i>
+              
+              發現更多的隱私優先網路服務，包括電子郵件、VPN 營運商、 DNS 域名代管服務等等。
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-success mb-1" href="/providers/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-primary">
+        
+        <div class="card-header text-white bg-primary">
+        
+        <h3 class="h5">網頁瀏覽器</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="far fa-compass panel-icon text-dark"></i>
+              
+              找到適合您隱私要求的瀏覽器，並了解如何強化其阻止追踪和數據洩漏的保護措施。
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-primary mb-1" href="/browsers/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-warning">
+        
+        <div class="card-header text-dark bg-warning">
+        
+        <h3 class="h5">軟體</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="far fa-window-restore panel-icon text-dark"></i>
+              
+              認識更多開源軟體，以確保使用者隱私與數位資料安全。
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-warning mb-1" href="/software/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-info">
+        
+        <div class="card-header text-white bg-info">
+        
+        <h3 class="h5">作業系統</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="fas fa-desktop panel-icon text-dark"></i>
+              
+              了解作業系統如何侵犯使用者的隱私，以及查看現有的簡便替代選項。
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-info mb-1" href="/operating-systems/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-secondary">
+        
+        <div class="card-header text-white bg-secondary">
+        
+        <h3 class="h5">PrivacyTools 服務</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="far fa-eye-slash panel-icon text-dark"></i>
+              
+              PrivacyTools 網路隱私工具團隊為您獻上各種尊重用戶隱私的免費網路服務，例如 Mastodon、搜尋引擎、寫作園地等等！
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-secondary mb-1" href="/services/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-danger">
+        
+        <div class="card-header text-white bg-danger">
+        
+        <h3 class="h5">捐助</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <i class="fas fa-donate panel-icon text-dark"></i>
+              
+              沒有讀者們慷慨解囊，本站無法正常營運。懇請珍惜隱私的朋友們考慮捐助本站。
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-danger mb-1" href="/donate/">
+                    
+                        想多了解
+                    
+                </a>
+                
+                
+
+                
+
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<h1 id="sponsors" class="anchor"><a href="#sponsors"><i class="fas fa-link anchor-icon"></i></a> 贊助者</h1>
+
+<div class="alert alert-success mb-5" role="alert">
+  <strong>New!</strong> 歡迎認同之品牌贊助網路隱私工具，支持本站宗旨打造一個免於大規監控網路隱私環境，一個網路自由的世界！ <a href="/sponsors/" class="alert-link">了解詳情...</a>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+      <a href="https://safing.io/" target="_blank" rel="noreferrer">
+        <img
+        src="/assets/img/svg/sponsors/safing.svg"
+        title="Safing Privacy Network - Launching on Kickstarter January 2nd, 2020"
+        alt="Safing Privacy Network - Safing.io Logo"
+        class="img-fluid" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="page-header">
+  <h1>隱私？我無不可告人之事</h1>
+</div>
+<blockquote class="blockquote">
+  <p><a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters" title="Why privacy matters - TED Talk"><img src="/assets/img/png/layout/glenn_greenwald.png" width="170px" class="img-fluid float-right ml-2" alt="Glenn Greenwald: Why privacy matters"></a> 過去十多個月來，每當我在全球各地討論這個議題的時候，總是有人會這樣對我說：「我並不擔心隱私被侵犯因為我沒什麼不可告人之處」我也對他們回應相同的答覆。我拿了一支筆，寫下自己的電子郵件，然後說：「這上面是我的電子郵件，我希望當你回到家之後，把你自己所有的電子郵件帳號和密碼都寄給我。不是只提供你工作上使用那個一本正經的電子郵件，而是全部的電子郵件。這樣我可以在線上用你的帳號來了解你的一舉一動，然後把我認為有趣的事物公開出來。不管怎樣，如果你不是個壞人，如果你沒做過壞事，你應該也沒什麼不可告人之處。」 <strong>然而從來沒人回應我這項提議。</strong></p>
+  <footer class="blockquote-footer">Glenn Greenwald in <cite title="Why privacy matters - TED Talk"><a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters">為何隱私重要 - TED 演講</a></cite></footer>
+</blockquote>
+
+<blockquote class="blockquote">
+  <p>在房子里安裝窗簾的主要是為了阻止人們看到屋內。我們不希望他們看到屋內事物是因為我們認同在房屋內所做的許多事情都是私人行為，不管是在餐桌旁吃晚餐，與孩子一起看電影，還是與伴侶進行親密或性行為。這些行為都不是非法之事，但是即使如此，我們仍然放上窗簾和百葉窗。 這清楚地表明了當我們的私人生活和外界有所牽扯時，我們顯然對隱私存有強烈的渴望。</p>
+   <footer class="blockquote-footer">Joshua in <cite title="The Crypto Paper"><a href="https://github.com/cryptoseb/CryptoPaper#let-me-explain-further">The Crypto Paper</a></cite></footer>
+</blockquote>
+
+<h4>其它資訊:</h4>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Nothing_to_hide_argument">Nothing to hide argument (Wikipedia)</a></li>
+  <li><a href="https://www.reddit.com/r/privacy/comments/3hynvp/how_do_you_counter_the_i_have_nothing_to_hide/">How do you counter the "I have nothing to hide?" argument? (reddit.com)</a></li>
+  <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=998565">'I've Got Nothing to Hide' and Other Misunderstandings of Privacy (Daniel J. Solove - San Diego Law Review)</a></li>
+</ul>
+
+<h1 id="quotes" class="anchor"><a href="#quotes"><i class="fas fa-link anchor-icon"></i></a> 各方隱私評論</h1>
+
+<blockquote class="blockquote">
+  <p>主張無事隱瞞故隱私權無關緊要者，其類點差不多就是主張因為我沒事想說，所以言論自由一點都不重要。</p>
+  <footer class="blockquote-footer">Edward Snowden on <cite title="Just days left to kill mass surveillance under Section 215 of the Patriot Act. We are Edward Snowden and the ACLU's Jameel Jaffer. AUA."><a href="https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2">Reddit</a></cite></footer>
+</blockquote>
+
+<blockquote class="blockquote">
+  <p>美國國家安全局建置了一套設施，其幾乎可以攔截任何通訊。這套設備的能力，大多數人類的通訊都會自動地被吸納進去而不是針對特定目標。如果我想要看你的電子郵件內容或是你老婆的電話，我只須要利用這套設備進行攔截，就可以取得你的電子郵件、密碼、電信通聯記錄、信用卡資料等等。我不想活在一個做這種勾當的社會裏，我不想要活在一個任何所做的事所說的話都被記錄下來的世界。這不是我願意支持或是生活的地方。 </p>
+  <footer class="blockquote-footer">Edward Snowden in <cite title="Edward Snowden, NSA files source: 'If they want to get you, in time they will"><a href="https://www.theguardian.com/world/2013/jun/09/nsa-whistleblower-edward-snowden-why">The Guardian</a></cite></footer>
+</blockquote>
+
+<blockquote class="blockquote">
+  <p>每個人都需要有地方可以去探索而不依靠別人施加的眼光，只有在一個不必被放大檢視的地方我們才可以真正地測試出自己的極限。真正的私領域才能允許不同聲音、創造力和個人試探式的謊言。</p>
+  <footer class="blockquote-footer">Glenn Greenwald in <cite title="Glenn Greenwald On Why Privacy Is Vital, Even If You 'Have Nothing To Hide"><a href="https://www.huffingtonpost.com/2014/06/20/glenn-greenwald-privacy_n_5509704.html">Huffington Post</a></cite></footer>
+</blockquote>
+
+<h1 id="resources" class="anchor"><a href="#resources"><i class="fas fa-link anchor-icon"></i></a> 更多隱私安全資源</h1>
+
+<h3>指南守則類</h3>
+
+<ul>
+  <li><a href="https://ssd.eff.org/"><strong>Surveillance Self-Defense by EFF</strong></a> - 運用安全技術與力行良好實踐來保護自己遠離監控。（<a href="https://ocftw.github.io/ssd.eff.org/zh_TW/index.html">繁體中文版</a>）</li>
+  <li><a href="https://github.com/cryptoseb/CryptoPaper"><strong>The Crypto Paper</strong></a> - 每位網路使用者必備的隱私、安全與匿名資訊。</li>
+  <li><a href="https://emailselfdefense.fsf.org/en/"><strong>Email Self-Defense by FSF</strong></a> - 介紹 GnuPG 加密與如何運用指南</li>
+  <li><a href="https://www.bestvpn.com/the-ultimate-privacy-guide/"><strong>The Ultimate Privacy Guide</strong></a> - bestVPN.com 創辦人撰寫的優質 VPN 介紹。</li>
+  <li><a href="https://www.ivpn.net/privacy-guides"><strong>IVPN Privacy Guides</strong></a> - 解釋如何透過分隔與隔絕，以取得最大限度的自由、隱私保護和匿名性等隱私指南。</li>
+  <li><a href="https://fried.com/privacy"><strong>The Ultimate Guide to Online Privacy</strong></a> - 完整詳實的「忍者隱私訣竅」（Ninja Privacy Tips）與超過 150 種工具。</li>
+</ul>
+
+<h3>資訊類</h3>
+
+<ul>
+  <li><a href="https://freedom.press/"><strong>Freedom of the Press Foundation</strong></a> - 成立 2012，支持捍衛新聞自由致力於資訊透明和問責。</li>
+  <li><a href="https://www.erfahrungen.com/mit/anonymisierung/t/"><strong>Erfahrungen.com</strong></a> - 德文資訊，其檢視相關隱私服務的訊息動態。</li>
+  <li><a href="https://openwireless.org/"><strong>Open Wireless Movement</strong></a> - 網路自由倡議人士、公司與組織、科技人士組成的聯盟，希望推動新的無線技術以激勵開放網路運動。</li>
+  <li><a href="https://privacy.net/us-government-surveillance-spying-data"><strong>privacy.net</strong></a> - 美國政府掌握哪些網民個資？</li>
+  <li><a href="https://www.reddit.com/r/privacytoolsIO/wiki/index"><strong>r/privacytoolsIO Wiki</strong></a> - 由本站在 reddit.com 維護的維基頁</li>
+  <li><a href="https://www.grc.com/securitynow.htm"><strong>Security Now!</strong></a> -  Steve Gibson 與 Leo Laporte 所製作的網際網路安全每週 Podcast 節目。</li>
+  <li><a href="https://www.jupiterbroadcasting.com/show/techsnap/"><strong>TechSNAP</strong></a> - 每週播出的 Poadcast 節目，主題涵蓋科技產業對一般人生活之影響的故事。</li>
+  <li><a href="https://tosdr.org/"><strong>Terms of Service; Didn't Read</strong></a> - 「勾選已讀完用戶服務協議且予同意」是網際網路上最大的謊言，該網站希望能改善此困境。</li>
+  <li><a href="https://codeberg.org/crimeflare/cloudflare-tor"><strong>The Great Cloudwall</strong></a> - 對於 Cloudflare 這家網際網路背後大戶真面目的批評資訊。</li>
+</ul>
+
+<h3>工具類</h3>
+
+<ul>
+  <li><a href="https://ipleak.net/"><strong>ipleak.net</strong></a> - IP/DNS 偵測 - 可查出您的 IP、域名系統 DNS、以及其它對外送出的請求資訊。</li>
+  <li><a href="https://www.ghacks.net/2015/12/28/the-ultimate-online-privacy-test-resource-list/"><strong>The ultimate Online Privacy Test Resource List</strong></a> - 收錄一些網站，其提供資訊讓用戶了解所使用的瀏覽器是否有資訊漏洞</li>
+  <li><a href="https://prism-break.org/"><strong>PRISM Break</strong></a> - 人人都有隱私基本人權，透過通訊加密或是斬斷商用軟體服務依賴，重新落實個人隱私權利之主張吧。</li>
+  <li><a href="https://securityinabox.org/"><strong>Security in-a-Box</strong></a> - 為全球人權捍衛者與社運人士所編寫整理的數位安全指南。</li>
+  <li><a href="https://securedrop.org/"><strong>SecureDrop</strong></a> - 開源的吹哨揭密提交系統，讓媒體組織用來保護匿名消息來源，確保其安全。此工具由已故的 Aaron Swartz 創建，目前由新聞自由基金會（Freedom of the Press Foundation）負責維護。</li>
+  <li><a href="https://pack.resetthenet.org/"><strong>Reset The Net - Privacy Pack</strong></a> - 協助對抗、終結大規模監控。利用這些工具來保護自己和朋友。</li>
+  <li><a href="https://secfirst.org/"><strong>Security First</strong></a> -  Umbrella 是一個手機應用程式，提供如何在一個敵意的環境下採行各種安全措施的建議。</li>
+  <li><a href="https://www.osalt.com/"><strong>Osalt</strong></a> - 收錄開源替代專有工具。</li>
+  <li><a href="https://alternativeto.net/"><strong>AlternativeTo</strong></a> - 大量收集開源的線上或自行佈署的軟體工具，以替代商用軟體或服務。</li>
+</ul>
+
+<p>提醒：開放源代碼並不保證軟體安全！</p>
+
+<div class="page-header">
+  <h1 id="participate" class="anchor"><a href="#participate"><i class="fas fa-link anchor-icon"></i></a> 提出建設性批評與建議</h1>
+</div>
+
+<p>在網路資訊快速流動的今天，維持 PrivacyTools 與時具進地更新並不容易，為了讓用戶更快地掌握本站所列軟體與服務的動態，除主站外還可透過各式社交平台即時關注我們的新鮮推薦。如果您發現錯誤不妥或是其它更佳的推薦未被收入，<strong>請不吝告之</strong>。可透過<a rel="me" href="https://social.privacytools.io/@privacytools"> Mastodon 直接傳訊</a>或是加入 <a href="https://chat.privacytools.io">Matrix</a> 的聊天室 <code class="highlighter-rouge">#general:privacytools.io</code>。</p>
+
+<div class="row">
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-success">
+        
+        <div class="card-header text-white bg-success">
+        
+        <h3 class="h5">Discourse & Reddit</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <img src="/assets/img/svg/3rd-party/discourse.svg" width="120" height="120" alt="Discourse & Reddit" class="panel-item">
+              
+              參與「網路隱私工具」論壇，獲取線上社群近期熱門話題或是提出想法、建議！
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-success mb-1" href="https://forum.privacytools.io/">
+                    
+                        Discourse
+                    
+                </a>
+                
+                
+
+                
+
+                
+                    <a class="btn btn-success mb-1" href="https://www.reddit.com/r/privacytoolsIO/">Reddit</a>
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-primary">
+        
+        <div class="card-header text-white bg-primary">
+        
+        <h3 class="h5">Follow on Mastodon & Twitter</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <img src="/assets/img/svg/3rd-party/mastodon.svg" width="120" height="120" alt="Follow on Mastodon & Twitter" class="panel-item">
+              
+              透過 Mastodon 訊息推送掌握本站最新消息，即刻關注我們的帳號吧！
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-primary mb-1" href="https://social.privacytools.io/">
+                    
+                        Mastodon
+                    
+                </a>
+                
+                
+
+                
+
+                
+                    <a class="btn btn-primary mb-1" href="https://twitter.com/privacytoolsIO">Twitter</a>
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
+    <div class="card card-warning">
+        
+        <div class="card-header text-dark bg-warning">
+        
+        <h3 class="h5">Develop on GitHub</h3>
+        </div>
+        <div class="card-body">
+            
+            <p>
+              
+              <span class="fab fa-github panel-item panel-font" alt="Develop on GitHub"></span>
+              
+              全部的網站源代碼存放在 GitHub，歡迎加入開發團隊！
+            </p>
+            <div>
+            <p>
+                
+                <a class="btn btn-warning mb-1" href="https://github.com/twngo/privacytools-zh">
+                    
+                        中文版代碼 on GitHub
+                    
+                </a>
+                
+                
+
+                
+
+                
+                    <a class="btn btn-warning mb-1" href="https://github.com/privacytoolsIO/privacytools.io/graphs/contributors">Contributor List</a>
+                
+            </p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<p>網路隱私工具為社群性質的專案，旨在提供改善個人隱私的最好資訊。感謝您的參與，本專案永遠不嫌人多</p>
+
+
+  </main>
+  <footer>
+  <footer>
+
+  <hr class="footer-divider" />
+
+  <h3 id="participate">推廣本站助更多人了解隱私保護</h3>
+
+  <div class="row mb-4">
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="mailto:?subject=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&body=https://privacytools.twngo.xyz/" class="share-btn email" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://privacytools.twngo.xyz" class="share-btn facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="https://twitter.com/share?text=Knowledge%20and%20tools%20to%20protect%20your%20privacy%20against%20global%20mass%20surveillance%20&amp;url=https://privacytools.twngo.xyz/&amp;via=privacytoolsIO" class="share-btn twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="https://sharetomastodon.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools.twngo.xyz" class="share-btn mastodon" title="Mastodon">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="https://reddit.com/submit?url=https://privacytools.twngo.xyz&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn reddit" title="reddit">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/shareArticle?url=https://privacytools.twngo.xyz&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn linkedin" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://mix.com/mixit?su=submit&url=https://privacytools.twngo.xyz&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn mix" title="Mix">
+        <i class="ptio-mix"></i>
+      </a>
+
+      <a href="https://sharetodiaspora.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools.twngo.xyz" class="share-btn diaspora" title="Diaspora*">
+        <i class="fas fa-asterisk"></i>
+      </a>
+    </div>
+  </div>
+
+  <h3>複製網址與本站描述</h3>
+
+  <p>
+  <input type="text" value="PrivacyTools - Encryption and tools to protect against global mass surveillance - https://privacytools.twngo.xyz" class="form-control input-lg onclick-select">
+  <span class="help-block">更輕易地複製與貼上，請利用這個文字小物件作分享。</span>
+  </p>
+
+  <hr class="footer-divider" />
+
+  <div class="row mt-3">
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fab fa-creative-commons-zero fa-2x mr-2"></span>
+      <a
+        href="/LICENSE.txt"
+        title="This work is free. You can redistribute it and/or modify it under the terms of the &quot;Creative Commons CC0 1.0 Universal Public Domain Dedication&quot;."
+        data-toggle="tooltip"
+        data-placement="top">
+        CC0
+      </a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="far fa-address-card fa-2x mr-2"></span>
+      <a href="/about/">專案介紹 &amp; 聯絡方式</a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fas fa-donate fa-2x mr-2"></span>
+      <a href="/donate/" data-toggle="tooltip" data-placement="top" data-original-title="Please support this project by donating. We are ad-free and not affiliated with any providers. Your donation will cover our costs for servers and domains.">支持本站！</a>
+    </div>
+  </div>
+
+  <div class="copyright-text">
+    <a href="/about/javascript" data-jslicense="1">
+      <span class="fab fa-js fa-lg"></span>
+      JavaScript Licenses
+    </a>
+    <p class="mt-2">
+      <strong>無廣告、無 Google 追蹤分析器、無利害關聯、無跨站追踪</strong>
+      <em>PrivacyTools 是一個受社會現況激發的社群網站，它提供保護上網者資料安全的資訊。不要信任某家公司會善待保護消費者隱私，時時刻刻作好加密防備。</em>
+    </p>
+    <p class="text-left">
+      Tor v3: <strong>privacy2zbidut4m4jyj3ksdqidzkw3uoip2vhvhbvwxbqux5xy5obyd.onion</strong>
+      (<a href="https://write.privacytools.io/jonah/tor-on-privacytools-io">了解更多</a>)
+    </p>
+    <small>
+      <a href="/privacy/">隱私宣告</a> |
+      <a href="/notices/">注意事項 &amp; 免責聲明</a> |
+      <a href="https://github.com/privacytoolsIO/brand">品牌資產 &amp; 指導原則</a>
+    </small>
+
+  </div>
+</footer>
+
+  </footer>
+</div>
+  <script src="/assets/js/jquery-3.3.1.min.js?v=4"></script>
+<script src="/assets/js/popper.min.js?v=4"></script>
+<script src="/assets/js/bootstrap.min.js?v=4"></script>
+<script src="/assets/js/sortable.min.js?v=4"></script>
+<script src="/assets/js/main.js?v=5"></script>
+
+<!--
+  Matomo is the leading open-source analytics platform:
+  - Free open-source software
+  - 100% data ownership
+  - User privacy protection
+-->
+
+<noscript><img src="https://stats.privacytools.io/matomo.php?idsite=1&amp;rec=1" class="border-0" alt=""/></noscript>
+
+</body>
+</html>

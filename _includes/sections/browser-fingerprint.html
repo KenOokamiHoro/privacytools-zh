@@ -1,38 +1,31 @@
+<h1 id="fingerprint" class="anchor"><a href="#fingerprint"><i class="fas fa-link anchor-icon"></i></a> 瀏覽器指紋 - 您的瀏覽器設定是否過於獨特？</h1>
 
-  <!-- Browser Fingerprint -->
-  <h1 id="fingerprint" class="anchor"><a href="#fingerprint"><i class="fas fa-link anchor-icon"></i></a> 浏览器指纹 - 你的浏览器设定是否独一无二？</h1>
+<div class="alert alert-warning" role="alert">
+  <strong>瀏覽器傳送許多資訊，在數千百萬使用者當中可以容易地辨識出不同使用者特性。</strong>
+</div>
 
-  <!-- yellow warning message about the browser sending unique information -->
-  <div class="alert alert-warning" role="alert">
-    <strong> 你使用的浏览器传送了可以在数千百万使用者当中可以容易地辨识出你的许多信息。</strong>
-  </div>
+<p>當訪問某個網站時，瀏覽器會自行地送出一些本身的設定資訊，例如有哪些可用字型、瀏覽器類型、安裝的附加元件等。如果這些組合出來的資訊非常獨特，很容易讓有心者不用 cookies 小程式就可以辨識與追蹤。電子前鋒基金會 EFF 開發<a href="https://panopticlick.eff.org/">Panopticlick</a> 工具來測試瀏覽器的獨特程度。</p>
 
-  <!-- fingerprint image to the right of the paragraphs -->
-  <img src="assets/img/layout/browser-fingerprint.jpg" class="img-fluid float-right" alt="Fingerprint image" style="margin-left:20px;">
+<p>
+<a class="btn btn-warning" href="https://panopticlick.eff.org/">
+  立即測試瀏覽器
+</a>
+</p>
 
-  <!-- first paragraph -->
-  <p>当访问一个网站时，浏览器会自动发送一些自身设定的信息，例如可用的字体，浏览器类型、安装的附加组件等。如果这些组合出来的信息非常独特，很容易让其它人不需要 cookies 就可以辨识与追踪你。电子前哨基金会 EFF 创建了一个 <a href="https://panopticlick.eff.org/">Panopticlick 工具</a>来测试浏览器的独特程度。</p>
+<p>您需要找出<strong>大多數瀏覽器</strong>回報什麼資料，然後利用相近的人口使用資訊，再把這些變數放置到您的瀏覽器。這意謂著和其它人使用相同的字體、外掛元件、附加元件等，以擴大使用者基數。你也該利用欺瞞的<a href="https://addons.mozilla.org/firefox/addon/uaswitcher/">隨機瀏網器字串 (spoofed user-agent string)</a>以符合最大的使用者基數。你需要有相同的設定啟動和取消，例如 DNT 與 WebGL 功能。以讓使用的瀏覽器看起來會像大多數人用的差不多。取消 JavaScript、使用 Linux 或是進一步使用 Tor 瀏覽器，容易讓您從一般普羅群眾中被突顯出來。</p>
 
-  <!-- First orange "test your browser now" button -->
-  <p>
-  <a class="btn btn-warning" href="https://panopticlick.eff.org/">
-    立即测试你正在用的浏览器吧
-  </a>
-  </p>
+<p>現代網頁瀏覽器未依確保個人在萬維網隱私安全來打造。若擔心瀏覽器留下的獨特特徵指紋辨識，最實際的作法是使用<a href="#addons"><i class="fas fa-link"></i>免費的外掛軟體</a>，像 Privacy Badger、uBlock Origin。它們不只為了網路自由，也保護用戶上網的隱私保護。不妨進一步了解使用這些工具，會比試著操弄瀏覽器指紋更為簡單容易。</p>
 
-  <!-- second paragraph -->
-  <p>你需要找出<strong>大多数浏览器</strong>所传送的信息和启用或禁用的功能（例如 Do Not Track 和 WebGL），并利用这些和大多数人相同的信息和<a href="https://addons.mozilla.org/firefox/addon/uaswitcher/">伪造的 User Agent</a>来伪装你的浏览器来使你泯然然众人。
-    停用 JavaScript 、使用 GNU/Linux 和 Tor Browser 容易让你的浏览器更加突出。</p>
 
-  <p>（译者注： Tor Browser 和新版的 Firefox 中引入的抵抗指纹追踪功能会使你在服务器眼中看起来像一个普通的 Windows 用户， 可以加以应用。）</p>
-  <!-- third paragraph -->
-  <p>互联网和网络浏览器在一开始并没有以隐私为第一要素设计。如果你很担心浏览器留下的独特指纹被识别，比较实际的作法是使用 Privacy Badger、 uBlock Origin 与 Disconnect <a href="#addons"><i class="fas fa-link"></i>这样的附加组件</a>。它们提供给你互联网自由的同时也保护你上网的隐私。了解使用这些工具比试着摆弄浏览器指纹是一个更为容易方便的开始。</p>
+<h3>Firefox 附加元件：CanvasBlocker</h3>
+<ul>
+	<li><a href="https://addons.mozilla.org/firefox/addon/canvasblocker/">addons.mozilla.org</a> - <strong>CanvasBlocker</strong> 讓用戶阻止某些網站利用 Javascript APIs 來收集指紋。使用者可選擇阻斷所有網站的 APIs（這樣可能會導致部份網站斷裂）或是只封鎖或假冒指紋友善的 API。</li>
+</ul>
 
-  <!-- 相关资讯 links -->
-  <h3>相关资讯</h3>
-  <ul>
-    <li><a href="https://panopticlick.eff.org/static/browser-uniqueness.pdf">你的浏览器有多特别？ 来自 EFF 的 Peter Eckersley。</a></li>
-    <li><a href="https://www.reddit.com/r/privacytoolsIO/comments/35pqyl/new_section_browser_fingerprint_is_your_browser/">加入我们在 Reddit 上关于浏览器指纹的讨论。</a></li>
-    <li><a href="#addons"><i class="fas fa-link"></i>我们推荐的 Firefox 扩展合集。</a></li>
-    <li><a href="https://www.browserleaks.com/">BrowserLeaks.com</a> - 网页浏览器安全测试工具，它可以识别浏览器会泄露哪些和你相关的信息。</li>
-  </ul>
+<h3>相關資訊</h3>
+
+<ul>
+  <li><a href="https://panopticlick.eff.org/static/browser-uniqueness.pdf">How Unique Is Your Web Browser? Peter Eckersley, EFF.</a></li>
+  <li><a href="#addons"><i class="fas fa-link"></i> Our Firefox privacy add-ons section.</a></li>
+  <li><a href="https://www.browserleaks.com/">BrowserLeaks.com</a> - 網頁瀏覽器安全測試工具，可辨識什麼樣的個人識別資料可能會瀏網時未經同恴許可即被外洩。</li>
+</ul>

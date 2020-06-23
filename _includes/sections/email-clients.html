@@ -1,40 +1,50 @@
-<h1 id="clients" class="anchor"><a href="#clients"><i class="fas fa-link anchor-icon"></i></a> 电邮客户端软体</h1>
-<div class="row mb-2">
+<h1 id="clients" class="anchor"><a href="#clients"><i class="fas fa-link anchor-icon"></i></a> 電子郵件客戶端軟體</h1>
 
-  {% include card.html color='success'
-  title='Thunderbird'
-  image='assets/img/tools/Thunderbird.png'
-  url='https://mozilla.org/thunderbird'
-  website='mozilla.org'
-  footer='支援作业系统: Windows, macOS, Linux, BSD.'
-  description='Mozilla Thunderbird 是一个免费、开源、跨平台的电邮、新闻与聊天软体，由 Mozilla 基金会开发维护。 Thunderbird 是电子邮件、新闻群组、新闻推送订阅与聊天(支援 XMPP, IRC, Twitter)的客户端软体。'
-  %}    
-  {% include card.html color='primary'
-  title='Claws Mail'
-  image='assets/img/tools/Claws-Mail.png'
-  url='https://www.claws-mail.org/'
-  footer='支援作业系统: Windows, macOS, Linux, BSD, Solaris, Unix.'
-  description='Claws Mail 是一个免费开源，使用 GTK 桌面环境为基础的电邮与新闻软体。它提供了简单的设定和丰富的功能，也包括 Windows 底下的加密套件包。'
-  %}    <!--
-    <div class="col-sm-4">
-    <div class="panel panel-warning">
-    <div class="panel-heading">
-    <h3 class="panel-title">Whiteout Mail</h3>
-    </div>
-    <div class="panel-body">
-    <p><img src="assets/img/tools/Whiteout-Mail.png" alt="Whiteout Mail" align="right" style="margin-left:5px;">Whiteout Mail is an open source  email solution with strong end-to-end encryption that is really easy to use and runs on all of your devices. Keeping your emails safe has never been so easy. You can also get a new email address.</p>
-    <p><a href="https://whiteout.io/"><button type="button" class="btn btn-warning">Website: whiteout.io</button></a></p>
-    <p>OS: Chrome, Android, iOS, Web.</p>
-    </div>
-    </div>
-    </div>
-  -->
+{% include cardv2.html
+title="Thunderbird"
+image="/assets/img/svg/3rd-party/thunderbird.svg"
+description="Thunderbird 免費、開源、跨平台的電子郵件、新聞與聊天軟體，之前由 Mozilla 基金會開發維護，現為 Thunderbird 社群為開發主力。 是電子郵件、新聞群組、新聞推送訂閱與聊天(支援 XMPP, IRC, Twitter)的客戶端軟體。"
+website="https://www.thunderbird.net/"
+forum="https://forum.privacytools.io/t/discussion-thunderbird/659"
+source="https://hg.mozilla.org/comm-central/"
+windows="https://www.thunderbird.net/en-US/"
+mac="https://www.thunderbird.net/en-US/"
+linux="https://www.thunderbird.net/en-US/"
+freebsd="https://www.freshports.org/mail/thunderbird/"
+openbsd="http://openports.se/mail/mozilla-thunderbird"
+netbsd="http://pkgsrc.se/mail/thunderbird"
+%}
 
-</div>
+{% include cardv2.html
+title="Claws Mail"
+image="/assets/img/png/3rd-party/claws_mail.png"
+description="Claws Mail 免費開源，使用 GTK 桌面環境的電子郵件與新聞軟體。它提供了簡單的設定和豐富的功能，也包括 Windows 底下的加密套件包 Gpg4win。"
+website="https://www.claws-mail.org/"
+forum="https://forum.privacytools.io/t/discussion-claws-mail/660"
+git="https://git.claws-mail.org/"
+windows="https://www.claws-mail.org/win32/"
+mac="https://www.claws-mail.org/faq/index.php/Installation_and_Configuration#What_do_I_need_to_compile_Claws_Mail.3F"
+linux="https://www.claws-mail.org/downloads.php?section=downloads"
+freebsd="https://www.freshports.org/mail/claws-mail/"
+openbsd="http://openports.se/mail/claws-mail"
+netbsd="http://pkgsrc.se/mail/claws-mail"
+%}
+
+
+<h3>隱私電郵工具</h3>
+
+<ul>
+  <li><a href="https://www.gpg4usb.org/">gpg4usb</a> - 方便的小型擕帶式編輯器，可用於加密解密文字訊息或文件檔，支援 Windows 與 Linux。<a href="https://theprivacyguide.org/tutorials/gpg.html">GPG 教學</a>。</li>
+  <li><a href="https://www.mailvelope.com/">Mailvelope</a> - 瀏覽器上的附加元件，透過 <a href="https://theprivacyguide.org/tutorials/pgp.html">OpenPGP 加密標準</a>，以便交換加密郵件。.</li>
+  <li><a href="https://www.enigmail.net/">Enigmail</a> - Thunderbird 與 Seamonkey 的安全附加元件，讓用戶利用<a href="https://theprivacyguide.org/tutorials/pgp.html">OpenPGP 標準</a>來簽名或加密電子郵件內容。</li>
+  <li><a href="https://addons.thunderbird.net/thunderbird/addon/torbirdy/">TorBirdy</a> - 設定 Thunderbird 連結 Tor 匿名網路，此附加元件仍在測試實驗階段。</li>
+  <li><a href="https://www.emailprivacytester.com/">Email Privacy Tester</a> - 此工具可寄給用戶有關其電郵信箱隱私相關的測試報告郵件。</li>
+</ul>
 
 <h3>值得一提</h3>
+
 <ul>
-  <li><a href="https://github.com/k9mail/k-9/releases">K-9 Mail</a> - Android 安卓手机上的独立电邮应用程式，其同时支援 POP3 与 IMAP 协议的邮箱, 但目前只支援 IMAP 的推送邮件功能。</li>
-  <li><a href="https://www.gnupg.org/">GNU Privacy Guard</a> - GnuPG 电邮加密，GnuPG 为基于 GPL 授权版本的 PGP 密码套件软体的替代选择。<a href="https://theprivacyguide.org/tutorials/gpg.html">使用教学（英文）</a> macOS X 作业系统可使用<a href="https://gpgtools.org/">GPGTools for MacOS</a></li>
-  <li><a href="https://www.mailpile.is/">Mailpile (Beta)</a> - 一个现代、快速的网页用户端软体，提供友善的加密与隐私功能。</li>
+  <li><a href="https://github.com/k9mail/k-9/releases">K-9 Mail</a> - Android 安卓手機上的獨立電子郵件應用程式，其同時支援 POP3 與 IMAP 協議的郵箱, 但目前只支援 IMAP 的郵件推送。</li>
+  <li><a href="https://www.gnupg.org/">GNU Privacy Guard</a> - 電子郵件加密，GnuPG 為基於 GPL 授權版本的 PGP 密碼套件軟體的替代選擇。 <a href="https://theprivacyguide.org/tutorials/gpg.html">使用教學（英文）</a>。MacOS X 作業系統可使用 <a href="https://gpgtools.org/">GPGTools</a>。</li>
+  <li><a href="https://www.mailpile.is/">Mailpile (Beta)</a> - 現代、快捷的網頁電郵工具，易上手的使用介面與友善的加密隱私功能。</li>
 </ul>

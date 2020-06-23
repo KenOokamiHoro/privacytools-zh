@@ -1,275 +1,105 @@
-<h1 id="vpn" class="anchor"><a href="#vpn"><i class="fas fa-link anchor-icon"></i></a>提供额外隐私保护的 VPN 提供商</h1>
-  <div class="alert alert-success" role="alert">
-    <strong>在此所列的提供商都不在美国境内，他们都使用加密，接受 Bitcoin 付款，支持 OpenVPN 而且（声称）采用不记录用户活动的政策。</strong>
-  </div>
+<h1 id="vpn" class="anchor"><a href="#vpn"><i class="fas fa-link anchor-icon"></i></a> 推薦的 VPN 服務</h1>
 
-  <!-- START VPN TABLE -->
+<div class="alert alert-success" role="alert">
+  <strong>此推薦的供應商都不在美國境內，他們都使用加密，接受 Bitcoin 付款，支援 OpenVPN 而且採不記錄使用者活動的政策。可進一步了解 <a href="/providers/vpn/#criteria">完整的評鑑標準說明</a>。</strong>
+</div>
 
-  {% assign eur_to_usd = 1.14 %}
-  <div class="table-responsive">
-    <table class="table sortable-theme-bootstrap" data-sortable>
-      <thead>
-        <tr>
-          <th data-sortable="true">整理的 VPN 提供商表格</th>
-          <th data-sortable="true">年费</th>
-          <th data-sortable="true">免费试用？</th>
-          <th data-sortable="true" title="Number of Servers"># 服务器数量</th>
-          <th data-sortable="true">司法管辖区</th>
-          <th data-sortable="false">网站</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-value="AirVPN">
-            <a href="https://airvpn.org/"><img alt="AirVPN" src="assets/img/provider/AirVPN.png" width="200" height="70"></a></td>
-          <td data-value="{{ 54 | times: eur_to_usd }}">54 €</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>162</td>
-          <td><span class="flag-icon flag-icon-it"></span>意大利</td>
-          <td><a href="https://airvpn.org/">AirVPN.org</a></td>
-        </tr>
+<div class="container-fluid">
 
-        <tr>
-          <td data-value="AzireVPN">
-            <a href="https://www.azirevpn.com/"><img alt="AzireVPN" src="assets/img/provider/AzireVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 45 | times: eur_to_usd }}">45 €</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>22</td>
-          <td><span class="flag-icon flag-icon-se"></span> 瑞典</td>
-          <td><a href="https://www.azirevpn.com/">AzireVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="blackVPN">
-            <a href="https://www.blackvpn.com/"><img alt="blackVPN" src="assets/img/provider/blackVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 49 | times: eur_to_usd }}">49 €</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>31</td>
-          <td><span class="flag-icon flag-icon-hk"></span> 香港</td>
-          <td><a href="https://www.blackvpn.com/">blackVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="Cryptostorm">
-            <a href="https://cryptostorm.is/"><img alt="Cryptostorm" src="assets/img/provider/Cryptostorm.png" width="200" height="70"></a>
-          </td>
-          <td data-value="52">$ 52</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>28</td>
-          <td><span class="flag-icon flag-icon-is"></span> 冰岛</td>
-          <td><a href="https://cryptostorm.is/">Cryptostorm.is</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="ExpressVPN">
-            <a href="https://www.expressvpn.com/"><img alt="ExpressVPN" src="assets/img/provider/ExpressVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="100">$ 99.95</td> <!-- USD on December 28, 2018 -->
-          <td><span class="label label-success">Yes</span></td>
-          <td>148</td>
-          <td><span class="flag-icon flag-icon-vg"></span> 英属威京群岛</td>
-          <td><a href="https://www.expressvpn.com/">ExpressVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="FrootVPN">
-            <a href="https://www.frootvpn.com/"><img alt="FrootVPN" src="assets/img/provider/FrootVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="36">$ 35.88</td>
-          <td><span class="label label-warning">No</span></td>
-          <td>27</td>
-          <td><span class="flag-icon flag-icon-se"></span> 瑞典</td>
-          <td><a href="https://www.frootvpn.com/">FrootVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="hide.me">
-            <a href="https://hide.me/"><img alt="hide.me" src="assets/img/provider/hide.me.png" width="200" height="70"></a>
-          </td>
-          <td data-value="0"><a data-toggle="tooltip" data-placement="bottom" data-original-title="2 GB data transfer, 1 simultaneous connection" href="https://hide.me/pricing">Free</a></td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>160+</td>
-          <td><span class="flag-icon flag-icon-my"></span> 马来西亚</td>
-          <td><a href="https://hide.me/">hide.me</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="IVPN">
-            <a href="https://www.ivpn.net/"><img alt="IVPN" src="assets/img/provider/IVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="100">$ 100</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>38</td>
-          <td><span class="flag-icon flag-icon-gi"></span> 直布罗陀</td>
-          <td><a href="https://www.ivpn.net/">IVPN.net</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="Mullvad">
-            <a href="https://mullvad.net/"><img alt="Mullvad" src="assets/img/provider/Mullvad.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 60 | times: eur_to_usd }}">60 €</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>281</td>
-          <td><span class="flag-icon flag-icon-se"></span> 瑞典</td>
-          <td><a href="https://mullvad.net/">Mullvad.net</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="NordVPN">
-            <a href="https://nordvpn.com/"><img alt="NordVPN" src="assets/img/provider/NordVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="84">$ 83.88</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>5200+</td>
-          <td><span class="flag-icon flag-icon-pa"></span> 巴拿马</td>
-          <td><a href="https://nordvpn.com/">NordVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="OVPN.com">
-            <a href="https://www.ovpn.com/"><img alt="OVPN.com" src="assets/img/provider/OVPN.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 84 | times: eur_to_usd }}">84 €</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>67</td>
-          <td><span class="flag-icon flag-icon-se"></span> 瑞典</td>
-          <td><a href="https://www.ovpn.com/">OVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="Perfect Privacy">
-            <a href="https://www.perfect-privacy.com/"><img alt="Perfect Privacy" src="assets/img/provider/Perfect-Privacy.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 119.99 | times: eur_to_usd }}">119.99 €</td>
-          <td><span class="label label-warning">No</span></td>
-          <td>54</td>
-          <td><span class="flag-icon flag-icon-ch"></span> 瑞士</td>
-          <td><a href="https://www.perfect-privacy.com/">Perfect-Privacy.com</a></td>
-        </tr>
-
-        <!--
-          "Warning: It has come to our attention that Privatoria are no longer supporting their service – its advised to try some other VPN provider." Source: https://www.deepdotweb.com/2016/01/03/privatoria-review/
-          <tr>
-          <td data-value="Privatoria">
-          <a href="https://privatoria.net/"><img src="assets/img/provider/Privatoria.png" width="200" height="70"></a>
-          </td>
-          <td data-value="23">$ 22.8</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>22</td>
-          <td><span class="flag-icon flag-icon-cz"></span> Czech Republic</td>
-          <td><a href="https://privatoria.net/">Privatoria.net</a></td>
-          </tr>
-        -->
-        <tr>
-          <td data-value="ProtonVPN">
-            <a href="https://protonvpn.com/"><img alt="ProtonVPN" src="assets/img/provider/ProtonVPN.png" width="200" height="70"></a     >
-          </td>
-          <td data-value="0"><a data-toggle="tooltip" data-placement="bottom" data-original-title="3 countries, 1 device, speed: low" href="https://protonvpn.com/pricing">Free</a></td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>325</td>
-          <td><span class="flag-icon flag-icon-ch"></span> 瑞士</td>
-          <td><a href="https://protonvpn.com/">ProtonVPN.com</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="Proxy.sh">
-            <a href="https://proxy.sh/"><img alt="Proxy.sh" src="assets/img/provider/Proxy.sh.png" width="200" height="70"></a>
-          </td>
-          <td data-value="40">$ 40</td>
-          <td><span class="label label-warning">No</span></td>
-          <td>300+</td>
-          <td><span class="flag-icon flag-icon-sc"></span> 塞舌尔</td>
-          <td><a href="https://proxy.sh/">Proxy.sh</a></td>
-        </tr>
-
-        <tr>
-          <td data-value="Trust.Zone">
-            <a href="https://trust.zone/"><img alt="Trust.Zone" src="assets/img/provider/Trust.Zone.png" width="200" height="70"></a>
-          </td>
-          <td data-value="40">$ 39.95</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>164</td>
-          <td><span class="flag-icon flag-icon-sc"></span> 塞舌尔</td>
-          <td><a href="https://trust.zone/">Trust.Zone</a></td>
-        </tr>
-        <tr>
-          <td data-value="VPN.ht">
-            <a href="https://vpn.ht/"><img alt="VPN.ht" src="assets/img/provider/VPN.ht.png" width="200" height="70"></a>
-          </td>
-          <td data-value="40">$ 39.99</td>
-          <td><span class="label label-warning">No</span></td>
-          <td>128</td>
-          <td><span class="flag-icon flag-icon-hk"></span> 香港</td>
-          <td><a href="https://vpn.ht/">VPN.ht</a></td>
-        </tr>
-        <tr>
-          <td data-value="VPNArea">
-            <a href="https://vpnarea.com/"><img alt="VPNArea" src="assets/img/provider/vpnarea.png" width="200" height="70"></a>
-          </td>
-          <td data-value="59">$ 59</td>
-          <td><span class="label label-success">Yes</span></td>
-          <td>204</td>
-          <td><span class="flag-icon flag-icon-bg"></span> 保加利亚</td>
-          <td><a href="https://vpnarea.com/">VPNArea.com</a></td>
-        </tr>
-        <tr>
-          <td data-value="VPNTunnel">
-            <a href="https://vpntunnel.com/"><img alt="VPNTunnel" src="assets/img/provider/VPNTunnel.png" width="200" height="70"></a>
-          </td>
-          <td data-value="{{ 35.88 | times: eur_to_usd }}">35.88 €</td>
-          <td><span class="label label-warning">No</span></td>
-          <td>800+</td>
-          <td><span class="flag-icon flag-icon-sc"></span> 塞舌尔</td>
-          <td><a href="https://vpntunnel.com/">VPNTunnel.com</a></td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>  <!-- END VPN TABLE -->
-
-  <!-- yellow warning box about vpns and "no log" policies. -->
-  <div class="alert alert-warning" role="alert">
-    <strong>注意：使用 VPN 可以提供较佳的隐私控制，但不能做到匿名。 VPN 不是用来作违法活动的工具，不能仅依赖提供商的「不记录用户活动」政策。</strong>
-  </div>  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <!-- bullet list of VPN Provider Criteria -->
-        <h3>我们挑选 VPN 提供商的标准</h3>
-        <ul>
-          <li>在美国境外或其它五眼联盟以外的国家营运 <p>再者: <a href="https://www.bestvpn.com/the-ultimate-privacy-guide/#avoidus">避免使用位于美国或英国的服务。</a></p></li>
-          <li>支持 OpenVPN 协议</li>
-          <li>接受比特币、现金、借记卡或现金卡等付款方式</li>
-          <li>注册帐号时不会求提供个人资讯，仅需提供填用户名、密码与<a href="#email"><i class="fas fa-link"></i> 电子邮件地址</a>/li>
-        </ul>
-        <p>我们和上列的 VPN 提供商并没有任何利益关联，以求诚实地予以最佳推荐。</p>
-
-        <h3>更多的 VPN 提供商</h3>
-        <p>
-        <a href="https://thatoneprivacysite.net/vpn-comparison-chart/">
-          无偏颇、独立，查证过的一百多家 VPN 提供商表单资讯</a>
-        <a href="https://www.reddit.com/r/privacytoolsIO/comments/43d4zs/you_guys_might_be_interested_in_this_a/">
-          (欢迎加入在 Reddit 的讨论)
-        </a>
-        </p>
-      </div>
-
-      <!-- bullet list of VPN articles -->
-      <div class="col-md-6">
-        <h3>与 VPN 相关的其它信息</h3>
-        <ul>
-          <li><a href="https://torrentfreak.com/vpn-services-keep-anonymous-2018/">哪个 VPN 服务能让你保持匿名?</a><br />(<strong>注意:</strong>这篇文章中首先提到的 TorrentFreaks 是赞助商)</li>
-          <li><a href="https://torrentfreak.com/how-to-make-vpns-even-more-secure-120419/">使 VPN 更安全</a></li>
-          <li><a href="https://vikingvpn.com/blogs/off-topic/beware-of-vpn-marketing-and-affiliate-programs">注意识别 VPN 市场和营销中的虚假评论</a></li>
-          <li><a href="https://www.goldenfrog.com/take-back-your-internet/articles/7-myths-about-vpn-logging-and-anonymity">我用了 VPN 所以我是匿名的？- 揭穿关于 VPN  的七大神话</a><br />(<strong>注意:</strong>虽然文章值得一读，但是依然包含宣传内容)</li>
-          <li><a href="https://torrentfreak.com/proxy-sh-vpn-provider-monitored-traffic-to-catch-hacker-130930/">Proxy.sh 嗅探自己服务器上的流量来追踪骇客</a></li>
-          <li><a href="https://proxy.sh/panel/knowledgebase.php?action=displayarticle&id=5">合情合理的政策 - Proxy.sh 启用日志记录的原因</a></li>
-          <li><a href="https://www.ivpn.net/privacy">IVPN.net 会在你注册完成后收集你的 IP 地址</a><br />（<a data-toggle="tooltip" data-placement="top" data-original-title="在你注册完成时收集的 IP 地址仅用于反欺诈用途并会在几秒钟后丢弃，因为存储这些信息会大大增加我们自己的责任，也不符合我们的利益。不过你也可以使用 Tor 或另一个 VPN 注册。">来自 IVPN 的邮件声明</a>）</li>
-          <li><a href="https://medium.com/@blackVPN/no-logs-6d65d95a3016">blackVPN 声称会在断开连接时删除日志</a></li>
-          <li><a href="https://gist.github.com/kennwhite/1f3bc4d889b02b35d8aa">不要使用 LT2P IPSec 协议.</a></li>
-        </ul>
-      </div>
+  <div class="row mb-2">
+    <div class="col-lg-3 col-sm-12 pt-lg-5">
+      <img
+        src="/assets/img/svg/3rd-party/mullvad.svg"
+        data-theme-src="/assets/img/svg/3rd-party/mullvad-dark.svg"
+        height="70"
+        width="200"
+        class="img-fluid d-block mr-auto ml-auto align-middle"
+        alt="Mullvad">
+    </div>
+    <div class="col">
+    <h2>Mullvad <span class="badge badge-info">歐元 €60/年</span></h2>
+    <p><strong>Mullvad</strong> 速度快、價格合理的 VPN，同時認真看待安全與透明課題。自 <strong>2009</strong>開始營運，是唯一達到我們各要求標準的 VPN 供應商。Mullvad 主要位於<span class="flag-icon flag-icon-se"></span> 瑞典，未提供免費試用，請到 <a href="https://mullvad.net/">mullvad.net</a> 建立一個帳號吧。</p>
+    <h5><span class="badge badge-success">406+ 伺服器</span></h5>
+    <p>計至在本文撰寫時，Mullvad 在 39 國家佈署了409 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
+    <h5><span class="badge badge-success">WireGuard 支援</span></h5>
+    <p>除標準的 OpenVPN 連線， Mullvad 還支援 WireGuard。WireGuard 是試驗階段的網路協定，理論上會更安全與更可靠。不過目前它仍未大量使用。</p>
+    <h5><span class="badge badge-success">獨立稭核</span></h5>
+    <p>Mullvad 的 VPN 客戶端軟體曾由 Cure53 與 Assured AB 稭核，提交滲透測試報告，公佈在<a href="https://cure53.de/pentest-report_mullvad_v2.pdf"> cure53.de</a>。 安全檢查的研究成員包括：</p>
+    <blockquote class="blockquote">
+      <p class="mb-0">...Cure53 與 Assured AB 對於安全稭核結果感到滿意，對他們的軟體留下了良好印象。Mullvad VPN 自家團隊在資安用心的專注投入，測試員深信此專案朝著正確的軌道前進。</p>
+    </blockquote>
+    <h5><span class="badge badge-success">IPv6 支援</span></h5>
+    <p>Mullvad 支援 <a href="https://en.wikipedia.org/wiki/IPv6">IPv6 </a>網路協定，讓用戶可訪問<a href="https://mullvad.net/en/blog/2014/9/15/ipv6-support/">架設在 IPv6</a>的服務。不少供應商會阻斷 IPv6 連線。</p>
+    <h5><span class="badge badge-success">遠處端口轉發 Remote port forwarding</span></h5>
+    <p>Mullvad 提供遠端<a href="https://en.wikipedia.org/wiki/Port_forwarding">端口轉發</a>功能，請見<a href="https://mullvad.net/help/port-forwarding-and-mullvad/">Port forwarding with Mullvad VPN</a>.</p>
+    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
+    <p>Mullvad 可採 信用卡/簽帳卡、<strong>比特幣</strong>、<strong>Bitcoin Cash</strong>以及<strong>現金或當地流通貨幣</strong>等不記名付款方式，也可接受 Swish 與銀行電滙。</p>
+    <h5><span class="badge badge-warning">無手機端應用</span></h5>
+    <p>其 iOS 與 Android 客戶端軟體仍在開發中，手機用戶必須使用舊有的 OpenVPN 進行設定，通常它較複雜難搞。</p>
+    <h5><span class="badge badge-info">額外功能</span></h5>
+    <p>The Mullvad VPN 客戶端內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。 Mullvad 網站可以透由 Tor  <a href="http://xcln5hkbriyklr6n.onion/">xcln5hkbriyklr6n.onion </a>訪問。</p>
     </div>
   </div>
+
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <strong>注意：使用 VPN 無法匿名，但某些狀況下提供用戶更佳的隱私保護。 VPN 不是用來從事違法活動的工具，不要依賴「不留活動記錄 "no log"」政策。</strong>
+</div>
+
+<h1 id="vpn" class="anchor"><a href="#worth-mentioning"><i class="fas fa-link anchor-icon"></i></a> 其它值得一提的 VPN 供應商</h1>
+
+<div class="container-fluid">
+
+  <div class="row mb-2">
+    <div class="col-lg-3 col-sm-12 pt-lg-5">
+      <img src="/assets/img/svg/3rd-party/protonvpn.svg" height="70" width="200" class="img-fluid d-block mr-auto ml-auto align-middle" alt="ProtonVPN">
+    </div>
+    <div class="col">
+    <h2>ProtonVPN <span class="badge badge-info">免費版</span> <span class="badge badge-info">美元 $96/年 </span></h2>
+    <p><strong>ProtonVPN</strong>是 VPN 市場上有力的競爭者，從 <strong>2016 年</strong>開始加入 VPN 服務。 ProtonVPN 以<span class="flag-icon flag-icon-ch"></span>瑞士為所在地，有免費版的限量使用和付費昇級版等消費選項。可惜它目前仍無獨立的資安稭核審查，故無法達到我們推薦產品的全部要求標準，可參考下方之說明：</p>
+    <h5><span class="badge badge-danger">未稭核</span></h5>
+    <p>ProtonVPN 尚無任何第三方獨立進行資安稭核審查（截至本文發佈之際），所以我們無法將之列在可放心使用的推薦名單，姑且先列在此處希望他們能儘快發佈相關報告。</p>
+    <blockquote class="blockquote">
+      <p class="mb-0">ProtonVPN  已委託瑞士某家公司對 VPN 產品進行完整的資安稭核審查，其結果將會儘快發佈。</p>
+      <footer class="blockquote-footer">Marc Loebekken, ProtonVPN AG Legal counsel</footer>
+    </blockquote>
+    <p>我們會再次於 2020 年第一季重新評估上述的安全審查報告是否發表。
+    <h5><span class="badge badge-success">610+ 伺服器</span></h5>
+    <p>計至在本文撰寫時，ProtonVPN 在 44 國家佈署了610 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
+    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
+    <p>技術上 ProtonVPN 可接受比特幣，但必須為老用戶或是事先聯絡 ProtonVPN 客服使用比特幣註冊。</p>
+    <h5><span class="badge badge-success">手機端應用</span></h5>
+    <p>除標準的 OpenVPN 設定外， ProtonVPN 也有手機專用的 iOS 與 Android 應用軟體，便於用戶連接 ProtonVPN 伺服器。</p>
+    <h5><span class="badge badge-info">Extra Functionality</span></h5>
+    <p>ProtonVPN 客戶端內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。ProtonVPN 也有 "Tor" 伺服器以便輕鬆訪問 onion 網站，不過還是建議透過 Tor 瀏覽器來訪問深網。</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-lg-3 col-sm-12 pt-lg-5">
+      <img src="/assets/img/svg/3rd-party/ivpn.svg" height="70" width="200" class="img-fluid d-block mr-auto ml-auto align-middle" alt="IVPN">
+    </div>
+    <div class="col">
+    <h2>
+      IVPN
+      <span class="badge badge-info">標準版美元 $60/年</span>
+      <span class="badge badge-secondary">昇級版 美元 $100/年</span>
+    </h2>
+    <p><strong>IVPN</strong> 是另一家不錯的 VPN 供應商，成立於 <strong>2009</strong> 年，註冊所在地是 <span class="flag-icon flag-icon-gi"></span> 直布羅陀。IVPN 提供三天免費體驗試用，收費等級有二種。可惜它目前仍無獨立的資安稭核審查，故無法達到我們推薦產品的全部要求標準，可參考下方之說明：</p>
+    <h5><span class="badge badge-danger">無資安稭核</span></h5>
+    <p>IVPN 已委託 Cure53 完成了 <a href="https://cure53.de/audit-report_ivpn.pdf">no-logging 稭核</a>，此資料掲示在 IVPN 的「不記錄用戶活動」政策聲明當中。除此之外，IVPN 未發佈任何第三方進行完整的資安稭查，所以此刻我們無法向用戶強力推薦。</p><p>預期他們很快就會公佈資安稭查報告，故仍把 IVPN 列上來。<a href="https://nitter.net/ivpnnet/status/1181954975687163905">IVPN 已委託 Cure53</a> 自 2019 年 11 月至 2020 年 1 月間，由六名稭核審員查針對 IVPN 網站、公開與內部伺服器基礎設施進行資安稭核審查。</p>
+    <h5><span class="badge badge-success">77+ 伺服器s</span></h5>
+    <p>計至在本文撰寫時，IVPN 在 31 國家佈署了 77 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
+    <h5><span class="badge badge-success">遠處端口轉發</span></h5>
+    <p>付費昇級的用戶可享遠端<a href="https://en.wikipedia.org/wiki/Port_forwarding">遠處端口轉發</a>功能，透過客戶端軟體<a href="https://www.ivpn.net/knowledgebase/81/How-do-I-activate-port-forwarding.html">開啟</a>。只有在使用 <a href="https://www.ivpn.net/knowledgebase/116/Port-forwarding-is-not-working-why.html"> OpenVPN 且不連接位在美國的伺服器時</a>，才可進行端口轉發功能。</p>
+    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
+    <p>IVPN 收信用卡/簽帳卡、PayPal、<strong>比特幣</strong>以及<strong>現金或當地流通貨幣</strong>（年繳）等不記名付款方式。</p>
+    <h5><span class="badge badge-success">Mobile Clients</span></h5>
+    <p>除標準的 OpenVPN 設定外， IVPN 也有手機專用的 iOS 與 Android 應用軟體，便於用戶連接到他們的伺服器。</p>
+    <h5><span class="badge badge-info">Extra Functionality</span></h5>
+    <p>The Mullvad VPN 客戶端軟體內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。 IVPN 還有反追蹤功能，可阻擋網路廣告與追蹤器。</p>
+    </div>
+  </div>
+
+</div>
