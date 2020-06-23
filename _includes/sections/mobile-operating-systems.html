@@ -38,7 +38,41 @@ github="https://github.com/ubports"
 <h3>值得一提</h3>
 
 <ul>
-  <li><a href="https://www.replicant.us/">Replicant</a> <span class="badge badge-info">AOSP</span> - 基於 Android 的開源作業系統，希望能更換所有的商用元件以免費軟體作取代。</li>
-  <li><a href="https://www.omnirom.org/">OmniROM</a> <span class="badge badge-info">AOSP</span> <span class="badge badge-warning" data-toggle="tooltip" title="This software may depend on or recommend non-free software.">contrib <i class="far fa-question-circle"></i></span> - 基於 Android 手機平台，可使用在智慧型手機與平板電腦上的自由開源作業系統。</li>
-  <li><a href="https://microg.org/">MicroG</a> <span class="badge badge-info">Add-on Package</span> <span class="badge badge-warning" data-toggle="tooltip" title="This software may depend on or recommend non-free software.">contrib <i class="far fa-question-circle"></i></span> - 旨在 Android 安卓系統上作為商用 Google 商店服務的開源自由軟體替代專案。它也負責維護把 microG 與 F-Droid 預裝在 <a href="https://lineage.microg.org/">Lineage </a>的分支專案。</li>
+  <li><a href="https://www.replicant.us/">Replicant</a>
+    {% include badge.html
+    color="info"
+    text="AOSP"
+    %}
+    - An open-source operating system based on Android, aiming to replace all proprietary components with free software.
+  </li>
+
+  <li>
+    <a href="https://www.omnirom.org/">OmniROM</a>
+    {% include badge.html
+    color="info"
+    text="AOSP"
+    %}
+    {% include badge.html
+    color="warning"
+    icon="far fa-question-circle"
+    text="contrib"
+    tooltip="This software may depend on or recommend non-free software."
+    %}
+    - A free-software operating system for smartphones and tablet computers, based on the Android mobile platform.
+  </li>
+
+  <li>
+    <a href="https://microg.org/">MicroG</a>
+    {% include badge.html
+    color="info"
+    text="Add-on Package"
+    %}
+    {% include badge.html
+    color="warning"
+    icon="far fa-question-circle"
+    text="contrib"
+    tooltip="This software may depend on or recommend non-free software."
+    %}
+    - A project that aims to reimplement the proprietary Google Play Services in the Android operating system with a FLOSS replacement. The microG project also maintains a fork of LineageOS with microG and F-Droid preinstalled at <a href="https://lineage.microg.org/">Lineage for microG</a>.
+  </li>
 </ul>

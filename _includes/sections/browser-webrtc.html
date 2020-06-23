@@ -38,10 +38,21 @@
 <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">再次測試 WebRTC 漏洞吧</a>
 </p>
 
+<h3>How to disable WebRTC in Safari?</h3>
+
+<p>Safari is far stricter with WebRTC than other major browsers, and it does not leak your IP address in its default configuration. If you'd like, you can follow these steps just to double-check your browser:</p>
+
+<ol class="long-string-list">
+  <li>Choose "Preferences" under the Safari menu in your menu bar.</li>
+  <li>Select the Advanced tab and check the "Show Develop menu in menu bar" box.</li>
+  <li>Exit Preferences and open the Develop menu in your menu bar.</li>
+  <li>In the drop-down menu, open the "WebRTC" submenu and ensure "Enable Legacy WebRTC API" is unchecked. If it's grayed out, even better.</li>
+</ol>
+
 <h3>如何解決 Google Chrome 底下的 WebRTC 漏洞？</h3>
 
 <p>Chrome 瀏覽器無法完全取消 WebRTC，但可以透過附加套件變更其路由設定（與防止洩漏）。有兩種開源方式：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a> （需依情況來調整設定選項），和  <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>（設置時請選「預防 WebRTC 洩漏本地 IP 地址」）。</p>
 
 <h3>其它的瀏覽器呢？</h3>
 
-<p>蘋果 iOS 作業系統下的 Chrome、Internet Explorer 與 Safari 目前尚未採用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不過我們建議在各種設備上最好還是使用火狐瀏覽器。</a></p>
+<p>蘋果 macOS 作業系統下的 Chrome 與 Internet Explorer 與 Safari 目前尚未採用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不過我們建議在各種設備上最好還是使用火狐瀏覽器。</a></p>

@@ -102,14 +102,32 @@
   </ul>
   </dd>
 
+  <dt>beacon.enabled = false</dt>
+  <dd>Disables sending additional analytics to web servers. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Details</a></dd>
+
+  <dt>browser.safebrowsing.downloads.remote.enabled = false</dt>
+  <dd>Prevents Firefox from sending information about downloaded executable files to Google Safe Browsing to determine whether it should be blocked for safety reasons. <a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work#w_what-information-is-sent-to-mozilla-or-its-partners-when-phishing-and-malware-protection-are-enabled">Details</a></dd>
+
+  <dt>Disable Firefox prefetching pages it thinks you will visit next:</dt>
+  <dd>
+  Prefetching causes cookies from the prefetched site to be loaded and other potentially unwanted behavior. Details <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ">here</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">here</a>.
+  <ul>
+    <li>network.dns.disablePrefetch = true</li>
+    <li>network.dns.disablePrefetchFromHTTPS = true</li>
+    <li>network.predictor.enabled = false</li>
+    <li>network.predictor.enable-prefetch = false</li>
+    <li>network.prefetch-next = false</li>
+  </dd>
 
   <dt>network.IDN_show_punycode = true</dt>
-  <dd>不會收集 IDNs，否則其 Punycode 等量容易陷入難以察覺的釣魚攻擊。<a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">來源出處</a></dd>
-  
+  <dd>Not rendering IDNs as their Punycode equivalent leaves you open to phishing attacks that can be very difficult to notice. <a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">Source</a></dd>
 
-<h3 id="user.js">Firefox user.js 模版</h3>
+  <dt>Looking for TRR, DoH or ESNI?</dt>
+  <dd>They have moved to <a href="/providers/dns/#dns">our DNS page</a>.</dd>
+
+<h3 id="user.js">Firefox user.js Templates</h3>
 <ul>
-	<li><a href="https://github.com/ghacksuserjs/ghacks-user.js">ghacks-user.js</a> - 進行中的全面化用戶樣版，用以設置強化 Firefox 的隱私、安全和反指紋記錄。</li>
+   <li><a href="https://github.com/ghacksuserjs/ghacks-user.js">ghacks-user.js</a> - An ongoing comprehensive user.js template for configuring and hardening Firefox privacy, security and anti-fingerprinting.</li>
 </ul>
 
 
@@ -118,7 +136,6 @@
 <ul>
   <li><a href="https://blog.privacytools.io/firefox-privacy-an-introduction-to-safe/">Firefox Privacy: Tips and Tricks for Better Browsing</a> - 適合新手，如何保持資料私密與安全初步指南。</li>
   <li><a href="https://ffprofile.com/">ffprofile.com</a> - 協助建立所喜好預設的 Firefox 設定檔。</li>
-  <li><a href="http://kb.mozillazine.org/Category:Security_and_privacy-related_preferences">mozillazine.org</a> - 安全及隱私相關偏好設定。</li>
   <li><a href="https://addons.mozilla.org/firefox/addon/privacy-settings/">Privacy Settings</a> - 以簡單的工具列，替代 Firefox 原本內建隱私設定的擴充元件。</li>
   <li><a href="https://12bytes.org/articles/tech/firefox/the-firefox-privacy-guide-for-dummies/">Firefox Privacy Guide For Dummies</a> - 提供改善火狐瀏覽器隱私安全設定的指南。</li>
 </ul>

@@ -1,7 +1,7 @@
-<h1 id="vpn" class="anchor"><a href="#vpn"><i class="fas fa-link anchor-icon"></i></a> 推薦的 VPN 服務</h1>
+<h1 id="vpn" class="anchor"><a href="#vpn"><i class="fas fa-link anchor-icon"></i></a> Recommended VPN Services</h1>
 
 <div class="alert alert-success" role="alert">
-  <strong>此推薦的供應商都不在美國境內，他們都使用加密，接受 Bitcoin 付款，支援 OpenVPN 而且採不記錄使用者活動的政策。可進一步了解 <a href="/providers/vpn/#criteria">完整的評鑑標準說明</a>。</strong>
+  <strong>Our recommended providers are outside the US, use encryption, accept Bitcoin, support OpenVPN, and have a no logging policy. <a href="/providers/vpn/#criteria">Read our full list of criteria for more information</a>.</strong>
 </div>
 
 <div class="container-fluid">
@@ -17,89 +17,95 @@
         alt="Mullvad">
     </div>
     <div class="col">
-    <h2>Mullvad <span class="badge badge-info">歐元 €60/年</span></h2>
-    <p><strong>Mullvad</strong> 速度快、價格合理的 VPN，同時認真看待安全與透明課題。自 <strong>2009</strong>開始營運，是唯一達到我們各要求標準的 VPN 供應商。Mullvad 主要位於<span class="flag-icon flag-icon-se"></span> 瑞典，未提供免費試用，請到 <a href="https://mullvad.net/">mullvad.net</a> 建立一個帳號吧。</p>
-    <h5><span class="badge badge-success">406+ 伺服器</span></h5>
-    <p>計至在本文撰寫時，Mullvad 在 39 國家佈署了409 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
-    <h5><span class="badge badge-success">WireGuard 支援</span></h5>
-    <p>除標準的 OpenVPN 連線， Mullvad 還支援 WireGuard。WireGuard 是試驗階段的網路協定，理論上會更安全與更可靠。不過目前它仍未大量使用。</p>
-    <h5><span class="badge badge-success">獨立稭核</span></h5>
-    <p>Mullvad 的 VPN 客戶端軟體曾由 Cure53 與 Assured AB 稭核，提交滲透測試報告，公佈在<a href="https://cure53.de/pentest-report_mullvad_v2.pdf"> cure53.de</a>。 安全檢查的研究成員包括：</p>
+    <h2 id="mullvad" class="anchor">
+      <a href="#mullvad"><i class="fas fa-link anchor-icon"></i></a> Mullvad
+      {% include badge.html color="info" text="EUR €60/y" %}
+    </h2>
+    <p><strong><a href="https://mullvad.net/">Mullvad.net</a> </strong> is a fast and inexpensive VPN with a serious focus on transparency and security. They have been in operation since <strong>2009</strong>. Mullvad is based in <span class="flag-icon flag-icon-se"></span> Sweden and does not have a free trial.</p>
+    <h5>{% include badge.html color="success" text="35 Countries" %}</h5>
+    <p>Mullvad has <a href="https://mullvad.net/en/servers/">servers in 35 countries</a> at the time of writing this page. Picking a VPN provider with a server nearest to you will reduce latency of the network traffic you send. This is because of a shorter route (less hops) to the destination.</p>
+    <p>We also think it's better for the security of the VPN provider's private keys if they use <a href="https://en.wikipedia.org/wiki/Dedicated_hosting_service">dedicated servers</a>, instead of cheaper shared solutions (with other customers) such as <a href="https://en.wikipedia.org/wiki/Virtual_private_server">virtual private servers</a>.</p>
+    <h5>{% include badge.html color="success" text="Independently Audited" %}</h5>
+    <p>Mullvad's VPN clients have been audited by Cure53 and Assured AB in a pentest report <a href="https://cure53.de/pentest-report_mullvad_v2.pdf">published at cure53.de</a>. The security researchers concluded:</p>
     <blockquote class="blockquote">
-      <p class="mb-0">...Cure53 與 Assured AB 對於安全稭核結果感到滿意，對他們的軟體留下了良好印象。Mullvad VPN 自家團隊在資安用心的專注投入，測試員深信此專案朝著正確的軌道前進。</p>
+      <p class="mb-0">...Cure53 and Assured AB are happy with the results of the audit and the software leaves an overall positive impression. With security dedication of the in-house team at the Mullvad VPN compound, the testers have no doubts about the project being on the right track from a security standpoint.</p>
     </blockquote>
-    <h5><span class="badge badge-success">IPv6 支援</span></h5>
-    <p>Mullvad 支援 <a href="https://en.wikipedia.org/wiki/IPv6">IPv6 </a>網路協定，讓用戶可訪問<a href="https://mullvad.net/en/blog/2014/9/15/ipv6-support/">架設在 IPv6</a>的服務。不少供應商會阻斷 IPv6 連線。</p>
-    <h5><span class="badge badge-success">遠處端口轉發 Remote port forwarding</span></h5>
-    <p>Mullvad 提供遠端<a href="https://en.wikipedia.org/wiki/Port_forwarding">端口轉發</a>功能，請見<a href="https://mullvad.net/help/port-forwarding-and-mullvad/">Port forwarding with Mullvad VPN</a>.</p>
-    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
-    <p>Mullvad 可採 信用卡/簽帳卡、<strong>比特幣</strong>、<strong>Bitcoin Cash</strong>以及<strong>現金或當地流通貨幣</strong>等不記名付款方式，也可接受 Swish 與銀行電滙。</p>
-    <h5><span class="badge badge-warning">無手機端應用</span></h5>
-    <p>其 iOS 與 Android 客戶端軟體仍在開發中，手機用戶必須使用舊有的 OpenVPN 進行設定，通常它較複雜難搞。</p>
-    <h5><span class="badge badge-info">額外功能</span></h5>
-    <p>The Mullvad VPN 客戶端內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。 Mullvad 網站可以透由 Tor  <a href="http://xcln5hkbriyklr6n.onion/">xcln5hkbriyklr6n.onion </a>訪問。</p>
+    <h5>{% include badge.html color="success" text="Open Source Clients" %}</h5>
+    <p>Mullvad provides the source code for their desktop and mobile clients in their <a href="https://github.com/mullvad/mullvadvpn-app">GitHub organization</a>.</p>
+    <h5>{% include badge.html color="success" text="Accepts Bitcoin" %}</h5>
+    <p>Mullvad in addition to accepting credit/debit cards and PayPal, accepts <strong>Bitcoin</strong>, <strong>Bitcoin Cash</strong>, and <strong>cash/local currency</strong> as anonymous forms of payment. They also accept Swish and bank wire transfers.</p>
+    <h5>{% include badge.html color="success" text="WireGuard Support" %}</h5>
+    <p>In addition to standard OpenVPN connections, Mullvad supports WireGuard. WireGuard is an experimental protocol with theoretically better security and higher reliability, although it is not currently recommended for production use.</p>
+    <h5>{% include badge.html color="success" text="IPv6 Support" %}</h5>
+    <p>Mullvad supports the future of networking <a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a>. Their network allows users to <a href="https://mullvad.net/en/blog/2014/9/15/ipv6-support/">access services hosted on IPv6</a> as opposed to other providers who block IPv6 connections.</p>
+    <h5>{% include badge.html color="success" text="Remote Port Forwarding" %}</h5>
+    <p>Remote <a href="https://en.wikipedia.org/wiki/Port_forwarding">port forwarding</a> is allowed on Mullvad, see <a href="https://mullvad.net/help/port-forwarding-and-mullvad/">Port forwarding with Mullvad VPN</a>.</p>
+    <h5>{% include badge.html color="success" text="Mobile Clients" %}</h5>
+    <p>Mullvad has published <a href ="https://apps.apple.com/app/mullvad-vpn/id1488466513">App Store</a> and <a href="https://play.google.com/store/apps/details?id=net.mullvad.mullvadvpn">Google Play</a> clients, both supporting an easy-to use interface as opposed to requiring users to manual configure their WireGuard connections.</p>
+    <h5>{% include badge.html color="info" text="Extra Functionality" %}</h5>
+    <p>The Mullvad VPN clients have a built-in killswitch to block internet connections outside of the VPN. They also are able to automatically start on boot. The Mullvad website is also accessible via Tor at <a href="http://xcln5hkbriyklr6n.onion/">xcln5hkbriyklr6n.onion</a>.</p>
     </div>
   </div>
-
-</div>
-
-<div class="alert alert-warning" role="alert">
-  <strong>注意：使用 VPN 無法匿名，但某些狀況下提供用戶更佳的隱私保護。 VPN 不是用來從事違法活動的工具，不要依賴「不留活動記錄 "no log"」政策。</strong>
-</div>
-
-<h1 id="vpn" class="anchor"><a href="#worth-mentioning"><i class="fas fa-link anchor-icon"></i></a> 其它值得一提的 VPN 供應商</h1>
-
-<div class="container-fluid">
-
   <div class="row mb-2">
     <div class="col-lg-3 col-sm-12 pt-lg-5">
       <img src="/assets/img/svg/3rd-party/protonvpn.svg" height="70" width="200" class="img-fluid d-block mr-auto ml-auto align-middle" alt="ProtonVPN">
     </div>
     <div class="col">
-    <h2>ProtonVPN <span class="badge badge-info">免費版</span> <span class="badge badge-info">美元 $96/年 </span></h2>
-    <p><strong>ProtonVPN</strong>是 VPN 市場上有力的競爭者，從 <strong>2016 年</strong>開始加入 VPN 服務。 ProtonVPN 以<span class="flag-icon flag-icon-ch"></span>瑞士為所在地，有免費版的限量使用和付費昇級版等消費選項。可惜它目前仍無獨立的資安稭核審查，故無法達到我們推薦產品的全部要求標準，可參考下方之說明：</p>
-    <h5><span class="badge badge-danger">未稭核</span></h5>
-    <p>ProtonVPN 尚無任何第三方獨立進行資安稭核審查（截至本文發佈之際），所以我們無法將之列在可放心使用的推薦名單，姑且先列在此處希望他們能儘快發佈相關報告。</p>
-    <blockquote class="blockquote">
-      <p class="mb-0">ProtonVPN  已委託瑞士某家公司對 VPN 產品進行完整的資安稭核審查，其結果將會儘快發佈。</p>
-      <footer class="blockquote-footer">Marc Loebekken, ProtonVPN AG Legal counsel</footer>
-    </blockquote>
-    <p>我們會再次於 2020 年第一季重新評估上述的安全審查報告是否發表。
-    <h5><span class="badge badge-success">610+ 伺服器</span></h5>
-    <p>計至在本文撰寫時，ProtonVPN 在 44 國家佈署了610 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
-    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
-    <p>技術上 ProtonVPN 可接受比特幣，但必須為老用戶或是事先聯絡 ProtonVPN 客服使用比特幣註冊。</p>
-    <h5><span class="badge badge-success">手機端應用</span></h5>
-    <p>除標準的 OpenVPN 設定外， ProtonVPN 也有手機專用的 iOS 與 Android 應用軟體，便於用戶連接 ProtonVPN 伺服器。</p>
-    <h5><span class="badge badge-info">Extra Functionality</span></h5>
-    <p>ProtonVPN 客戶端內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。ProtonVPN 也有 "Tor" 伺服器以便輕鬆訪問 onion 網站，不過還是建議透過 Tor 瀏覽器來訪問深網。</p>
+    <h2 id="protonvpn" class="anchor">
+      <a href="#protonvpn"><i class="fas fa-link anchor-icon"></i></a> ProtonVPN
+      {% include badge.html color="info" text="Free" %}
+      {% include badge.html color="info" text="Basic USD $48/y" %}
+      {% include badge.html color="secondary" text="Plus USD $96/y" %}
+    </h2>
+    <p><strong><a href="https://protonvpn.com/">ProtonVPN.com</a></strong> is a strong contender in the VPN space, and they have been in operation since <strong>2016</strong>. ProtonVPN is based in <span class="flag-icon flag-icon-ch"></span> Switzerland and offers a limited free pricing tier, as well as premium options. They offer a further 14% discount for buying a 2 year subscription.</p>
+    <h5>{% include badge.html color="success" text="44 Countries" %}</h5>
+    <p>ProtonVPN has <a href="https://protonvpn.com/vpn-servers">servers in 44 countries</a> at the time of writing this page. Picking a VPN provider with a server nearest to you will reduce latency of the network traffic you send. This is because of a shorter route (less hops) to the destination.</p>
+    <p>We also think it's better for the security of the VPN provider's private keys if they use <a href="https://en.wikipedia.org/wiki/Dedicated_hosting_service">dedicated servers</a>, instead of cheaper shared solutions (with other customers) such as <a href="https://en.wikipedia.org/wiki/Virtual_private_server">virtual private servers</a>.</p>
+    <h5>{% include badge.html color="success" text="Independently Audited" %}</h5>
+    <p>As of January 2020 ProtonVPN has undergone an independent audit by SEC Consult. SEC Consult found some medium and low risk vulnerabilities in ProtonVPN's Windows, Android, and iOS applications, all of which were "properly fixed" by ProtonVPN before the reports were published. None of the issues identified would have provided an attacker remote access to a user's device or traffic. You can view individual reports for each platform at <a href="https://protonvpn.com/blog/open-source/">protonvpn.com</a>.
+    <h5>{% include badge.html color="success" text="Open Source Clients" %}</h5>
+    <p>ProtonVPN provides the source code for their desktop and mobile clients in their <a href="https://github.com/ProtonVPN">GitHub organization</a>.</p>
+    <h5>{% include badge.html color="success" text="Accepts Bitcoin" %}</h5>
+    <p>ProtonVPN does technically accept Bitcoin payments; however, you either need to have an existing account, or contact their support team in advance to register with Bitcoin.</p>
+    <h5>{% include badge.html color="success" text="Mobile Clients" %}</h5>
+    <p>In addition to providing standard OpenVPN configuration files, ProtonVPN has mobile clients for <a href="https://apps.apple.com/us/app/protonvpn-fast-secure-vpn/id1437005085">App Store</a> and <a href="https://play.google.com/store/apps/details?id=ch.protonvpn.android&hl=en_US">Google Play</a> allowing for easy connections to their servers. The mobile client on Android is also available in <a href="https://f-droid.org/en/packages/ch.protonvpn.android">F-Droid</a>, which ensures that it is compiled with <a href="https://www.f-droid.org/en/2019/05/05/trust-privacy-and-free-software.html">reproducable builds</a>.</p>
+    <h5>{% include badge.html color="warning" text="No Port Forwarding" %}</h5>
+    <p>ProtonVPN does not currently support remote port forwarding, which may impact some applications. Especially Peer-to-Peer applications like Torrent clients.</p>
+    <h5>{% include badge.html color="info" text="Extra Functionality" %}</h5>
+    <p>The ProtonVPN clients have a built-in killswitch to block internet connections outside of the VPN. They also are able to automatically start on boot. ProtonVPN also offers "Tor" servers allowing you to easily connect to onion sites, but we still strongly recommend using <a href="https://www.torproject.org/">the official Tor Browser</a> for this purpose.</p>
     </div>
   </div>
-
   <div class="row mb-2">
     <div class="col-lg-3 col-sm-12 pt-lg-5">
       <img src="/assets/img/svg/3rd-party/ivpn.svg" height="70" width="200" class="img-fluid d-block mr-auto ml-auto align-middle" alt="IVPN">
     </div>
     <div class="col">
-    <h2>
-      IVPN
-      <span class="badge badge-info">標準版美元 $60/年</span>
-      <span class="badge badge-secondary">昇級版 美元 $100/年</span>
+    <h2 id="ivpn" class="anchor">
+      <a href="#ivpn"><i class="fas fa-link anchor-icon"></i></a> IVPN
+      {% include badge.html color="info" text="Standard USD $60/y" %}
+      {% include badge.html color="secondary" text="Pro USD $100/y" %}
     </h2>
-    <p><strong>IVPN</strong> 是另一家不錯的 VPN 供應商，成立於 <strong>2009</strong> 年，註冊所在地是 <span class="flag-icon flag-icon-gi"></span> 直布羅陀。IVPN 提供三天免費體驗試用，收費等級有二種。可惜它目前仍無獨立的資安稭核審查，故無法達到我們推薦產品的全部要求標準，可參考下方之說明：</p>
-    <h5><span class="badge badge-danger">無資安稭核</span></h5>
-    <p>IVPN 已委託 Cure53 完成了 <a href="https://cure53.de/audit-report_ivpn.pdf">no-logging 稭核</a>，此資料掲示在 IVPN 的「不記錄用戶活動」政策聲明當中。除此之外，IVPN 未發佈任何第三方進行完整的資安稭查，所以此刻我們無法向用戶強力推薦。</p><p>預期他們很快就會公佈資安稭查報告，故仍把 IVPN 列上來。<a href="https://nitter.net/ivpnnet/status/1181954975687163905">IVPN 已委託 Cure53</a> 自 2019 年 11 月至 2020 年 1 月間，由六名稭核審員查針對 IVPN 網站、公開與內部伺服器基礎設施進行資安稭核審查。</p>
-    <h5><span class="badge badge-success">77+ 伺服器s</span></h5>
-    <p>計至在本文撰寫時，IVPN 在 31 國家佈署了 77 個伺服器。通常供應商有更多伺服器就能提供更佳服務：當上百台伺服器營運時，用戶可以更輕易地找到速度最快、距離最近的伺服器。</p>
-    <h5><span class="badge badge-success">遠處端口轉發</span></h5>
-    <p>付費昇級的用戶可享遠端<a href="https://en.wikipedia.org/wiki/Port_forwarding">遠處端口轉發</a>功能，透過客戶端軟體<a href="https://www.ivpn.net/knowledgebase/81/How-do-I-activate-port-forwarding.html">開啟</a>。只有在使用 <a href="https://www.ivpn.net/knowledgebase/116/Port-forwarding-is-not-working-why.html"> OpenVPN 且不連接位在美國的伺服器時</a>，才可進行端口轉發功能。</p>
-    <h5><span class="badge badge-success">接受比特幤付款</span></h5>
-    <p>IVPN 收信用卡/簽帳卡、PayPal、<strong>比特幣</strong>以及<strong>現金或當地流通貨幣</strong>（年繳）等不記名付款方式。</p>
-    <h5><span class="badge badge-success">Mobile Clients</span></h5>
-    <p>除標準的 OpenVPN 設定外， IVPN 也有手機專用的 iOS 與 Android 應用軟體，便於用戶連接到他們的伺服器。</p>
-    <h5><span class="badge badge-info">Extra Functionality</span></h5>
-    <p>The Mullvad VPN 客戶端軟體內鍵 killswitch 以阻斷 VPN 以外的網路連線，也能在開機時即自動載入 VPN。 IVPN 還有反追蹤功能，可阻擋網路廣告與追蹤器。</p>
+    <p><strong><a href="https://www.ivpn.net">IVPN.net</a></strong> is another premium VPN provider, and they have been in operation since <strong>2009</strong>. IVPN is based in <span class="flag-icon flag-icon-gi"></span> Gibraltar and offers a 3 day free trial.</p>
+    <h5>{% include badge.html color="success" text="32 Countries" %}</h5>
+    <p>IVPN has <a href="https://www.ivpn.net/server-locations">servers in 32 countries</a> at the time of writing this page. Picking a VPN provider with a server nearest to you will reduce latency of the network traffic you send. This is because of a shorter route (less hops) to the destination.</p>
+    <p>We also think it's better for the security of the VPN provider's private keys if they use <a href="https://en.wikipedia.org/wiki/Dedicated_hosting_service">dedicated servers</a>, instead of cheaper shared solutions (with other customers) such as <a href="https://en.wikipedia.org/wiki/Virtual_private_server">virtual private servers</a>.</p>
+    <h5>{% include badge.html color="success" text="Independently Audited" %}</h5>
+    <p>IVPN has undergone a <a href="https://cure53.de/audit-report_ivpn.pdf">no-logging audit from Cure53</a> which concluded in agreement with IVPN's no-logging claim. IVPN has also completed a <a href="https://cure53.de/summary-report_ivpn_2019.pdf">comprehensive pentest report Cure53</a> in January 2020. IVPN has also said they plan to have <a href="https://www.ivpn.net/blog/independent-security-audit-concluded">annual reports</a> in the future.</p>
+    <h5>{% include badge.html color="success" text="Open Source Clients" %}</h5>
+    <p>As of Feburary 2020 <a href="https://www.ivpn.net/blog/ivpn-applications-are-now-open-source">IVPN applications are now open source</a>. Source code can be obtained from their <a href="https://github.com/ivpn">GitHub organization</a>.</p>
+    <h5>{% include badge.html color="success" text="Accepts Bitcoin" %}</h5>
+    <p>In addition to accepting credit/debit cards and PayPal, IVPN accepts <strong>Bitcoin</strong> and <strong>cash/local currency</strong> (on annual plans) as anonymous forms of payment.</p>
+    <h5>{% include badge.html color="success" text="WireGuard Support" %}</h5>
+    <p>In addition to standard OpenVPN connections, IVPN supports WireGuard. WireGuard is an experimental protocol with theoretically better security and higher reliability, although it is not currently recommended for production use.</p>
+    <h5>{% include badge.html color="success" text="Remote Port Forwarding" %}</h5>
+    <p>Remote <a href="https://en.wikipedia.org/wiki/Port_forwarding">port forwarding</a> is possible with a Pro plan. Port forwarding <a href="https://www.ivpn.net/knowledgebase/81/How-do-I-activate-port-forwarding.html">can be activated</a> via the client area. Port forwarding is only available on IVPN when <a href="https://www.ivpn.net/knowledgebase/116/Port-forwarding-is-not-working-why.html">using OpenVPN and is disabled on US servers</a>.</p>
+    <h5>{% include badge.html color="success" text="Mobile Clients" %}</h5>
+    <p>In addition to providing standard OpenVPN configuration files, IVPN has mobile clients for <a href="https://apps.apple.com/us/app/ivpn-serious-privacy-protection/id1193122683">App Store</a> and <a href="https://play.google.com/store/apps/details?id=net.ivpn.client">Google Play</a> allowing for easy connections to their servers. The mobile client on Android is also available in <a href="https://f-droid.org/en/packages/net.ivpn.client">F-Droid</a>, which ensures that it is compiled with <a href="https://www.f-droid.org/en/2019/05/05/trust-privacy-and-free-software.html">reproducable builds</a>.</p>
+    <h5>{% include badge.html color="info" text="Extra Functionality" %}</h5>
+    <p>The IVPN clients have a built-in killswitch to block internet connections outside of the VPN. They also are able to automatically start on boot. IVPN also provides "<a href="https://www.ivpn.net/antitracker">AntiTracker</a>" functionality, which blocks advertising networks and trackers from the network level.</p>
     </div>
   </div>
 
+<div class="alert alert-warning" role="alert">
+  <strong>Note: Using a VPN provider will not make you anonymous, but it will give you better privacy in certain situations. A VPN is not a tool for illegal activities. Don't rely on a "no log" policy.</strong>
 </div>

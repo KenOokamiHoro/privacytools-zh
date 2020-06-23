@@ -3,7 +3,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="privacy, anonymity, privacy tools, surveillance, encryption, NGO 推進器, TWNGO">
+  <meta name="keywords" content="privacy, anonymity, privacy tools, surveillance, encryption">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ site.production_url }}{{ page.url | replace:'index.html',''}}">
 
@@ -22,7 +22,7 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="{{ site.name }}" />
 
-  {% if page.url == "/" or page.url == "/about/" %}
+  {% if page.url == "/" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,6 +32,8 @@
     "alternateName": [
       "Privacy Tools",
       "網路隱私工具"
+      "privacytools.io",
+      "privacytoolsIO"
     ],
     "url": "{{ site.production_url }}",
     "logo": "{{ site.production_url }}/assets/img/svg/layout/brand/square-transparent.svg",
@@ -40,7 +42,7 @@
       "https://twitter.com/privacytoolsIO",
       "https://social.privacytools.io/@privacytools",
       "https://www.youtube.com/channel/UCen3taxHtzByXV8Da73B1Vg",
-      "https://github.com/privacytoolsIO"
+      "https://github.com/privacytools"
     ]
   }
   </script>

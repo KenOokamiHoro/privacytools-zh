@@ -20,6 +20,7 @@ badges="info:BSD"
 labels="warning:contrib:This software may depend on or recommend non-free software."
 website="https://www.pfsense.org/"
 github="https://github.com/pfsense/"
+privacy-policy="https://www.pfsense.org/privacy.html"
 %}
 
 {% include cardv2.html
@@ -35,6 +36,27 @@ git="https://gogs.librecmc.org/libreCMC/libreCMC"
 <h3>值得一提</h3>
 
 <ul>
-  <li><a href="https://www.openbsd.org/">OpenBSD</a> <span class="badge badge-info">BSD</span> -創造免費、多平台，類似像 4.4BSD-based UNIX 的作業系統開發專案。強調可攜帶性、標準化、正確性、主動安全與整合的密碼學系統。</li>
-  <li><a href="https://dd-wrt.com/">DD-WRT</a> <span class="badge badge-info">Linux</span> <span class="badge badge-warning" data-toggle="tooltip" title="This software may depend on or recommend non-free software.">contrib <i class="far fa-question-circle"></i></span> - 利用 Linux 為無線路由器與無線接取器所開發的軔體，可和多種路由器和接取器模式相容。A</li>
+  <li>
+    <a href="https://www.openbsd.org/">OpenBSD</a>
+    {% include badge.html
+    color="info"
+    text="BSD"
+    %}
+    - A project that produces a free, multi-platform 4.4BSD-based UNIX-like operating system. Emphasizes portability, standardization, correctness, proactive security and integrated cryptography.
+  </li>
+
+  <li>
+    <a href="https://dd-wrt.com/">DD-WRT</a>
+    {% include badge.html
+    color="info"
+    text="GNU/Linux"
+    %}
+    {% include badge.html
+    color="warning"
+    icon="far fa-question-circle"
+    text="contrib"
+    tooltip="This software may depend on or recommend non-free software."
+    %}
+    - A Linux-based open-source firmware compatible with several models of routers and access points.
+  </li>
 </ul>

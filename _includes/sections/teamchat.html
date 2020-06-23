@@ -6,12 +6,12 @@
 
 {%
   include cardv2.html
-  title="Matrix"
-  image="/assets/img/svg/3rd-party/matrix.svg"
-  image-dark="/assets/img/svg/3rd-party/matrix-dark.svg"
-  description='<a href="https://matrix.org/docs/guides/introduction">Matrix</a> 開源專案發佈了安全、非集中式、即時性的通訊 <a href="https://matrix.org/docs/spec">Matrix 開放標準</a>。<br />
-  <a href="https://en.wikipedia.org/wiki/Riot.im">Riot.im</a> 則為 Matrix 團隊開發的客戶端聊天應用軟體，提供 E2E 一對一或是多人會議選項。（此項功能須由用戶<strong>主動啟用</strong>，其操作方法為調整聊天室或聊天對象的安全隱私加密模式。）此功能未來將會改成<a href="https://github.com/vector-im/riot-web/issues/6779">默認預設</a>。'
+  title="Riot"
+  image="/assets/img/svg/3rd-party/riotim.svg"
+  description='<a href="//about.riot.im">Riot.im</a> is the reference client for the <a href="//matrix.org/docs/guides/introduction">Matrix</a> network. The <a href="//matrix.org/docs/spec">Matrix open standard</a> is an open-source standard for secure, decentralized, real-time communication.<br />'
+  labels="text==VoIP"
   website="https://about.riot.im/"
+  privacy-policy="https://riot.im/privacy"
   forum="https://forum.privacytools.io/t/discussion-riot-im/665/"
   github="https://github.com/vector-im/riot-web/"
   windows="https://riot.im/download/desktop/"
@@ -27,9 +27,10 @@
   include cardv2.html
   title="Rocket.chat"
   image="/assets/img/svg/3rd-party/rocketchat.svg"
-  description="Rocket.chat 為適合團隊通訊的自架式開放溝通軟體，可選擇聯邦與試驗中的 E2EE 模式。"
-  labels="warning:<a href=//rocket.chat/docs/user-guides/end-to-end-encryption/>試驗的 E2EE</a>：E2EE 文件闡明「此功能目前仍在初期測試階段，尚未能支援手機系統。」 它沒有前向保密因此可能會損害密碼解密，造成訊息內容的外洩。後來增加的聯邦式功能也可能會出錯。"
+  description="Rocket.chat is an self-hostable open source platform for team communication. It has optional federation and experimental E2EE."
+  labels="color==warning::link==https://rocket.chat/docs/user-guides/end-to-end-encryption/::text==Experimental E2EE::tooltip==Regarding E2EE their documentation states 'This feature is currently in alpha. It's also not yet supported on mobile'. There is no forward secrecy so compromised decryption password would leak all messages. Federation was also added afterwards, potentially causing room for mistakes.|text==VoIP"
   website="https://rocket.chat/"
+  privacy-policy="https://rocket.chat/privacy"
   forum="https://forum.privacytools.io/t/discussion-rocket-chat/1223"
   github="https://github.com/rocketchat/"
   windows="https://rocket.chat/install"
@@ -44,9 +45,10 @@
   include cardv2.html
   title="Keybase"
   image="/assets/img/svg/3rd-party/keybase.svg"
-  description='Keybase provides a hosted team chat with E2EE 加密功能的團隊聊天服務，其協議曾通過<a href="https://keybase.io/docs-assets/blog/NCC_Group_Keybase_KB2018_Public_Report_2019-02-27_v1.3.pdf">獨立的稭核審查 (PDF 檔案)</a>。用戶可以透過 Keybase "<a href="https://en.wikipedia.org/wiki/Keybase#Identity_proofs">識別證明</a>的密碼簽署法，認證自己的網路社交帳號。'
-  labels="warning:<a href=github.com/keybase/client/issues/6374>Warning</a>:This software relies on a closed-source central server."
+  description='Keybase provides a hosted team chat with E2EE. Its protocol has also been <a href="https://keybase.io/docs-assets/blog/NCC_Group_Keybase_KB2018_Public_Report_2019-02-27_v1.3.pdf">indepedently audited (PDF)</a>. Keybase can help you prove you own social media accounts through the use of cryptographic signing of "<a href="https://en.wikipedia.org/wiki/Keybase#Identity_proofs">identity proofs</a>".'
+  labels="color==warning::link==https://github.com/keybase/client/issues/6374::text==Warning::tooltip==This software relies on a closed-source central server.| color==info::link==https://github.com/privacytools/privacytools.io/issues/1894::text==Ownership change::tooltip==Keybase has recently been acquired by Zoom."
   website="https://keybase.io/"
+  privacy-policy="https://keybase.io/docs/privacypolicy"
   forum="https://forum.privacytools.io/t/discussion-keybase/1224"
   tor="http://keybase5wmilwokqirssclfnsqrjdsi7jdir5wy7y7iu3tanwmtp6oid.onion/"
   github="https://github.com/Keybase"

@@ -219,7 +219,13 @@ h2, h3:not(.h5), h4, h5 {
   background: darken($tor, 5%);
 }
 
+.icon-btn {
+  padding: 0px;
+}
 
+.flow-root {
+  display: flow-root;
+}
 
 /*
  * Bootstrap 4.2+ features
@@ -375,6 +381,30 @@ input#nav-toggle,
   #navbar {
     padding: 1rem 3rem;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #navbar {
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .nav-dropdown {
+    max-height: 8em;
+  }
+}
+
+.nav-theme-icon:before {
+  color: var(--warning);
+  font-size: 0.875em;
+  content: "\f186";
 }
 
 @media only screen and (max-width: 768px) {

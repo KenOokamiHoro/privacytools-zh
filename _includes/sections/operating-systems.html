@@ -1,45 +1,86 @@
 <h1 id="os" class="anchor"><a href="#os"><i class="fas fa-link anchor-icon"></i></a> 電腦作業系統</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong> 如果你目前還在使用微軟 Windows 或是蘋果電腦 macOS 的作業系統，不妨從下方考慮其它替代選項。</strong>
+  <strong>If you are currently using an operating system like Windows 10, you should pick an alternative here.</strong>
 </div>
 
 {% include cardv2.html
-title="Qubes OS"
-image="/assets/img/svg/3rd-party/qubes_os.svg"
-description='Qubes 開源的作業系統，其設計為桌機型電腦提供更堅強的安全保護。Qubes 是以 Xen 為基礎， X 視窗系統桌面環境與 Linux。它可以執行大多數的 Linux 應用程式以及適用大部份的 Linux 的硬體效能驅動。'
-badges="info:Xen"
-labels="warning:contrib:This software may depend on or recommend non-free software."
-website="https://www.qubes-os.org/"
-github="https://github.com/QubesOS"
-tor="http://qubesosfasa4zl44o4tws22di6kepyzfeqv3tg4e3ztknltfxqrymdad.onion/"
+  title="Qubes OS"
+  image="/assets/img/svg/3rd-party/qubes_os.svg"
+  description='Qubes is an open-source operating system designed to provide strong security for desktop computing. Qubes is based on Xen, the X Window System, and Linux, and can run most Linux applications and utilize most of the Linux drivers.'
+  badges="info:Xen"
+  labels="color==warning::text==contrib::tooltip==This software may depend on or recommend non-free software."
+  website="https://www.qubes-os.org/"
+  privacy-policy="https://www.qubes-os.org/privacy/"
+  github="https://github.com/QubesOS"
+  tor="http://qubesosfasa4zl44o4tws22di6kepyzfeqv3tg4e3ztknltfxqrymdad.onion/"
 %}
 
 {% include cardv2.html
-title="Fedora 工作站"
-image="/assets/img/svg/3rd-party/fedora.svg"
-description='Fedora 由 Red Hat 贊助，Fedora 專案開發的 Linux 版本。 Fedora 工作站強調安全、可靠與使用友善，使用 GNOME 桌面環境來提供桌機與筆電運行。'
-badges="info:GNU/Linux"
-labels="warning:contrib:This software may depend on or recommend non-free software."
-website="https://getfedora.org/"
-git="https://src.fedoraproject.org/"
+  title="Fedora Workstation"
+  image="/assets/img/svg/3rd-party/fedora.svg"
+  description='Fedora is a Linux distribution developed by the Fedora Project and sponsored by Red Hat. Fedora Workstation is a secure, reliable, and user-friendly edition developed for desktops and laptops, using GNOME as the default desktop environment.'
+  badges="info:GNU/Linux"
+  labels="color==warning::text==contrib::tooltip==This software may depend on or recommend non-free software."
+  website="https://getfedora.org/"
+  privacy-policy="https://fedoraproject.org/wiki/Legal:PrivacyPolicy?rd=Legal/PrivacyPolicy"
+  git="https://src.fedoraproject.org/"
 %}
 
 {% include cardv2.html
-title="Debian"
-image="/assets/img/svg/3rd-party/debian.svg"
-description='Debian 有點類似 Unix 的電腦操作系統，為 Linux 的發佈版本之一，完全以自由免費的軟體組成，大部份的軟體都是採用 GNU 一般公共授權。有一群人長期地投入 Debian 專案的開發維護。'
-badges="info:GNU/Linux"
-website="https://www.debian.org/"
-tor="http://sejnfjrq6szgca7v.onion"
-gitlab="https://salsa.debian.org/qa/debsources"
+  title="Debian"
+  image="/assets/img/svg/3rd-party/debian.svg"
+  description='Debian is a Unix-like computer operating system and a Linux distribution that is composed entirely of free and open-source software, most of which is under the GNU General Public License, and packaged by a group of individuals known as the Debian project.'
+  badges="info:GNU/Linux"
+  website="https://www.debian.org/"
+  privacy-policy="https://www.debian.org/legal/privacy"
+  tor="http://sejnfjrq6szgca7v.onion"
+  gitlab="https://salsa.debian.org/qa/debsources"
 %}
 
-<h3>值得一提</h3>
+<h3>Worth Mentioning</h3>
 
 <ul>
-  <li><a href="https://www.openbsd.org/">OpenBSD</a> <span class="badge badge-info">BSD</span> - 創造免費、多平台，類似像 4.4BSD-based UNIX 的作業系統開發專案。強調可攜帶性、標準化、正確性、主動安全與整合的密碼學系統。</li>
-  <li><a href="https://www.archlinux.org/">Arch Linux</a> <span class="badge badge-info">GNU/Linux</span> <span class="badge badge-warning" data-toggle="tooltip" title="This software may depend on or recommend non-free software.">contrib <i class="far fa-question-circle"></i></span> - 一套簡約、輕量的 Linux 發行版本。主要由免費和開源軟體所組成，支持社群投入。<a href="https://www.parabola.nu/">Parabola</a> 則是 Arch Linux 的完整開源版本。</li>
-  <li><a href="https://trisquel.info/">Trisquel</a> <span class="badge badge-info">GNU/Linux</span> - Ubuntu 分家出來的 Linux 作業系統。這個專案希望能發展一個完全免費的軟體系統而不依靠商用軟體或軔體，故其採用 Linux-libre，這是一個 Linux kernel 核心版本，移除封閉的程式碼（如 binary blobs）。</li>
-  <li><a href="https://www.whonix.org/">Whonix</a> <span class="badge badge-info">GNU/Linux</span> - 以 Debian GNU/Linux 為基礎，更強調安全關注的 Linux 發行版本。它希望能提供網路上的隱私保護，安全與匿名性。這個作業系統由二個虛擬機器組成，一個是「工作站」一個是 Tor「閘門道」。所有的通訊都被迫要透過 Tor 網路。</li>
+  <li><a href="https://www.openbsd.org/">OpenBSD</a>
+    {% include badge.html
+    color="info"
+    text="BSD"
+    %}
+    - A project that produces a free, multi-platform 4.4BSD-based UNIX-like operating system. Emphasizes portability, standardization, correctness, proactive security and integrated cryptography.
+  </li>
+
+  <li>
+    <a href="https://www.archlinux.org/">Arch Linux</a>
+    {% include badge.html
+    color="info"
+    text="GNU/Linux"
+    %}
+    {% include badge.html
+    color="warning"
+    icon="far fa-question-circle"
+    text="contrib"
+    tooltip="This software may depend on or recommend non-free software."
+    %}
+    - A simple, lightweight Linux distribution. It is composed predominantly of free and open-source software, and supports community involvement. <a href="https://www.parabola.nu/">Parabola</a> is a
+    completely open source version of Arch Linux.
+  </li>
+
+  <li>
+    <a href="https://trisquel.info/">Trisquel</a>
+    {% include badge.html
+    color="info"
+    text="GNU/Linux"
+    %}
+    - Derived from Ubuntu, this project aims for a fully free software system without proprietary software or firmware and uses Linux-libre, a version of the Linux kernel with the non-free code (binary blobs) removed.
+  </li>
+
+  <li>
+    <a href="https://www.whonix.org/">Whonix</a>
+    {% include badge.html
+    color="info"
+    text="GNU/Linux"
+    %}
+    - A Debian-based security-focused Linux distribution. It aims to provide privacy, security and anonymity on the internet. The operating system consists of two virtual machines, a "Workstation"
+    and a Tor "Gateway". All communication are forced through the Tor network to accomplish this.
+  </li>
 </ul>
