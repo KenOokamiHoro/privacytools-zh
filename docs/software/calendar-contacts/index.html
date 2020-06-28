@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="privacy, anonymity, privacy tools, surveillance, encryption">
+  <meta name="description" content="发现免费、开源和安全的方式来同止各设备的联系人和行事历。">
+  <link rel="canonical" href="https://privacytools-zh-cn.yoitsu.moe/software/calendar-contacts/">
+
+  <!-- title -->
+  
+  <title>日历/联系人同步工具 | PrivacyTools</title>
+  <meta property="og:title" content="日历/联系人同步工具 | PrivacyTools" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://privacytools-zh-cn.yoitsu.moe/software/calendar-contacts/" />
+  <meta property="og:image" content="https://privacytools-zh-cn.yoitsu.moe/assets/img/svg/layout/brand/square-transparent.svg" />
+  <meta property="og:description" content="发现免费、开源和安全的方式来同止各设备的联系人和行事历。"/>
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="PrivacyTools" />
+
+  
+
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/png/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/png/favicons/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/png/favicons/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/assets/img/png/favicons/site.webmanifest?v=2">
+  <link rel="mask-icon" href="/assets/img/png/favicons/safari-pinned-tab.svg?v=2" color="#3498db">
+  <link rel="shortcut icon" href="/assets/img/png/favicons/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#3498db">
+  <meta name="msapplication-config" content="/assets/img/png/favicons/browserconfig.xml?v=2">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- CSS stylesheets -->
+  <link href="/assets/css/style.css?v=9" rel="stylesheet">
+  <link id="dark-css" href="/assets/css/dark.css?v=4" rel="stylesheet" media="(prefers-color-scheme: dark)">
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+  <script src="/assets/js/applytheme.js?v=1"></script>
+  <header>
+  <nav class="fixed-top bg-dark">
+  <div id="navbar" class="d-flex flex-wrap justify-content-between align-items-center">
+    <div class="w-50">
+      <a id="nav-home-mobile" class="nav-anchor" href="/">
+        <img src="/assets/img/svg/layout/brand/horizontal.svg" width="150px" />
+      </a>
+    </div>
+    <input type="checkbox" id="nav-toggle" checked />
+    <label for="nav-toggle" id="nav-toggle-label" class="fas fa-bars fa-lg"></label>
+
+    <div class="menu w-100">
+      <div id="nav-left" class="position-relative flex-col">
+        <a class="nav-anchor" href="/">
+          <span id="nav-home" class="fas fa-home fa-fw"></span>
+        </a>
+
+        <!-- Provider -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              服务提供商
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/providers/#ukusa"><span class="fas fa-user-secret fa-fw"></span> 避兔使用位于美国与英国的网络服务</a>
+            <a class="dropdown-item" href="/providers/cloud-storage/"><span class="fas fa-cloud fa-fw"></span> 云存储服务</a>
+            <a class="dropdown-item" href="/providers/dns/"><span class="fa fa-tasks fa-fw"></span> 域名系统（DNS）</a>
+            <a class="dropdown-item" href="/providers/email/"><span class="fas fa-mail-bulk fa-fw"></span> 电子邮件</a>
+            <a class="dropdown-item" href="/providers/hosting/"><span class="fas fa-database fa-fw"></span> 网站托管服务商</a>
+            <a class="dropdown-item" href="/providers/paste/"><span class="fas fa-paste fa-fw"></span> 文本保存服务（Pastebin）</a>
+            <a class="dropdown-item" href="/providers/search-engines/"><span class="fas fa-search fa-fw"></span> 搜索引擎</a>
+            <a class="dropdown-item" href="/providers/social-networks/"><span class="fas fa-expand-arrows-alt fa-fw"></span> 社交网络</a>
+            <a class="dropdown-item" href="/providers/social-news-aggregator/"><span class="far fa-newspaper fa-fw"></span> 社交消息聚合</a>
+            <a class="dropdown-item" href="/providers/vpn/"><span class="far fa-eye-slash fa-fw"></span> 虚拟专用网络（VPN）</a>
+          </span>
+        </details>
+
+        <!-- Browser -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              浏览器
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/browsers/#browser"><span class="fas fa-check fa-fw"></span> 推荐</a>
+            <a class="dropdown-item" href="/browsers/#fingerprint"><span class="fas fa-fingerprint fa-fw"></span>关于浏览器指纹</a>
+            <a class="dropdown-item" href="/browsers/#webrtc"><span class="far fa-eye fa-fw"></span> WebRTC IP 漏洞</a>
+            <a class="dropdown-item" href="/browsers/#addons"><span class="far fa-list-alt fa-fw"></span> 浏览器附加组件</a>
+            <a class="dropdown-item" href="/browsers/#about_config"><span class="fas fa-wrench fa-fw"></span> 火狐隐私调校技巧</a>
+          </span>
+        </details>
+
+        <!-- Software -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              应用软件
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/software/calendar-contacts/"><span class="fas fa-calendar fa-fw"></span> 日历/联系人同步工具</a>
+            <a class="dropdown-item" href="/software/notebooks/"><span class="far fa-sticky-note fa-fw"></span> 数字笔记簿</a>
+            <a class="dropdown-item" href="/software/email/"><span class="fas fa-envelope fa-fw"></span> 电子邮件客户端软件</a>
+            <a class="dropdown-item" href="/software/encryption-tools/"><span class="fas fa-lock fa-fw"></span> 文件加密</a>
+            <a class="dropdown-item" href="/software/file-sharing/"><span class="fas fa-file-export fa-fw"></span> 文件分享</a>
+            <a class="dropdown-item" href="/software/file-sync/"><span class="fas fa-copy fa-fw"></span> 文件同步</a>
+            <a class="dropdown-item" href="/software/productivity/#metadata-removal-tools"><span class="far fa-eye-slash fa-fw"></span> 移除元数据工具</a>
+            <a class="dropdown-item" href="/software/passwords/"><span class="fas fa-user-lock fa-fw"></span> 密码管理</a>
+            <a class="dropdown-item" href="/software/productivity/"><span class="fas fa-briefcase fa-fw"></span> 生产力工具</a>
+            <a class="dropdown-item" href="/software/real-time-communication/"><span class="fas fa-comments fa-fw"></span> 即时通信</a>
+            <a class="dropdown-item" href="/software/networks/"><span class="fas fa-user-secret fa-fw"></span> 去中心化网络和匿名网络</a>
+            <a class="dropdown-item" href="/software/cloud/"><span class="fas fa-hdd fa-fw"></span> 自建云端服务器</a>
+          </span>
+        </details>
+
+        <!-- OS -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              操作系统
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/operating-systems/#os"><span class="fas fa-th-large fa-fw"></span> 个人电脑操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#live_os"><span class="fas fa-compact-disc fa-fw"></span> Live 操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#mobile_os"><span class="fas fa-mobile-alt fa-fw"></span> 手机操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#aaddons"><span class="fas fa-th fa-fw"></span> Android 隐私附加组件</a>
+            <a class="dropdown-item" href="/operating-systems/#firmware"><span class="fas fa-signal fa-fw"></span> 路由器固件</a>
+            <a class="dropdown-item" href="/operating-systems/#win10"><span class="far fa-thumbs-down fa-fw"></span> 不要使用 Windows 10</a>
+          </span>
+        </details>
+
+        <a class="nav-anchor" href="/index.html#participate">参与</a>
+      </div>
+
+      <!-- Language -->
+      <div id="nav-right">
+
+        <a href="/services/" class="nav-anchor">
+          其它服务
+        </a>
+        <a href="https://blog.privacytools.io/" class="nav-anchor">
+          PrivacyTools 博客（英文）
+        </a>
+        <a href="/sponsors/" class="nav-anchor">
+          赞助者
+        </a>
+        <a href="/about/" class="nav-anchor">
+          关于本站
+        </a>
+        <span id="nav-switch-theme" class="nav-anchor">
+          <span class="nav-theme-icon fas fa-fw" aria-hidden="true" title="Theme"></span>
+          <span class="sr-only">Toggle Theme</span>
+        </span>
+
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              <span class="fas fa-language text-danger fa-fw" aria-hidden="true" title="Language"></span>
+              <span class="sr-only">其它语言版本</span>
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a href="https://www.privacytools.io/" class="dropdown-item">English</a>
+            <a href="https://privacytools.twngo.xyz/" rel="nofollow noopener" class="dropdown-item">繁体中文</a>
+            <a href="https://victorhck.gitlab.io/privacytools-es/" rel="nofollow noopener" class="dropdown-item">Español</a>
+            <a href="https://pl.privacytools.io/" rel="nofollow noopener" class="dropdown-item">Polski</a>
+            <a href="https://www.privacidade.digital/" rel="nofollow noopener" class="dropdown-item">Português</a>
+            <a href="https://privacytools.it-sec.rocks/" rel="nofollow noopener" class="dropdown-item">Deutsch</a>
+            <a href="https://privacytools-it.github.io/" rel="nofollow noopener" class="dropdown-item">Italiano</a>
+            <a href="https://privacytools.ru" rel="nofollow noopener" class="dropdown-item">Русский</a>
+            <a href="https://privacytools.dreads-unlock.fr" rel="nofollow noopener" class="dropdown-item">Français</a>
+          </span>
+        </details>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top" class="py-4"></div>
+  </header>
+  <div class="container" role="main">
+  <main>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+  
+  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumb-item">
+      <a href="/"><i class="fas fa-home" aria-hidden="true"></i> <span>Home</span></a>
+    </li>
+    
+    
+    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/software/" itemprop="item"><span itemprop="name">Software</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    
+    
+    
+    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <link href="/software/calendar-contacts/" itemprop="item"  />
+      <span itemprop="name">Calendar and Contacts
+      </span>
+      <meta itemprop="position" content="2" />
+    </li>
+    
+    
+  </ol>
+</nav>
+
+
+<div class="jumbotron p-5">
+  <h1 class="display-4">日历/联系人同步工具</h1>
+  <p class="lead">发现免费、开源和安全的方式来同止各设备的联系人和行事历。</p>
+</div>
+
+<h1 id="calendar_contacts" class="anchor"><a href="#calendar_contacts"><i class="fas fa-link anchor-icon"></i></a> 行事历与联系人同步</h1>
+
+<div class="alert alert-warning" role="alert">
+  <strong>若使用行事历与联系人同步服务，是 Google Sync 或 Apple iCloud，这里有其它替代的选项。</strong>
+</div>
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Nextcloud
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/nextcloud.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Nextcloud logo"
+      >
+      <strong>Nextcloud</strong> 是一套用来创建及使用文件分享服务的客户端－服务器软件。它包含通过 CalDAV 来同步行事历及联系人。Nextcloud 自由、开源，因此，在任何人都能免费的安装、运行在私有的服务器上。
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://nextcloud.com/"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        <a
+          href="https://nextcloud.com/privacy/"
+          rel="noopener"
+          class="btn btn-warning mt-1 mr-1">
+          <i class="fas fa-book fa-fw"></i>
+          Privacy Policy
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-nextcloud-calender-contacts-sync-tools/1535"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+            
+              <a href="https://nextcloud.com/install/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-windows fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://nextcloud.com/install/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-macos fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://nextcloud.com/install/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-linux fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.freshports.org/deskutils/nextcloudclient/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-freebsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="http://openports.se/www/nextcloud" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-openbsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="http://pkgsrc.se/www/php-nextcloud" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-netbsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            
+              <a href="https://nextcloud.com/install/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-android fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://nextcloud.com/install/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-ios fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/nextcloud" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        EteSync
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/etesync.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="EteSync logo"
+      >
+      <strong>EteSync</strong> 安全、重视隐私、端对端加密的日志型个人信息（例如：行事历与联系人）云端同步备份工具，提供 Android, iOS, 与网页用户端，以服务多数桌面用户。它的费用是一年 $24 或可免费架在自己的服务器。
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://www.etesync.com/"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        <a
+          href="https://www.etesync.com/tos/#privacy"
+          rel="noopener"
+          class="btn btn-warning mt-1 mr-1">
+          <i class="fas fa-book fa-fw"></i>
+          Privacy Policy
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-etesync-calender-contacts-sync-tools/1536"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-windows fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-macos fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-linux fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-freebsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-openbsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/dav/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-netbsd fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            
+              <a href="https://f-droid.org/packages/com.etesync.syncadapter/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-f-droid fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://play.google.com/store/apps/details?id=com.etesync.syncadapter" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-google-play fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+            
+              <a href="https://www.etesync.com/install/ios/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-ios fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+            
+              <a href="https://client.etesync.com/" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fas fa-globe-americas fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/etesync" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        电邮供应商
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/layout/email.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="电邮供应商 logo"
+      >
+      许多电子邮件供应商亦提供行事历和联系人同步服务。可参考<a href="/providers/email">电子邮件供应商的部分</a>选择电子邮件供应商，确认他们是否也提供同步行事历或联系人。
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="/providers/email"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<h3>值得一提</h3>
+
+<ul>
+  <li>
+    <a href="https://fruux.com/">fruux</a> - 结合了联系人和行事历系统，可跨不同平台与多台设备。
+  </li>
+
+  <li>
+    <a href="../cloud">Cloud backups</a> - 请考虑定期导出行事历与联系人数据备份到不同的保存硬盘或是上传到云存储（最好是先 <a href="../encryption-tools/">经加密处理</a>）。
+  </li>
+
+  <li>
+    <a href="https://github.com/39aldo39/DecSync">DecSync</a> - 不经服务器端，利用文件同步软件如<a href="https://syncthing.net/">Syncthing</a>来同步 RSS、联系人和行事历。
+  </li>
+</ul>
+
+
+
+  </main>
+  <footer>
+  <footer>
+
+  <hr class="footer-divider" />
+
+  <h3 id="participate">推广本站助更多人了解隐私保护</h3>
+
+  <div class="row mb-4">
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="mailto:?subject=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&body=https://privacytools-zh-cn.yoitsu.moe/" class="share-btn email" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://privacytools-zh-cn.yoitsu.moe" class="share-btn facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="https://twitter.com/share?text=Knowledge%20and%20tools%20to%20protect%20your%20privacy%20against%20global%20mass%20surveillance%20&amp;url=https://privacytools-zh-cn.yoitsu.moe/&amp;via=privacytoolsIO" class="share-btn twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="https://sharetomastodon.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools-zh-cn.yoitsu.moe" class="share-btn mastodon" title="Mastodon">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="https://reddit.com/submit?url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn reddit" title="reddit">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/shareArticle?url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn linkedin" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://mix.com/mixit?su=submit&url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn mix" title="Mix">
+        <i class="ptio-mix"></i>
+      </a>
+
+      <a href="https://sharetodiaspora.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools-zh-cn.yoitsu.moe" class="share-btn diaspora" title="Diaspora*">
+        <i class="fas fa-asterisk"></i>
+      </a>
+    </div>
+  </div>
+
+  <h3>复制网址与本站描述</h3>
+
+  <p>
+  <input type="text" value="PrivacyTools 网络隐私工具 - 通过安全的加密抵抗全球大规模监控 - https://privacytools-zh-cn.yoitsu.moe" class="form-control input-lg onclick-select">
+  <span class="help-block">利用这个文本框快速复制和分享。</span>
+  </p>
+
+  <hr class="footer-divider" />
+
+  <div class="row mt-3">
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fab fa-creative-commons-zero fa-2x mr-2"></span>
+      <a
+        href="/LICENSE.txt"
+        title="本作品为自由作品，你可以在 &quot;CC0 1.0 通用 (CC0 1.0) 公共领域贡献&quot; 协议允许的范围内分发和修改本作品。"
+        data-toggle="tooltip"
+        data-placement="top">
+        CC0
+      </a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="far fa-address-card fa-2x mr-2"></span>
+      <a href="/about/">项目介绍 &amp; 联系方式</a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fas fa-donate fa-2x mr-2"></span>
+      <a href="/donate/" data-toggle="tooltip" data-placement="top" data-original-title="我们不放置广告，与任何服务提供商都没有关系。请捐助我们来帮我们支付服务器和域名等开销。">支持本站！</a>
+    </div>
+  </div>
+
+  <div class="copyright-text">
+    <a href="/about/javascript" data-jslicense="1">
+      <span class="fab fa-js fa-lg"></span>
+      JavaScript 许可信息
+    </a>
+    <p class="mt-2">
+      <strong>无广告、无 Google 追踪分析器、无利害关联、无跨站追踪</strong>
+      <em>
+        PrivacyTools 是一个受社会现况激发的社群网站，它提供保护上网者数据安全的信息。<br />
+        不要信任某家公司会善待保护消费者隐私，时时刻刻作好加密防备。</em>
+    </p>
+    <p class="text-left">
+      Tor v3 (English): <strong>privacy2zbidut4m4jyj3ksdqidzkw3uoip2vhvhbvwxbqux5xy5obyd.onion</strong>
+      (<a href="https://write.privacytools.io/jonah/tor-on-privacytools-io">了解更多</a>)
+    </p>
+    <small>
+      <a href="/privacy/">隐私声明</a> |
+      <a href="/notices/">注意事项 &amp; 免责声明</a> |
+      <a href="https://github.com/privacytoolsIO/brand">品牌资产 &amp; 指导原则</a>
+    </small>
+
+  </div>
+</footer>
+
+  </footer>
+</div>
+
+  <script src="/assets/js/jquery-3.3.1.min.js?v=4"></script>
+<script src="/assets/js/popper.min.js?v=4"></script>
+<script src="/assets/js/bootstrap.min.js?v=4"></script>
+<script src="/assets/js/sortable.min.js?v=4"></script>
+<script src="/assets/js/main.js?v=5"></script>
+
+<!--
+  Matomo is the leading open-source analytics platform:
+  - Free open-source software
+  - 100% data ownership
+  - User privacy protection
+-->
+
+<noscript><img src="https://stats.privacytools.io/matomo.php?idsite=1&amp;rec=1" class="border-0" alt=""/></noscript>
+
+</body>
+</html>

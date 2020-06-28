@@ -1,8 +1,8 @@
-title: PrivacyTools 網路隱私工具- 加密對抗全球大規模監控
+title: PrivacyTools 网络隐私工具 - 通过安全的加密抵抗全球大规模监控
 name: PrivacyTools
-description: 您正被盯著。私人和國家支持的組織正在監控與記錄您的線上活動。這裏提供一些知識與工具以保護個人隱私抵抗全球大規模監控。
-url: "https://privacytools.twngo.xyz"
-production_url: "https://privacytools.twngo.xyz"
+description: 老大哥在看着你！这里提供一些保护隐私和抵抗全球大规模监控的知识与工具。
+url: "https://privacytools-zh-cn.yoitsu.moe"
+production_url: "https://privacytools-zh-cn.yoitsu.moe"
 sass:
   style: compressed
 plugins:
@@ -11,3 +11,4 @@ sitemap:
 file: "/sitemap.xml"
 include: [".well-known"]
 exclude: ["font", "vendor"]
+destination: "./docs"

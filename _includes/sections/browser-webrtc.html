@@ -1,29 +1,29 @@
-<h1 id="webrtc" class="anchor"><a href="#webrtc"><i class="fas fa-link anchor-icon"></i></a> WebRTC IP 漏洞測試 - IP 資料是否被洩漏</h1>
+<h1 id="webrtc" class="anchor"><a href="#webrtc"><i class="fas fa-link anchor-icon"></i></a> WebRTC IP 漏洞测试 - IP 数据是否被泄漏</h1>
 
 <div class="alert alert-danger" role="alert">
-  <strong>WebRTC 是一種新的通訊協議，其依靠 JavaScript 程式。它可能會洩漏 VPN 使用者真實的 IP 位置資訊。</strong>
+  <strong>WebRTC 是一种新的通信协议，其依靠 JavaScript 程序。它可能会泄漏 VPN 用户真实的 IP 位置信息。</strong>
 </div>
 
-<p>有些軟體，如 NoScript 可以阻止這個漏洞。但為了安全起見，直接關閉這個協議也是不錯的作法。</p>
+<p>有些软件，如 NoScript 可以阻止这个漏洞。但为了安全起见，直接关闭这个协议也是不错的作法。</p>
 
 <p>
-<a class="btn btn-warning" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">立即測試您的瀏覽器</a>
+<a class="btn btn-warning" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">立即测试您的浏览器</a>
 </p>
 
-<h3>如何在火狐瀏覽器下取消 WebRTC？</h3>
+<h3>如何在火狐浏览器下取消 WebRTC？</h3>
 
-<p>簡單說：把 "about:config" 裏的的 "media.peerconnection.enabled" 設為 "false"。</p>
-<p><strong>說明：</strong></p>
+<p>简单说：把 "about:config" 里的的 "media.peerconnection.enabled" 设为 "false"。</p>
+<p><strong>说明：</strong></p>
 
 <ol class="long-string-list">
-  <li>在瀏覽器的網址列輸入 "about:config" 並點擊 enter 鍵</li>
-  <li>確信會謹慎使用後，點擊"I'll be careful, I promise!"按鈕</li>
-  <li>搜尋"media.peerconnection.enabled"</li>
-  <li>雙擊這條資訊, "Value"欄位現在應該變成了"false"</li>
-  <li>完成了，再作一次 WebRTC 漏洞測試吧</li>
+  <li>在浏览器的网址列输入 "about:config" 并点击 enter 键</li>
+  <li>确信会谨慎使用后，点击"I'll be careful, I promise!"按钮</li>
+  <li>搜索"media.peerconnection.enabled"</li>
+  <li>双击这条信息, "Value"字段现在应该变成了"false"</li>
+  <li>完成了，再作一次 WebRTC 漏洞测试吧</li>
 </ol>
 
-<p>如果要確認每個與 WebRTC 相關設定已確實關閉了，可以再進行以下的設定更動：</p>
+<p>如果要确认每个与 WebRTC 相关设置已确实关闭了，可以再进行以下的设置更动：</p>
 
 <ol class="long-string-list">
   <li>media.peerconnection.turn.disable = true</li>
@@ -32,10 +32,10 @@
   <li>media.peerconnection.identity.timeout = 1</li>
 </ol>
 
-<p>現在已百分百地將 WebRTC 功能取消了。</p>
+<p>现在已百分百地将 WebRTC 功能取消了。</p>
 
 <p>
-<a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">再次測試 WebRTC 漏洞吧</a>
+<a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">再次测试 WebRTC 漏洞吧</a>
 </p>
 
 <h3>How to disable WebRTC in Safari?</h3>
@@ -49,10 +49,10 @@
   <li>In the drop-down menu, open the "WebRTC" submenu and ensure "Enable Legacy WebRTC API" is unchecked. If it's grayed out, even better.</li>
 </ol>
 
-<h3>如何解決 Google Chrome 底下的 WebRTC 漏洞？</h3>
+<h3>如何解决 Google Chrome 底下的 WebRTC 漏洞？</h3>
 
-<p>Chrome 瀏覽器無法完全取消 WebRTC，但可以透過附加套件變更其路由設定（與防止洩漏）。有兩種開源方式：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a> （需依情況來調整設定選項），和  <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>（設置時請選「預防 WebRTC 洩漏本地 IP 地址」）。</p>
+<p>Chrome 浏览器无法完全取消 WebRTC，但可以通过附加套件变更其路由设置（与防止泄漏）。有两种开源方式：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a> （需依情况来调整设置选项），和  <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>（设置时请选「预防 WebRTC 泄漏本地 IP 地址」）。</p>
 
-<h3>其它的瀏覽器呢？</h3>
+<h3>其它的浏览器呢？</h3>
 
-<p>蘋果 macOS 作業系統下的 Chrome 與 Internet Explorer 與 Safari 目前尚未採用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不過我們建議在各種設備上最好還是使用火狐瀏覽器。</a></p>
+<p>苹果 macOS 操作系统下的 Chrome 与 Internet Explorer 与 Safari 目前尚未采用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不过我们建议在各种设备上最好还是使用火狐浏览器。</a></p>

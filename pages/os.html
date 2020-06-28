@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /operating-systems/
-title: "作業系統"
-description: "常用的電腦可能正在傷害您的隱私，請看看我們對於不同設備所推薦的替代作業系統選擇。"
+title: "操作系统"
+description: "常用的电脑操作系统可能正在伤害您的隐私，请看看我们对于不同设备所推荐的替代操作系统选择。"
 ---
 
 {% include sections/operating-systems.html %}
@@ -10,28 +10,28 @@ description: "常用的電腦可能正在傷害您的隱私，請看看我們對
 <h3>警示</h3>
 
 <ul>
-  <li><a href="#win10"><i class="fas fa-link"></i>不要使用 Windows 10 - 它是隱私夢魘</a></li>
+  <li><a href="#win10"><i class="fas fa-link"></i>不要使用 Windows 10 - 它是隐私梦魇</a></li>
 </ul>
 
-<h4 id="cpuvulns">請記得檢查中央處理器 CPU 弱點緩解 </h4>
+<h4 id="cpuvulns">请记得检查中央处理器 CPU 弱点缓解 </h4>
 
-<p><em><a href="https://support.microsoft.com/en-us/help/4073757/protect-windows-devices-from-speculative-execution-side-channel-attack">這對 Windows 10　有影響</a>，但微軟並未明白揭露情況或說明如何降低危險。 MacOS 用戶可檢查 <a href="https://support.apple.com/en-us/HT210108">How to enable full mitigation for Microarchitectural Data Sampling (MDS) vulnerabilities on Apple Support</a>.</em></p>
+<p><em><a href="https://support.microsoft.com/en-us/help/4073757/protect-windows-devices-from-speculative-execution-side-channel-attack">这对 Windows 10　有影响</a>，但微软并未明白揭露情况或说明如何降低危险。 MacOS 用户可检查 <a href="https://support.apple.com/en-us/HT210108">How to enable full mitigation for Microarchitectural Data Sampling (MDS) vulnerabilities on Apple Support</a>.</em></p>
 
-<p>如果電腦用的是 Linux 最近的核心，可以從 <code>tail -n +1 /sys/devices/system/cpu/vulnerabilities/*</code> 指令來檢查 CPU 弱點狀況。用 <code>tail -n +1</code> 而不是 <code>cat</code>指今，才可看到檔案名稱。</p>
+<p>如果电脑用的是 Linux 最近的内核，可以从 <code>tail -n +1 /sys/devices/system/cpu/vulnerabilities/*</code> 指令来检查 CPU 弱点状况。用 <code>tail -n +1</code> 而不是 <code>cat</code>指今，才可看到文档名称。</p>
 
 <p>
-    若使用英特爾處理器，執行 <code>tail</code> 指令時可能會出現"SMT vulnerable"之訊息。可在開機時的 UEFI/BIOS 底下關閉<a href="https://en.wikipedia.org/wiki/Hyper-threading">hyper-threading</a>，以減緩此問題。若您的作業系統版本使用 GRUB 且支援 <code>/etc/default/grub.d/</code>，不妨依照下列步驟操作：
+    若使用英特尔处理器，运行 <code>tail</code> 指令时可能会出现"SMT vulnerable"之消息。可在开机时的 UEFI/BIOS 设置中关闭<a href="https://en.wikipedia.org/wiki/Hyper-threading">hyper-threading</a>，以减缓此问题。若您的操作系统版本使用 GRUB 且支持 <code>/etc/default/grub.d/</code>，不妨依照下列步骤操作：
 </p>
 
 <ol>
-  <li><code>sudo mkdir /etc/default/grub.d/</code> 創建新目錄來作另一個 grub 設定。</li>
-  <li><code>echo GRUB_CMDLINE_LINUX_DEFAULT="$GRUB_CMDLINE_LINUX_DEFAULT l1tf=full,force mds=full,nosmt mitigations=auto,nosmt nosmt=force" | sudo tee /etc/default/grub.d/mitigations.cfg</code> 寫入新的 grub config 設定檔內容。</li>
-  <li><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code> 産生新的 grub 設定檔，其包含新核心啟動標記</li>
-  <li><code>sudo reboot</code> 重開機</li>
-  <li>重新開機後，再次檢查 <code>tail -n +1 /sys/devices/system/cpu/vulnerabilities/*</code>看看現在 SMT 是否顯示 "SMT disabled."</li>
+  <li><code>sudo mkdir /etc/default/grub.d/</code> 创建新目录来作另一个 grub 设置。</li>
+  <li><code>echo GRUB_CMDLINE_LINUX_DEFAULT="$GRUB_CMDLINE_LINUX_DEFAULT l1tf=full,force mds=full,nosmt mitigations=auto,nosmt nosmt=force" | sudo tee /etc/default/grub.d/mitigations.cfg</code> 写入新的 grub config 设置档内容。</li>
+  <li><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code> 产生新的 grub 设置档，其包含新内核启动标记</li>
+  <li><code>sudo reboot</code> 重开机</li>
+  <li>重新开机后，再次检查 <code>tail -n +1 /sys/devices/system/cpu/vulnerabilities/*</code>看看现在 SMT 是否显示 "SMT disabled."</li>
 </ol>
 
-<h5>進一步了解</h5>
+<h5>进一步了解</h5>
 
 <ul>
   <li><a href="https://cpu.fail/">CPU.fail</a></li>

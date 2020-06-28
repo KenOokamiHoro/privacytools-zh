@@ -1,66 +1,66 @@
-<h1 id="about_config" class="anchor"><a href="#about_config"><i class="fas fa-link anchor-icon"></i></a> FireFox: "about:config" 的隱私設定調整</h1>
+<h1 id="about_config" class="anchor"><a href="#about_config"><i class="fas fa-link anchor-icon"></i></a> FireFox: "about:config" 的隐私设置调整</h1>
 
-<div class="alert alert-success" role="alert">這部份整理 <strong>about:config</strong> 的隱私設定調整，我們將示範如何強化火狐瀏覽器的隱私保護。</div>
+<div class="alert alert-success" role="alert">这部份整理 <strong>about:config</strong> 的隐私设置调整，我们将示范如何强化火狐浏览器的隐私保护。</div>
 
-<h3>準備：</h3>
+<h3>准备：</h3>
 
 <ol>
   <li>
-    在瀏覽器的網址列輸入 "about:config" 並按下 Enter 鍵</li>
-  <li>點擊「我發誓，我一定會小心的！」按鈕</li>
+    在浏览器的网址列输入 "about:config" 并按下 Enter 键</li>
+  <li>点击「我发誓，我一定会小心的！」按钮</li>
   <li>依照下方指示操作....</li>
 </ol>
 
-<h3>開始動手：</h3>
+<h3>开始动手：</h3>
 
 <dl class="long-string-list">
   <dt>privacy.firstparty.isolate = true</dt>
-  <dd><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 專案投入，可將瀏覽器識別碼孤立給主要訪問網站，達到阻止跨站追踪之目的。 （若已使用 Firefox 58以下版本的 "Cookie AutoDelete"，請不要啟用此功能）</dd>
+  <dd><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 项目投入，可将浏览器识别码孤立给主要访问网站，达到阻止跨站追踪之目的。 （若已使用 Firefox 58以下版本的 "Cookie AutoDelete"，请不要激活此功能）</dd>
 
   <dt>privacy.resistFingerprinting = true</dt>
-  <dd>在 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 努力下，此項功能可更有效地止阻止瀏覽器指紋記錄。 </dd>
+  <dd>在 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 努力下，此项功能可更有效地止阻止浏览器指纹记录。 </dd>
 
   <dt>privacy.trackingprotection.fingerprinting.enabled = true</dt>
-  <dd>[FF67+] 屏蔽指紋記錄</dd>
+  <dd>[FF67+] 屏蔽指纹记录</dd>
 
   <dt>privacy.trackingprotection.cryptomining.enabled = true</dt>
-  <dd>[FF67+] 阻止加密幣挖礦</dd>
+  <dd>[FF67+] 阻止加密币挖矿</dd>
 
   <dt>privacy.trackingprotection.enabled = true</dt>
-  <dd>Mozilla 新內建的跟蹤保護功能，使用 Disconnect.me 過濾清單。若已啟用 uBlock Origin 第三方過濾器則不必重覆開啟。</dd>
+  <dd>Mozilla 新内置的跟踪保护功能，使用 Disconnect.me 过滤清单。若已激活 uBlock Origin 第三方过滤器则不必重复打开。</dd>
 
   <dt>browser.send_pings = false</dt>
   <dd>The attribute would be useful for letting websites track visitors' clicks.</dd>
 
   <dt>browser.sessionstore.max_tabs_undo = 0</dt>
-  <dd>即便 Firefox 已設置為不保存瀏覽記錄，但最近關閉的分頁記錄仍會暫時保留在 選單 -&gt; 瀏覽記錄 -&gt; 最近關閉的分頁 的地方</dd>
+  <dd>即便 Firefox 已设置为不保存浏览记录，但最近关闭的分页记录仍会暂时保留在 菜单 -&gt; 浏览记录 -&gt; 最近关闭的分页 的地方</dd>
 
   <dt>browser.urlbar.speculativeConnect.enabled = false</dt>
-  <dd>關閉自動完成網址的預載，當使用者在網址欄輸入時 Firefox 會先自動找出完整的網址，有時候它所建議的網址並不是使用者本意要訪問的網站。<a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">資料來源</a></dd>
+  <dd>关闭自动完成网址的预载，当用户在网址栏输入时 Firefox 会先自动找出完整的网址，有时候它所建议的网址并不是用户本意要访问的网站。<a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">数据源</a></dd>
 
 
   <dt>dom.event.clipboardevents.enabled = false</dt>
-  <dd>讓網站無法知道使用者從網頁在複製、黏貼、裁剪等事件行為，但可以知道網頁哪個部份被選取。</dd>
+  <dd>让网站无法知道用户从网页在拷贝、黏贴、裁剪等事件行为，但可以知道网页哪个部份被选取。</dd>
 
   <dt>media.eme.enabled = false</dt>
   <dd>
-  <p>關閉數位版權控制的 HTML5內容回放功能z。此功能會自動地下載 Google 提供的　Widevine Content Decryption 模組。<a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">詳細資料</a></p>
-  <p>如果 Firefox 安裝啟用 Adobe Flash 或 Microsoft Silverlight NPAPI 外掛，數位版權管理所控制的內容還是可以播放。</p>
+  <p>关闭数字版权控制的 HTML5内容回放功能z。此功能会自动地下载 Google 提供的　Widevine Content Decryption 模块。<a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">详细数据</a></p>
+  <p>如果 Firefox 安装激活 Adobe Flash 或 Microsoft Silverlight NPAPI 插件，数字版权管理所控制的内容还是可以播放。</p>
   </dd>
 
   <dt>media.gmp-widevinecdm.enabled = false</dt>
-  <dd>關閉 Google 所提供 Widevine Content Decryption 模組，它用於回放受數位版權管理控制的 HTML5 內容。 <a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">詳情</a></dd>
+  <dd>关闭 Google 所提供 Widevine Content Decryption 模块，它用于回放受数字版权管理控制的 HTML5 内容。 <a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">详情</a></dd>
 
   <dt>media.navigator.enabled = false</dt>
-  <dd>可追踪設備上的麥克風與攝影機使用狀態</dd>
+  <dd>可追踪设备上的麦克风与摄影机使用状态</dd>
 
   <dt>network.cookie.cookieBehavior = 1</dt>
   <dd>
-  關閉 cookies
+  关闭 cookies
   <ul>
-    <li>0 = 預設接受所有 cookies </li>
-    <li>1 = 僅接受原訪問網站之 cookies（封鑜第三方網站）</li>
-    <li>2 = 預設關閉所有 cookies </li>
+    <li>0 = 缺省接受所有 cookies </li>
+    <li>1 = 仅接受原访问网站之 cookies（封鑜第三方网站）</li>
+    <li>2 = 缺省关闭所有 cookies </li>
   </ul>
   </dd>
 
@@ -68,37 +68,37 @@
 
   <dt>network.http.referer.XOriginPolicy = 2</dt>
   <dd>
-  當網站域名完全符合時，僅傳送參照位址表頭（<code>Referer</code>）。 （提醒：如留意到明顯斷裂，可試由 <code>1</code> 結合下方 <code>XOriginTrimmingPolicy</code> 來調整）<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">來源出處</a>
+  当网站域名完全符合时，仅发送参照地址表头（<code>Referer</code>）。 （提醒：如留意到明显断裂，可试由 <code>1</code> 结合下方 <code>XOriginTrimmingPolicy</code> 来调整）<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">来源出处</a>
   <ul>
-    <li>0 = 在參照位置中，全都傳送完整網址</li>
-    <li>1 = 僅在相同的延伸頂級域名（eTLD）網站之間傳送參照位置</li>
-    <li>2 = 只有完整的域名相符時，才傳送參照位置</li>
+    <li>0 = 在参照位置中，全都发送完整网址</li>
+    <li>1 = 仅在相同的延伸顶级域名（eTLD）网站之间发送参照位置</li>
+    <li>2 = 只有完整的域名相符时，才发送参照位置</li>
   </ul>
   </dd>
 
   <dt>network.http.referer.XOriginTrimmingPolicy = 2</dt>
   <dd>
-  不同域名之間傳送參照位置（<code>Referer</code>）時，只送出表頭欄規格（scheme）、主機、端口。<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">來源出處</a>
+  不同域名之间发送参照位置（<code>Referer</code>）时，只送出表头栏规格（scheme）、主机、端口。<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">来源出处</a>
   <ul>
-    <li>0 = 送出參照位置完整的網址</li>
-    <li>1 = 只送傳不帶查詢字串的網址資料</li>
-    <li>2 = 只傳送參照位置中的規格、主機、端口資訊。</li>
+    <li>0 = 送出参照位置完整的网址</li>
+    <li>1 = 只送传不带查找字符串的网址数据</li>
+    <li>2 = 只发送参照位置中的规格、主机、端口信息。</li>
   </ul>
   </dd>
 
-  <dt>想找 TRR, DoH 或 ESNI 的資訊</dt>
-  <dd>它們已被搬移至<a href="/providers/dns/#icanndns"> DNS 頁面</a>.</dd>
+  <dt>想找 TRR, DoH 或 ESNI 的信息</dt>
+  <dd>它们已被搬移至<a href="/providers/dns/#icanndns"> DNS 页面</a>.</dd>
 
   <dt>webgl.disabled = true</dt>
-  <dd>WebGL 有潛在的安全風險。<a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">來源出處</a></dd>
+  <dd>WebGL 有潜在的安全风险。<a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">来源出处</a></dd>
 
   <dt>browser.sessionstore.privacy_level = 2</dt>
   <dd>
-  此偏好控制瀏覽器某工作階段所儲存的額外資訊：含內容形式、滾動條位置、cookies 和上傳數據資料。 <a href="http://kb.mozillazine.org/Browser.sessionstore.privacy_level">詳情</a>。
+  此偏好控制浏览器某工作阶段所保存的额外信息：含内容形式、滚动条位置、cookies 和上传数据数据。 <a href="http://kb.mozillazine.org/Browser.sessionstore.privacy_level">详情</a>。
   <ul>
-    <li>0 = 儲存所有網站額外的連線階段資料（Firefox 4 起即為預設）</li>
-    <li>1 = 只儲存未加密（非 HTTPS）網站額外的連線階段資料（Firefox 4 前探此設定）</li>
-    <li>2 = 不儲存額外的連線階段資料</li>
+    <li>0 = 保存所有网站额外的连接阶段数据（Firefox 4 起即为缺省）</li>
+    <li>1 = 只保存未加密（非 HTTPS）网站额外的连接阶段数据（Firefox 4 前探此设置）</li>
+    <li>2 = 不保存额外的连接阶段数据</li>
   </ul>
   </dd>
 
@@ -131,11 +131,11 @@
 </ul>
 
 
-<h3>相關資訊</h3>
+<h3>相关信息</h3>
 
 <ul>
-  <li><a href="https://blog.privacytools.io/firefox-privacy-an-introduction-to-safe/">Firefox Privacy: Tips and Tricks for Better Browsing</a> - 適合新手，如何保持資料私密與安全初步指南。</li>
-  <li><a href="https://ffprofile.com/">ffprofile.com</a> - 協助建立所喜好預設的 Firefox 設定檔。</li>
-  <li><a href="https://addons.mozilla.org/firefox/addon/privacy-settings/">Privacy Settings</a> - 以簡單的工具列，替代 Firefox 原本內建隱私設定的擴充元件。</li>
-  <li><a href="https://12bytes.org/articles/tech/firefox/the-firefox-privacy-guide-for-dummies/">Firefox Privacy Guide For Dummies</a> - 提供改善火狐瀏覽器隱私安全設定的指南。</li>
+  <li><a href="https://blog.privacytools.io/firefox-privacy-an-introduction-to-safe/">Firefox Privacy: Tips and Tricks for Better Browsing</a> - 适合新手，如何保持数据私密与安全初步指南。</li>
+  <li><a href="https://ffprofile.com/">ffprofile.com</a> - 协助创建所喜好缺省的 Firefox 设置档。</li>
+  <li><a href="https://addons.mozilla.org/firefox/addon/privacy-settings/">Privacy Settings</a> - 以简单的工具列，替代 Firefox 原本内置隐私设置的扩充组件。</li>
+  <li><a href="https://12bytes.org/articles/tech/firefox/the-firefox-privacy-guide-for-dummies/">Firefox Privacy Guide For Dummies</a> - 提供改善火狐浏览器隐私安全设置的指南。</li>
 </ul>

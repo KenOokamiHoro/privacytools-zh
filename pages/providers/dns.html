@@ -2,7 +2,7 @@
 layout: page
 permalink: /providers/dns/
 title: "加密的域名解析"
-description: "別讓 Google 和一般傳統 DNS 供應商知道您所有的網站訪問狀況，換換其它更注重隱私的域名解析服務吧。"
+description: "别让 Google 和一般传统 DNS 供应商知道您所有的网站访问状况，换换其它更注重隐私的域名解析服务吧。"
 breadcrumb: "DNS"
 ---
 
@@ -105,25 +105,25 @@ breadcrumb: "DNS"
 <h2 id="dns-definitions" class="anchor">
 	<a href="#dns-definitions">
 		<i class="fas fa-link anchor-icon"></i>
-	</a> Definitions
+	</a> 相关术语
 </h2>
 
 <h4>DNS-over-TLS (DoT)</h4>
 <p>
-  A security protocol for encrypted DNS on a dedicated port 853. Some providers support port 443 which generally works everywhere while port 853 is often blocked by restrictive firewalls.
+	加密 DNS 的安全协定，在特定的的 853 端口上提供服务，某些供应商则用 443 端口，尤其当 853 常被限制的防火墙所阻挡时。
 </p>
 
 <h4>DNS-over-HTTPS (DoH)</h4>
 <p>
-  Similar to DoT, but uses HTTPS instead, being indistinguishable from "normal" HTTPS traffic on port 443 and more difficult to block. {% include badge.html color="warning" text="Warning" tooltip="DoH contains metadata such as user-agent (which may include system information) that is sent to the DNS server." link="https://tools.ietf.org/html/rfc8484#section-8.2" icon="fas fa-exclamation-triangle" %}
+	类似 DoT，但采用 HTTPS 取代，通过 443 端口，和一般的 HTTPS 流量无异 {% include badge.html color="warning" text="警告" tooltip="DoH 会向 DNS 服务器发送像是 user-agent 一类的可能包含系统信息的元数据。" link="https://tools.ietf.org/html/rfc8484#section-8.2" icon="fas fa-exclamation-triangle" %}
 </p>
 
 <h4>DNSCrypt</h4>
 <p>
-  With an <a href="https://dnscrypt.info/protocol/">open specification</a>, DNSCrypt is an older, yet robust method for encrypting DNS.
+  一种稍旧但仍常被使用的 DNS 加密方式，它的协议<a href="https://dnscrypt.info/protocol/">是开放的</a>。
 </p>
 
-<h4>Anonymized DNSCrypt</h4>
+<h4>匿名化 DNSCrypt</h4>
 <p>
   A <a href="https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Anonymized-DNS">lightweight protocol</a> that hides the client IP address by using pre-configured relays to forward encrypted DNS data. This is a relatively new protocol created in 2019 currently only supported by <a href="#dns-desktop-clients">dnscrypt-proxy</a> and a limited number of <a href="https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v2/relays.md">relays</a>.
 </p>

@@ -1,24 +1,24 @@
-<h1 id="dns" class="anchor"><a href="#dns"><i class="fas fa-link anchor-icon"></i></a> 加密網域名系統解析</h1>
+<h1 id="dns" class="anchor"><a href="#dns"><i class="fas fa-link anchor-icon"></i></a> 加密网域名系统解析</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>請注意：使用加密的域名解析器並無匿名化效果，也不能向網路連線供應商 ISP 隱瞞您的網路流量狀況。它<i>只</i>可防止域名被截持綁架，讓域名請求查詢更難被第三方所竊聽和竄改。如果您現在用的是 Google 提供的域名解析服務，不妨試試其它供應者。</strong>
+  <strong>请注意：使用加密的域名解析器并无匿名化效果，也不能向网络连接供应商 ISP 隐瞒您的网络流量状况。它<i>只</i>可防止域名被截持绑架，让域名请求查找更难被第三方所窃听和窜改。如果您现在用的是 Google 提供的域名解析服务，不妨试试其它提供者。</strong>
 </div>
 
 <div class="table-responsive">
   <table class="table sortable-theme-bootstrap" data-sortable>
     <thead>
       <tr>
-        <th data-sorted="true" data-sorted-direction="ascending">DNS 供應商</th>
-        <th data-sortable="true">伺服器所在地</th>
-        <th data-sortable="false">隱私政策</th>
-        <th data-sortable="true">經營者類型</th>
-        <th data-sortable="true">用戶活動記錄</th>
-        <th data-sortable="true">網路協議</th>
+        <th data-sorted="true" data-sorted-direction="ascending">DNS 供应商</th>
+        <th data-sortable="true">服务器所在地</th>
+        <th data-sortable="false">隐私政策</th>
+        <th data-sortable="true">经营者类型</th>
+        <th data-sortable="true">用户活动记录</th>
+        <th data-sortable="true">网络协议</th>
         <th data-sortable="true">DNSSEC</th>
         <th data-sortable="true">限定名(QNAME) 最小化</th>
-        <th data-sortable="true">過濾器</th>
-        <th data-sortable="true">源代碼</th>
-        <th data-sortable="true">使用的網路主機供應者</th>
+        <th data-sortable="true">过滤器</th>
+        <th data-sortable="true">源代码</th>
+        <th data-sortable="true">使用的网络服务提供商</th>
       </tr>
     </thead>
     <tbody>
@@ -29,7 +29,7 @@
         <td>Anycat 任播型 (以
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-cy"></span>
-              賽浦勒斯為主要地)
+              赛浦勒斯为主要地)
           </span>
         </td>
         <td>
@@ -42,13 +42,13 @@
         <td>Commercial</td>
        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We store aggregated performance metrics of our DNS server, namely the number of complete requests to a particular server, the number of blocked requests, the speed of processing requests.
 We keep and store the database of domains requested in the last 24 hours. We need this information to identify and block new trackers and threats.
-We also log how many times this or that tracker has been blocked. We need this information to remove outdated rules from our filters."' href="https://adguard.com/en/privacy/dns.html">Some</a></td>
+We also log how many times this or that tracker has been blocked. We need this information to remove outdated rules from our filters."' href="https://adguard.com/en/privacy/dns.html">某些</a></td>
         <td>DoH, DoT, DNSCrypt</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Based on server choice
+            依服务器而异
           </span>
         </td>
         <td>
@@ -75,11 +75,11 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-fi"></span>
-            芬蘭、
+            芬兰、
           </span>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-de"></span>
-            德國、
+            德国、
           </span>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-jp"></span>
@@ -95,30 +95,30 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </div>
         </td>
-        <td>啫好推廣</td>
-        <td>不</td>
+        <td>兴趣项目</td>
+        <td>否</td>
         <td data-value="dot/443">
           <span class="no-text-wrap">
             DoH,
-            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Supports port 443 in addition to 853">
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="除了常规的 853 端口以外也支持 443 端口">
               DoT <span class="fas fa-info-circle fa-sm text-secondary"></span>,
             </span>
           </span>
           DNSCrypt
         </td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Ads, trackers,
+            广告，跟踪器
           </span>
           <span class="no-text-wrap">
-            malicious domains
+            恶意域名
             {% include badge.html
             link="https://github.com/ookangzheng/blahdns#default-blocked-wildcard-domain"
             color="warning"
             icon="fas fa-exclamation-triangle"
-            tooltip="And some wildcard and IDN domains."
+            tooltip="和某些 wildcard / IDN 域名。"
             %}
           </span>
         </td>
@@ -149,13 +149,13 @@ We also log how many times this or that tracker has been blocked. We need this i
           link="https://codeberg.org/crimeflare/cloudflare-tor/"
           color="warning"
           icon="fas fa-exclamation-triangle"
-          tooltip="Cloudflare is one of the world's largest networks, and a problem considering anonymity and decentralization."
+          tooltip="Cloudflare 是最大的网络之一，你可能会在使用它时考虑去匿名化和中心化的问题。"
           %}
         </td>
-        <td>Anycast (based in
+        <td>Anycat 任播型（主要在
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-us"></span>
-            US)
+            美国）
           </span>
         </td>
         <td>
@@ -165,14 +165,14 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td>Commercial</td>
-        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We will collect limited DNS query data that is sent to the resolvers. This data does not contain user IP addresses or any other personally identifiable information, and the bulk of the data is only stored for 24 hours."' href="https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy/">Some</a></td>
+        <td>商业</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We will collect limited DNS query data that is sent to the resolvers. This data does not contain user IP addresses or any other personally identifiable information, and the bulk of the data is only stored for 24 hours."' href="https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy/">某些</a></td>
         <td>DoH, DoT</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Based on server choice
+            依服务器而异
           </span>
         </td>
         <td>?</td>
@@ -198,14 +198,14 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"CZ.NIC is an interest association of legal entities, founded in 1998 by leading providers of Internet services."' href="https://www.nic.cz/page/351/about-association/">Association</a></td>
-        <td>No</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"CZ.NIC is an interest association of legal entities, founded in 1998 by leading providers of Internet services."' href="https://www.nic.cz/page/351/about-association/">基于协会运营</a></td>
+        <td>否</td>
         <td>DoH, DoT</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td data-value="No">?</td>
         <td>?</td>
-        <td>Self</td>
+        <td>自行架设</td>
       </tr>
 
       <tr>
@@ -215,7 +215,7 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-at"></span>
-            Austria
+            奥地利
           </span>
         </td>
         <td>
@@ -225,8 +225,8 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td>Non-Profit</td>
-        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We do NOT log your IP address or DNS queries during normal operations. We do NOT share query data with third parties that are not directly involved with resolving the query (i.e. sending queries to authoritative nameservers for resolution)."' href="https://appliedprivacy.net/privacy-policy/">Some</a></td>
+        <td>非盈利</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We do NOT log your IP address or DNS queries during normal operations. We do NOT share query data with third parties that are not directly involved with resolving the query (i.e. sending queries to authoritative nameservers for resolution)."' href="https://appliedprivacy.net/privacy-policy/">某些</a></td>
         <td data-value="dot/443">
           <span class="no-text-wrap">
             DoH,
@@ -235,9 +235,9 @@ We also log how many times this or that tracker has been blocked. We need this i
             </span>
           </span>
         </td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>No</td>
+        <td>是</td>
+        <td>是</td>
+        <td>否</td>
         <td>?</td>
         <td>
           <span class="no-text-wrap">
@@ -253,7 +253,7 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-de"></span>
-            Germany
+            德国
           </span>
         </td>
         <td>
@@ -265,16 +265,16 @@ We also log how many times this or that tracker has been blocked. We need this i
         </td>
         <td>
           <a data-toggle="tooltip" data-placement="bottom" data-original-title="Part of LibreHosters, &quot;a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms.&quot;" href="https://libreho.st/">
-            Informal collective
+            非正式协作
           </a>
         </td>
-        <td>No</td>
+        <td>否</td>
         <td>DoH, DoT</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Based on server choice only for DoH
+            依服务器而异（仅 DoH）
           </span>
         </td>
         <td>
@@ -295,10 +295,10 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td data-value="nextdns">
           <a href="https://www.nextdns.io/">NextDNS</a>
         </td>
-        <td>Anycast (based in
+        <td> Anycat 任播型（主要在
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-us"></span>
-            US)
+            美国）
           </span>
         </td>
         <td>
@@ -308,16 +308,16 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td>Commercial</td>
+        <td>商业l</td>
         <td>
-          <a data-toggle="tooltip" data-placement="bottom" data-original-title='"Some of the features require some sort of data retention. In that case, we give our users the choice to granularly or completely disable those features (and associated data retention), and we follow up immediately on that promise"' href="https://www.nextdns.io/privacy">Based on user choice</a>
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title='"Some of the features require some sort of data retention. In that case, we give our users the choice to granularly or completely disable those features (and associated data retention), and we follow up immediately on that promise"' href="https://www.nextdns.io/privacy">基于用户的选择</a>
         </td>
         <td>DoH, DoT, DNSCrypt</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Based on server choice
+            依服务器而异
           </span>
         </td>
         <td>?</td>
@@ -330,17 +330,17 @@ We also log how many times this or that tracker has been blocked. We need this i
         </td>
         <td>
           <span class="no-text-wrap">
-            Anycast (based in
+            Anycast 任播型（主要在
             <span class="flag-icon flag-icon-us"></span>
-            US),
+            美国），
           </span>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-us"></span>
-            US,
+            美国，
           </span>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-lu"></span>
-            Luxembourg
+            卢森堡
           </span>
         </td>
         <td>
@@ -352,16 +352,16 @@ We also log how many times this or that tracker has been blocked. We need this i
         </td>
         <td>
           <a data-toggle="tooltip" data-placement="bottom" data-original-title='Part of LibreHosters, "a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms."' href="https://libreho.st/">
-            Informal collective
+            非正式协作
           </a>
         </td>
-        <td>No</td>
+        <td>否</td>
         <td>DoH, DoT</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Based on server choice
+            依服务器而异
           </span>
         </td>
         <td>
@@ -385,7 +385,7 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-nl"></span>
-            尼德蘭
+            尼德兰
           </span>
         </td>
         <td>
@@ -395,12 +395,12 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td>Hobby Project</td>
-        <td>No</td>
+        <td>兴趣项目</td>
+        <td>否</td>
         <td>DoH</td>
-        <td>Yes</td>
-        <td>No</td>
-        <td>No</td>
+        <td>是</td>
+        <td>否</td>
+        <td>否</td>
         <td>
           <a
             class="btn-secondary btn-icon"
@@ -424,10 +424,10 @@ We also log how many times this or that tracker has been blocked. We need this i
           tooltip="Founders include the Global Cyber Alliance, composed of the City of London Police and Manhattan District Attorney's Office."
           %}
         </td>
-        <td>Anycast (based in
+        <td>Anycast 任播型（主要在
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-us"></span>
-            US)
+            美国）
           </span>
         </td>
         <td>
@@ -437,19 +437,19 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </a>
         </td>
-        <td>Non-Profit</td>
-        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"Our normal course of data management does not have any IP address information or other PII logged to disk or transmitted out of the location in which the query was received."' href="https://quad9.net/policy/">Some</a></td>
+        <td>非盈利</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"Our normal course of data management does not have any IP address information or other PII logged to disk or transmitted out of the location in which the query was received."' href="https://quad9.net/policy/">某些</a></td>
         <td>DoH, DoT, DNSCrypt</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            Malicious domains
+            恶意域名
           </span>
         </td>
         <td>?</td>
         <td>
-          Self,
+          自建,
           <span class="no-text-wrap">
             <a href="https://www.pch.net/">Packet Clearing House</a>
           </span>
@@ -463,7 +463,7 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td>
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-fi"></span>
-            Finland
+            芬兰
           </span>
         </td>
         <td>
@@ -475,16 +475,16 @@ We also log how many times this or that tracker has been blocked. We need this i
         </td>
         <td>
           <a data-toggle="tooltip" data-placement="bottom" data-original-title="Part of LibreHosters, &quot;a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms.&quot;" href="https://libreho.st/">
-            Informal collective
+            非正式协作
           </a>
         </td>
-        <td>No</td>
+        <td>否</td>
         <td>DoH, DoT</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>是</td>
+        <td>是</td>
         <td>
           <span class="no-text-wrap">
-            No
+            否
           </span>
         </td>
         <td>?</td>
@@ -499,20 +499,20 @@ We also log how many times this or that tracker has been blocked. We need this i
         <td data-value="UncensoredDNS">
           <a href="https://blog.uncensoreddns.org/">UncensoredDNS</a>
         </td>
-        <td>Anycast (based in
+        <td>任播型 （主要在
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-dk"></span>
-            Denmark),
+            丹麦），
           </span>
 
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-dk"></span>
-            Denmark,
+            丹麦，
             </span>
 
           <span class="no-text-wrap">
             <span class="flag-icon flag-icon-us"></span>
-            US
+            美国
           </span>
         </td>
         <td>
@@ -524,12 +524,12 @@ We also log how many times this or that tracker has been blocked. We need this i
             <span class="fas fa-globe"></span>
           </div>
         </td>
-        <td>Hobby Project</td>
-        <td>No</td>
+        <td>兴趣项目</td>
+        <td>否</td>
         <td data-value="doh">DoT</td> <!-- "hack" to group "DoT" values (when sorted) with "DoH" values -->
-        <td>Yes</td>
-        <td>No</td>
-        <td>No</td>
+        <td>是</td>
+        <td>否</td>
+        <td>否</td>
         <td>?</td>
         <td>
           Self,

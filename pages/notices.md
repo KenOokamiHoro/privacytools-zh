@@ -55,8 +55,4 @@ You must not conduct any systematic or automated data collection activities on o
 - Data Mining
 - ‘Framing’ (IFrames)
 
-<<<<<<< HEAD
-We take the security of our website, infrastructure, and services very seriously. Our [SECURITY.md](https://github.com/privacytoolsIO/.github/blob/master/SECURITY.md) document outlines responsible disclosure guidelines and other security-related information.
-=======
 We take the security of our website, infrastructure, and services very seriously. Our [SECURITY.md](https://github.com/privacytools/.github/blob/master/SECURITY.md) document outlines responsible disclosure guidelines and other security-related information.
->>>>>>> upstream/master

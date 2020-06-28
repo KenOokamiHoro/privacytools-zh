@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="privacy, anonymity, privacy tools, surveillance, encryption">
+  <meta name="description" content="别让 Google 和一般传统 DNS 供应商知道您所有的网站访问状况，换换其它更注重隐私的域名解析服务吧。">
+  <link rel="canonical" href="https://privacytools-zh-cn.yoitsu.moe/providers/dns/">
+
+  <!-- title -->
+  
+  <title>加密的域名解析 | PrivacyTools</title>
+  <meta property="og:title" content="加密的域名解析 | PrivacyTools" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://privacytools-zh-cn.yoitsu.moe/providers/dns/" />
+  <meta property="og:image" content="https://privacytools-zh-cn.yoitsu.moe/assets/img/svg/layout/brand/square-transparent.svg" />
+  <meta property="og:description" content="别让 Google 和一般传统 DNS 供应商知道您所有的网站访问状况，换换其它更注重隐私的域名解析服务吧。"/>
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="PrivacyTools" />
+
+  
+
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/png/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/png/favicons/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/png/favicons/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/assets/img/png/favicons/site.webmanifest?v=2">
+  <link rel="mask-icon" href="/assets/img/png/favicons/safari-pinned-tab.svg?v=2" color="#3498db">
+  <link rel="shortcut icon" href="/assets/img/png/favicons/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#3498db">
+  <meta name="msapplication-config" content="/assets/img/png/favicons/browserconfig.xml?v=2">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- CSS stylesheets -->
+  <link href="/assets/css/style.css?v=9" rel="stylesheet">
+  <link id="dark-css" href="/assets/css/dark.css?v=4" rel="stylesheet" media="(prefers-color-scheme: dark)">
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+  <script src="/assets/js/applytheme.js?v=1"></script>
+  <header>
+  <nav class="fixed-top bg-dark">
+  <div id="navbar" class="d-flex flex-wrap justify-content-between align-items-center">
+    <div class="w-50">
+      <a id="nav-home-mobile" class="nav-anchor" href="/">
+        <img src="/assets/img/svg/layout/brand/horizontal.svg" width="150px" />
+      </a>
+    </div>
+    <input type="checkbox" id="nav-toggle" checked />
+    <label for="nav-toggle" id="nav-toggle-label" class="fas fa-bars fa-lg"></label>
+
+    <div class="menu w-100">
+      <div id="nav-left" class="position-relative flex-col">
+        <a class="nav-anchor" href="/">
+          <span id="nav-home" class="fas fa-home fa-fw"></span>
+        </a>
+
+        <!-- Provider -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              服务提供商
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/providers/#ukusa"><span class="fas fa-user-secret fa-fw"></span> 避兔使用位于美国与英国的网络服务</a>
+            <a class="dropdown-item" href="/providers/cloud-storage/"><span class="fas fa-cloud fa-fw"></span> 云存储服务</a>
+            <a class="dropdown-item" href="/providers/dns/"><span class="fa fa-tasks fa-fw"></span> 域名系统（DNS）</a>
+            <a class="dropdown-item" href="/providers/email/"><span class="fas fa-mail-bulk fa-fw"></span> 电子邮件</a>
+            <a class="dropdown-item" href="/providers/hosting/"><span class="fas fa-database fa-fw"></span> 网站托管服务商</a>
+            <a class="dropdown-item" href="/providers/paste/"><span class="fas fa-paste fa-fw"></span> 文本保存服务（Pastebin）</a>
+            <a class="dropdown-item" href="/providers/search-engines/"><span class="fas fa-search fa-fw"></span> 搜索引擎</a>
+            <a class="dropdown-item" href="/providers/social-networks/"><span class="fas fa-expand-arrows-alt fa-fw"></span> 社交网络</a>
+            <a class="dropdown-item" href="/providers/social-news-aggregator/"><span class="far fa-newspaper fa-fw"></span> 社交消息聚合</a>
+            <a class="dropdown-item" href="/providers/vpn/"><span class="far fa-eye-slash fa-fw"></span> 虚拟专用网络（VPN）</a>
+          </span>
+        </details>
+
+        <!-- Browser -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              浏览器
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/browsers/#browser"><span class="fas fa-check fa-fw"></span> 推荐</a>
+            <a class="dropdown-item" href="/browsers/#fingerprint"><span class="fas fa-fingerprint fa-fw"></span>关于浏览器指纹</a>
+            <a class="dropdown-item" href="/browsers/#webrtc"><span class="far fa-eye fa-fw"></span> WebRTC IP 漏洞</a>
+            <a class="dropdown-item" href="/browsers/#addons"><span class="far fa-list-alt fa-fw"></span> 浏览器附加组件</a>
+            <a class="dropdown-item" href="/browsers/#about_config"><span class="fas fa-wrench fa-fw"></span> 火狐隐私调校技巧</a>
+          </span>
+        </details>
+
+        <!-- Software -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              应用软件
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/software/calendar-contacts/"><span class="fas fa-calendar fa-fw"></span> 日历/联系人同步工具</a>
+            <a class="dropdown-item" href="/software/notebooks/"><span class="far fa-sticky-note fa-fw"></span> 数字笔记簿</a>
+            <a class="dropdown-item" href="/software/email/"><span class="fas fa-envelope fa-fw"></span> 电子邮件客户端软件</a>
+            <a class="dropdown-item" href="/software/encryption-tools/"><span class="fas fa-lock fa-fw"></span> 文件加密</a>
+            <a class="dropdown-item" href="/software/file-sharing/"><span class="fas fa-file-export fa-fw"></span> 文件分享</a>
+            <a class="dropdown-item" href="/software/file-sync/"><span class="fas fa-copy fa-fw"></span> 文件同步</a>
+            <a class="dropdown-item" href="/software/productivity/#metadata-removal-tools"><span class="far fa-eye-slash fa-fw"></span> 移除元数据工具</a>
+            <a class="dropdown-item" href="/software/passwords/"><span class="fas fa-user-lock fa-fw"></span> 密码管理</a>
+            <a class="dropdown-item" href="/software/productivity/"><span class="fas fa-briefcase fa-fw"></span> 生产力工具</a>
+            <a class="dropdown-item" href="/software/real-time-communication/"><span class="fas fa-comments fa-fw"></span> 即时通信</a>
+            <a class="dropdown-item" href="/software/networks/"><span class="fas fa-user-secret fa-fw"></span> 去中心化网络和匿名网络</a>
+            <a class="dropdown-item" href="/software/cloud/"><span class="fas fa-hdd fa-fw"></span> 自建云端服务器</a>
+          </span>
+        </details>
+
+        <!-- OS -->
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              操作系统
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a class="dropdown-item" href="/operating-systems/#os"><span class="fas fa-th-large fa-fw"></span> 个人电脑操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#live_os"><span class="fas fa-compact-disc fa-fw"></span> Live 操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#mobile_os"><span class="fas fa-mobile-alt fa-fw"></span> 手机操作系统</a>
+            <a class="dropdown-item" href="/operating-systems/#aaddons"><span class="fas fa-th fa-fw"></span> Android 隐私附加组件</a>
+            <a class="dropdown-item" href="/operating-systems/#firmware"><span class="fas fa-signal fa-fw"></span> 路由器固件</a>
+            <a class="dropdown-item" href="/operating-systems/#win10"><span class="far fa-thumbs-down fa-fw"></span> 不要使用 Windows 10</a>
+          </span>
+        </details>
+
+        <a class="nav-anchor" href="/index.html#participate">参与</a>
+      </div>
+
+      <!-- Language -->
+      <div id="nav-right">
+
+        <a href="/services/" class="nav-anchor">
+          其它服务
+        </a>
+        <a href="https://blog.privacytools.io/" class="nav-anchor">
+          PrivacyTools 博客（英文）
+        </a>
+        <a href="/sponsors/" class="nav-anchor">
+          赞助者
+        </a>
+        <a href="/about/" class="nav-anchor">
+          关于本站
+        </a>
+        <span id="nav-switch-theme" class="nav-anchor">
+          <span class="nav-theme-icon fas fa-fw" aria-hidden="true" title="Theme"></span>
+          <span class="sr-only">Toggle Theme</span>
+        </span>
+
+        <details class="nav-details">
+          <summary>
+            <span class="nav-summary">
+              <span class="fas fa-language text-danger fa-fw" aria-hidden="true" title="Language"></span>
+              <span class="sr-only">其它语言版本</span>
+              <span class="dropdown-toggle"></span>
+            </span>
+          </summary>
+          <span class="nav-dropdown">
+            <a href="https://www.privacytools.io/" class="dropdown-item">English</a>
+            <a href="https://privacytools.twngo.xyz/" rel="nofollow noopener" class="dropdown-item">繁体中文</a>
+            <a href="https://victorhck.gitlab.io/privacytools-es/" rel="nofollow noopener" class="dropdown-item">Español</a>
+            <a href="https://pl.privacytools.io/" rel="nofollow noopener" class="dropdown-item">Polski</a>
+            <a href="https://www.privacidade.digital/" rel="nofollow noopener" class="dropdown-item">Português</a>
+            <a href="https://privacytools.it-sec.rocks/" rel="nofollow noopener" class="dropdown-item">Deutsch</a>
+            <a href="https://privacytools-it.github.io/" rel="nofollow noopener" class="dropdown-item">Italiano</a>
+            <a href="https://privacytools.ru" rel="nofollow noopener" class="dropdown-item">Русский</a>
+            <a href="https://privacytools.dreads-unlock.fr" rel="nofollow noopener" class="dropdown-item">Français</a>
+          </span>
+        </details>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top" class="py-4"></div>
+  </header>
+  <div class="container" role="main">
+  <main>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+  
+  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumb-item">
+      <a href="/"><i class="fas fa-home" aria-hidden="true"></i> <span>Home</span></a>
+    </li>
+    
+    
+    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/providers/" itemprop="item"><span itemprop="name">Providers</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    
+    
+    
+    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <link href="/providers/dns/" itemprop="item"  />
+      <span itemprop="name">DNS
+      </span>
+      <meta itemprop="position" content="2" />
+    </li>
+    
+    
+  </ol>
+</nav>
+
+
+<div class="jumbotron p-5">
+  <h1 class="display-4">加密的域名解析</h1>
+  <p class="lead">别让 Google 和一般传统 DNS 供应商知道您所有的网站访问状况，换换其它更注重隐私的域名解析服务吧。</p>
+</div>
+
+<h1 id="dns" class="anchor"><a href="#dns"><i class="fas fa-link anchor-icon"></i></a> 加密网域名系统解析</h1>
+
+<div class="alert alert-warning" role="alert">
+  <strong>请注意：使用加密的域名解析器并无匿名化效果，也不能向网络连接供应商 ISP 隐瞒您的网络流量状况。它<i>只</i>可防止域名被截持绑架，让域名请求查找更难被第三方所窃听和窜改。如果您现在用的是 Google 提供的域名解析服务，不妨试试其它提供者。</strong>
+</div>
+
+<div class="table-responsive">
+  <table class="table sortable-theme-bootstrap" data-sortable>
+    <thead>
+      <tr>
+        <th data-sorted="true" data-sorted-direction="ascending">DNS 供应商</th>
+        <th data-sortable="true">服务器所在地</th>
+        <th data-sortable="false">隐私政策</th>
+        <th data-sortable="true">经营者类型</th>
+        <th data-sortable="true">用户活动记录</th>
+        <th data-sortable="true">网络协议</th>
+        <th data-sortable="true">DNSSEC</th>
+        <th data-sortable="true">限定名(QNAME) 最小化</th>
+        <th data-sortable="true">过滤器</th>
+        <th data-sortable="true">源代码</th>
+        <th data-sortable="true">使用的网络服务提供商</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-value="AdGuard">
+          <a href="https://adguard.com/en/adguard-dns/overview.html">AdGuard</a>
+        </td>
+        <td>Anycat 任播型 (以
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-cy"></span>
+              赛浦勒斯为主要地)
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://adguard.com/en/privacy/dns.html">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>Commercial</td>
+       <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We store aggregated performance metrics of our DNS server, namely the number of complete requests to a particular server, the number of blocked requests, the speed of processing requests.
+We keep and store the database of domains requested in the last 24 hours. We need this information to identify and block new trackers and threats.
+We also log how many times this or that tracker has been blocked. We need this information to remove outdated rules from our filters."' href="https://adguard.com/en/privacy/dns.html">某些</a></td>
+        <td>DoH, DoT, DNSCrypt</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            依服务器而异
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://github.com/AdguardTeam/AdGuardDNS/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.choopa.com/">Choopa, LLC</a>,
+          </span>
+          <span class="no-text-wrap">
+            <a href="https://flops.ru/en/about.html">Serveroid, LLC</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="BlahDNS">
+          <a href="https://blahdns.com/">BlahDNS</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-fi"></span>
+            芬兰、
+          </span>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-de"></span>
+            德国、
+          </span>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-jp"></span>
+            日本
+          </span>
+        </td>
+        <td>
+          <div
+            class="btn-secondary btn-icon"
+            title="&quot;No logs.&quot;"
+            data-toggle="tooltip"
+            data-placement="bottom">
+            <span class="fas fa-globe"></span>
+          </div>
+        </td>
+        <td>兴趣项目</td>
+        <td>否</td>
+        <td data-value="dot/443">
+          <span class="no-text-wrap">
+            DoH,
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="除了常规的 853 端口以外也支持 443 端口">
+              DoT <span class="fas fa-info-circle fa-sm text-secondary"></span>,
+            </span>
+          </span>
+          DNSCrypt
+        </td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            广告，跟踪器
+          </span>
+          <span class="no-text-wrap">
+            恶意域名
+            
+<a
+  href="https://github.com/ookangzheng/blahdns#default-blocked-wildcard-domain" class="badge badge-warning"
+  
+  data-toggle="tooltip"
+  title="和某些 wildcard / IDN 域名。"><i class="fas fa-exclamation-triangle"></i> 
+
+</a>
+
+
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://github.com/ookangzheng/blahdns/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.choopa.com/">Choopa, LLC</a>,
+          </span>
+          <span class="no-text-wrap">
+            <a href="https://www.datacenterlight.ch/">Data Center Light</a>,
+          </span>
+          <span class="no-text-wrap">
+            <a href="https://www.hetzner.com/">Hetzner Online GmbH</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="Cloudflare">
+          <a href="https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/">Cloudflare</a>
+          
+<a
+  href="https://codeberg.org/crimeflare/cloudflare-tor/" class="badge badge-warning"
+  
+  data-toggle="tooltip"
+  title="Cloudflare 是最大的网络之一，你可能会在使用它时考虑去匿名化和中心化的问题。"><i class="fas fa-exclamation-triangle"></i> 
+
+</a>
+
+
+        </td>
+        <td>Anycat 任播型（主要在
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-us"></span>
+            美国）
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://www.cloudflare.com/privacypolicy/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>商业</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We will collect limited DNS query data that is sent to the resolvers. This data does not contain user IP addresses or any other personally identifiable information, and the bulk of the data is only stored for 24 hours."' href="https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy/">某些</a></td>
+        <td>DoH, DoT</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            依服务器而异
+          </span>
+        </td>
+        <td>?</td>
+        <td>Self</td>
+      </tr>
+
+      <tr>
+        <td data-value="CZ.NIC">
+          <a href="https://www.nic.cz/odvr/">CZ.NIC</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-cz"></span>
+            捷克
+          </span>
+        </td>
+        <td>
+          <div
+            class="btn-secondary btn-icon"
+            title="&quot;CZ.NIC resolvers neither collect any personal data nor gather information on pages where your computer sends personal data.&quot;"
+            data-toggle="tooltip"
+            data-placement="bottom">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"CZ.NIC is an interest association of legal entities, founded in 1998 by leading providers of Internet services."' href="https://www.nic.cz/page/351/about-association/">基于协会运营</a></td>
+        <td>否</td>
+        <td>DoH, DoT</td>
+        <td>是</td>
+        <td>是</td>
+        <td data-value="No">?</td>
+        <td>?</td>
+        <td>自行架设</td>
+      </tr>
+
+      <tr>
+        <td data-value="Foundation for Applied Privacy">
+          <a href="https://appliedprivacy.net/services/dns/">Foundation for Applied Privacy</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-at"></span>
+            奥地利
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://appliedprivacy.net/privacy-policy">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>非盈利</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"We do NOT log your IP address or DNS queries during normal operations. We do NOT share query data with third parties that are not directly involved with resolving the query (i.e. sending queries to authoritative nameservers for resolution)."' href="https://appliedprivacy.net/privacy-policy/">某些</a></td>
+        <td data-value="dot/443">
+          <span class="no-text-wrap">
+            DoH,
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Supports port 443 in addition to 853">
+              DoT <span class="fas fa-info-circle fa-sm text-secondary"></span>
+            </span>
+          </span>
+        </td>
+        <td>是</td>
+        <td>是</td>
+        <td>否</td>
+        <td>?</td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.ipax.at/">IPAX OG</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="LibreDNS">
+          <a href="https://libredns.gr/">LibreDNS</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-de"></span>
+            德国
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://libreops.cc/terms.html">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title="Part of LibreHosters, &quot;a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms.&quot;" href="https://libreho.st/">
+            非正式协作
+          </a>
+        </td>
+        <td>否</td>
+        <td>DoH, DoT</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            依服务器而异（仅 DoH）
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://gitlab.com/libreops/libredns">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.hetzner.com/">Hetzner Online GmbH</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="nextdns">
+          <a href="https://www.nextdns.io/">NextDNS</a>
+        </td>
+        <td> Anycat 任播型（主要在
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-us"></span>
+            美国）
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://www.nextdns.io/privacy">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>商业l</td>
+        <td>
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title='"Some of the features require some sort of data retention. In that case, we give our users the choice to granularly or completely disable those features (and associated data retention), and we follow up immediately on that promise"' href="https://www.nextdns.io/privacy">基于用户的选择</a>
+        </td>
+        <td>DoH, DoT, DNSCrypt</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            依服务器而异
+          </span>
+        </td>
+        <td>?</td>
+        <td>Self</td>
+      </tr>
+
+      <tr>
+        <td data-value="NixNet">
+          <a href="https://nixnet.xyz/dns/">NixNet</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            Anycast 任播型（主要在
+            <span class="flag-icon flag-icon-us"></span>
+            美国），
+          </span>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-us"></span>
+            美国，
+          </span>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-lu"></span>
+            卢森堡
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://nixnet.xyz/privacy/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title='Part of LibreHosters, "a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms."' href="https://libreho.st/">
+            非正式协作
+          </a>
+        </td>
+        <td>否</td>
+        <td>DoH, DoT</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            依服务器而异
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://git.nixnet.xyz/NixNet/dns">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://frantech.ca/">FranTech Solutions</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="PowerDNS">
+          <a href="https://powerdns.org/">PowerDNS</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-nl"></span>
+            尼德兰
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://powerdns.org/doh/privacy.html">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>兴趣项目</td>
+        <td>否</td>
+        <td>DoH</td>
+        <td>是</td>
+        <td>否</td>
+        <td>否</td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://github.com/PowerDNS/pdns">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.transip.nl/">TransIP B.V. Admin</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="Quad9">
+          <a href="https://quad9.net/">Quad9</a>
+          
+<span
+  class="badge badge-warning"
+  
+    data-toggle="tooltip"
+    title="Founders include the Global Cyber Alliance, composed of the City of London Police and Manhattan District Attorney's Office."
+    > <i class="fas fa-exclamation-triangle"></i> 
+  
+</span>
+
+
+        </td>
+        <td>Anycast 任播型（主要在
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-us"></span>
+            美国）
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://quad9.net/policy/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>非盈利</td>
+        <td><a data-toggle="tooltip" data-placement="bottom" data-original-title='"Our normal course of data management does not have any IP address information or other PII logged to disk or transmitted out of the location in which the query was received."' href="https://quad9.net/policy/">某些</a></td>
+        <td>DoH, DoT, DNSCrypt</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            恶意域名
+          </span>
+        </td>
+        <td>?</td>
+        <td>
+          自建,
+          <span class="no-text-wrap">
+            <a href="https://www.pch.net/">Packet Clearing House</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="Snopyta">
+          <a href="https://snopyta.org/service/dns/index.html">Snopyta</a>
+        </td>
+        <td>
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-fi"></span>
+            芬兰
+          </span>
+        </td>
+        <td>
+          <a
+            class="btn-secondary btn-icon"
+            href="https://snopyta.org/privacy_policy/">
+            <span class="fas fa-globe"></span>
+          </a>
+        </td>
+        <td>
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title="Part of LibreHosters, &quot;a network of cooperation and solidarity that uses free software to encourage decentralisation through federation and distributed platforms.&quot;" href="https://libreho.st/">
+            非正式协作
+          </a>
+        </td>
+        <td>否</td>
+        <td>DoH, DoT</td>
+        <td>是</td>
+        <td>是</td>
+        <td>
+          <span class="no-text-wrap">
+            否
+          </span>
+        </td>
+        <td>?</td>
+        <td>
+          <span class="no-text-wrap">
+            <a href="https://www.hetzner.com/">Hetzner Online GmbH</a>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="UncensoredDNS">
+          <a href="https://blog.uncensoreddns.org/">UncensoredDNS</a>
+        </td>
+        <td>任播型 （主要在
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-dk"></span>
+            丹麦），
+          </span>
+
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-dk"></span>
+            丹麦，
+            </span>
+
+          <span class="no-text-wrap">
+            <span class="flag-icon flag-icon-us"></span>
+            美国
+          </span>
+        </td>
+        <td>
+          <div
+            class="btn-secondary btn-icon"
+            title="&quot;Absolutely nothing is being logged, neither about the users nor the usage of this service. I do keep graphs of the total number of queries, but no personally identifiable information is saved. The data that is saved will never be sold or used for anything except capacity planning of the service.&quot;"
+            data-toggle="tooltip"
+            data-placement="bottom">
+            <span class="fas fa-globe"></span>
+          </div>
+        </td>
+        <td>兴趣项目</td>
+        <td>否</td>
+        <td data-value="doh">DoT</td> <!-- "hack" to group "DoT" values (when sorted) with "DoH" values -->
+        <td>是</td>
+        <td>否</td>
+        <td>否</td>
+        <td>?</td>
+        <td>
+          Self,
+          <span class="no-text-wrap">
+            <a href="https://www.teliacompany.com">Telia Company AB</a>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h1 id="dns-desktop-clients" class="anchor">
+  <a href="#dns-desktop-clients">
+    <i class="fas fa-link anchor-icon"></i>
+  </a> Encrypted DNS Client Recommendations for Desktop
+</h1>
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Unbound
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/unbound.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Unbound logo"
+      >
+      A validating, recursive, caching DNS resolver, supporting DNS-over-TLS, and has been <a href="https://ostif.org/our-audit-of-unbound-dns-by-x41-d-sec-full-results/">independently audited</a>.
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://nlnetlabs.nl/projects/unbound/about/"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-unbound/3563"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/NLnetLabs/unbound" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        dnscrypt-proxy
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/dnscrypt-proxy.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="dnscrypt-proxy logo"
+      >
+      A DNS proxy with support for DNSCrypt, DNS-over-HTTPS, and <a href="https://github.com/DNSCrypt/dnscrypt-protocol/blob/master/ANONYMIZED-DNSCRYPT.txt">Anonymized DNSCrypt</a>, a <a href="https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Anonymized-DNS">relay-based protocol that the hides client IP address.</a>
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://github.com/DNSCrypt/dnscrypt-proxy/wiki"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-dnscrypt-proxy/1498"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/DNSCrypt/dnscrypt-proxy" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Stubby
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/png/3rd-party/stubby.png"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Stubby logo"
+      >
+      An application that acts as a local DNS-over-TLS stub resolver. Stubby can be used in <a href="https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Clients#DNSPrivacyClients-Unbound/Stubbycombination">combination with Unbound</a> by managing the upstream TLS connections (since Unbound cannot yet re-use TCP/TLS connections) with Unbound providing a local cache.
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-stubby/3582"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/getdnsapi/stubby" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Firefox's built-in DNS-over-HTTPS resolver
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/firefox_browser.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Firefox's built-in DNS-over-HTTPS resolver logo"
+      >
+      Firefox comes with built-in DNS-over-HTTPS support for <a href="https://blog.mozilla.org/blog/2020/02/25/firefox-continues-push-to-bring-dns-over-https-by-default-for-us-users/">NextDNS and Cloudflare</a> but users can manually any other DoH resolver.
+      
+      
+      
+        
+          
+        
+<a
+  href="https://developers.cloudflare.com/1.1.1.1/privacy/firefox" class="badge badge-warning"
+  
+  data-toggle="tooltip"
+  title="Cloudflare logs a limited amount of data about the DNS requests that are sent to their custom resolver for Firefox."><i class="fas fa-exclamation-triangle"></i> Warning
+
+</a>
+
+
+        
+        
+        
+        
+        
+      
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://support.mozilla.org/en-US/kb/firefox-dns-over-https"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        <a
+          href="https://wiki.mozilla.org/Security/DOH-resolver-policy"
+          rel="noopener"
+          class="btn btn-warning mt-1 mr-1">
+          <i class="fas fa-book fa-fw"></i>
+          Privacy Policy
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-firefox-s-built-in-dns-over-https-resolver/3564"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<h1 id="dns-android-clients" class="anchor">
+	<a href="#dns-android-clients">
+		<i class="fas fa-link anchor-icon"></i>
+	</a> Encrypted DNS Client Recommendations for Android
+</h1>
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Android 9's built-in DNS-over-TLS resolver
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/svg/3rd-party/android.svg"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Android 9's built-in DNS-over-TLS resolver logo"
+      >
+      Android 9 (Pie) comes with built-in DNS-over-TLS support without the need for a 3rd-party application.
+      
+      
+      
+        
+          
+        
+<a
+  href="https://developers.google.com/speed/public-dns/docs/using#android_9_pie_or_later" class="badge badge-warning"
+  
+  data-toggle="tooltip"
+  title="Android 9's DoT settings have no effect when used concurrently with VPN-based apps which override the DNS."><i class="fas fa-exclamation-triangle"></i> Warning
+
+</a>
+
+
+        
+        
+        
+        
+        
+      
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://support.google.com/android/answer/9089903#private_dns"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-android-9s-built-in-dns-over-tls-resolver/3562"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        Nebulo
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/png/3rd-party/nebulo.png"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="Nebulo logo"
+      >
+      An open-source Android client supporting DNS-over-HTTPS and DNS-over-TLS, caching DNS responses, and locally logging DNS queries.
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://git.frostnerd.com/PublicAndroidApps/smokescreen/-/blob/master/README.md"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        <a
+          href="https://smokescreen.app/privacypolicy"
+          rel="noopener"
+          class="btn btn-warning mt-1 mr-1">
+          <i class="fas fa-book fa-fw"></i>
+          Privacy Policy
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-nebulo/3565"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            
+              <a href="https://git.frostnerd.com/PublicAndroidApps/smokescreen#f-droid" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-f-droid fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+            
+              <a href="https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="fab fa-google-play fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+
+          
+
+          
+            <a href="https://git.frostnerd.com/PublicAndroidApps/smokescreen" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fas fa-code-branch fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<h1 id="dns-ios-clients" class="anchor">
+	<a href="#dns-ios-clients">
+		<i class="fas fa-link anchor-icon"></i>
+	</a> Encrypted DNS Client Recommendations for iOS
+</h1>
+
+<div class="card">
+  <div class="card-header text-white bg-secondary">
+    <h3 class="h5">
+      
+        DNSCloak
+      
+    </h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <img
+        src="/assets/img/png/3rd-party/dnscloak.png"
+        
+        height="120"
+        width="120"
+        class="panel-pic"
+        alt="DNSCloak logo"
+      >
+      An open-source iOS client supporting DNS-over-HTTPS, DNSCrypt, and <a href="https://github.com/DNSCrypt/dnscrypt-proxy/wiki">dnscrypt-proxy</a> options such as caching DNS responses, locally logging DNS queries, and custom block lists. Users can <a href="https://blog.privacytools.io/adding-custom-dns-over-https-resolvers-to-dnscloak/">add custom resolvers by DNS stamp</a>.
+      
+    </p>
+    <div class="d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-center">
+      <div class="flow-root flex-shrink-0 mr-1">
+        <a
+          href="https://github.com/s-s/dnscloak/blob/master/README.md"
+          rel="noopener"
+          class="btn btn-primary mt-1 mr-1">
+          <i class="fas fa-external-link-alt fa-fw"></i>
+          Website
+        </a>
+        
+        <a
+          href="https://drive.google.com/file/d/1050No_pU74CAWUS5-BwQWyO2x_aiMzWc/view"
+          rel="noopener"
+          class="btn btn-warning mt-1 mr-1">
+          <i class="fas fa-book fa-fw"></i>
+          Privacy Policy
+        </a>
+        
+        
+          <a
+            href="https://forum.privacytools.io/t/discussion-dnscloak/3566"
+            rel="noopener"
+            class="btn btn-success mt-1 mr-1">
+            <i class="fab fa-discourse fa-fw"></i>
+            Forum
+          </a>
+        
+        
+        
+      </div>
+
+      <div class="mt-2">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            
+              <a href="https://apps.apple.com/app/id1452162351" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+                <i class="ptio-ios fa-2x fa-fw d-inline pr-1"></i>
+              </a>
+            
+          
+
+          
+
+          
+
+          
+          
+          
+
+          
+            <a href="https://github.com/s-s/dnscloak" rel="noopener" class="text-decoration-none hover-text-decoration-none">
+              <i class="fab fa-github fa-2x fa-fw d-inline"></i>
+            </a>
+          
+
+          
+
+          
+
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<h2 id="dns-definitions" class="anchor">
+	<a href="#dns-definitions">
+		<i class="fas fa-link anchor-icon"></i>
+	</a> 相关术语
+</h2>
+
+<h4>DNS-over-TLS (DoT)</h4>
+<p>
+	加密 DNS 的安全协定，在特定的的 853 端口上提供服务，某些供应商则用 443 端口，尤其当 853 常被限制的防火墙所阻挡时。
+</p>
+
+<h4>DNS-over-HTTPS (DoH)</h4>
+<p>
+	类似 DoT，但采用 HTTPS 取代，通过 443 端口，和一般的 HTTPS 流量无异 
+<a
+  href="https://tools.ietf.org/html/rfc8484#section-8.2" class="badge badge-warning"
+  
+  data-toggle="tooltip"
+  title="DoH 会向 DNS 服务器发送像是 user-agent 一类的可能包含系统信息的元数据。"><i class="fas fa-exclamation-triangle"></i> 警告
+
+</a>
+
+
+</p>
+
+<h4>DNSCrypt</h4>
+<p>
+  一种稍旧但仍常被使用的 DNS 加密方式，它的协议<a href="https://dnscrypt.info/protocol/">是开放的</a>。
+</p>
+
+<h4>匿名化 DNSCrypt</h4>
+<p>
+  A <a href="https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Anonymized-DNS">lightweight protocol</a> that hides the client IP address by using pre-configured relays to forward encrypted DNS data. This is a relatively new protocol created in 2019 currently only supported by <a href="#dns-desktop-clients">dnscrypt-proxy</a> and a limited number of <a href="https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v2/relays.md">relays</a>.
+</p>
+
+
+  </main>
+  <footer>
+  <footer>
+
+  <hr class="footer-divider" />
+
+  <h3 id="participate">推广本站助更多人了解隐私保护</h3>
+
+  <div class="row mb-4">
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="mailto:?subject=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&body=https://privacytools-zh-cn.yoitsu.moe/" class="share-btn email" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://privacytools-zh-cn.yoitsu.moe" class="share-btn facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="https://twitter.com/share?text=Knowledge%20and%20tools%20to%20protect%20your%20privacy%20against%20global%20mass%20surveillance%20&amp;url=https://privacytools-zh-cn.yoitsu.moe/&amp;via=privacytoolsIO" class="share-btn twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="https://sharetomastodon.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools-zh-cn.yoitsu.moe" class="share-btn mastodon" title="Mastodon">
+        <i class="fab fa-mastodon"></i>
+      </a>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-between">
+      <a href="https://reddit.com/submit?url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn reddit" title="reddit">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/shareArticle?url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn linkedin" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://mix.com/mixit?su=submit&url=https://privacytools-zh-cn.yoitsu.moe&title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance" class="share-btn mix" title="Mix">
+        <i class="ptio-mix"></i>
+      </a>
+
+      <a href="https://sharetodiaspora.github.io/?title=privacytools.io%20-%20encryption%20against%20global%20mass%20surveillance&url=https://privacytools-zh-cn.yoitsu.moe" class="share-btn diaspora" title="Diaspora*">
+        <i class="fas fa-asterisk"></i>
+      </a>
+    </div>
+  </div>
+
+  <h3>复制网址与本站描述</h3>
+
+  <p>
+  <input type="text" value="PrivacyTools 网络隐私工具 - 通过安全的加密抵抗全球大规模监控 - https://privacytools-zh-cn.yoitsu.moe" class="form-control input-lg onclick-select">
+  <span class="help-block">利用这个文本框快速复制和分享。</span>
+  </p>
+
+  <hr class="footer-divider" />
+
+  <div class="row mt-3">
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fab fa-creative-commons-zero fa-2x mr-2"></span>
+      <a
+        href="/LICENSE.txt"
+        title="本作品为自由作品，你可以在 &quot;CC0 1.0 通用 (CC0 1.0) 公共领域贡献&quot; 协议允许的范围内分发和修改本作品。"
+        data-toggle="tooltip"
+        data-placement="top">
+        CC0
+      </a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="far fa-address-card fa-2x mr-2"></span>
+      <a href="/about/">项目介绍 &amp; 联系方式</a>
+    </div>
+
+    <div class="col-sm-4 mb-3 d-flex justify-content-center align-items-center">
+      <span class="fas fa-donate fa-2x mr-2"></span>
+      <a href="/donate/" data-toggle="tooltip" data-placement="top" data-original-title="我们不放置广告，与任何服务提供商都没有关系。请捐助我们来帮我们支付服务器和域名等开销。">支持本站！</a>
+    </div>
+  </div>
+
+  <div class="copyright-text">
+    <a href="/about/javascript" data-jslicense="1">
+      <span class="fab fa-js fa-lg"></span>
+      JavaScript 许可信息
+    </a>
+    <p class="mt-2">
+      <strong>无广告、无 Google 追踪分析器、无利害关联、无跨站追踪</strong>
+      <em>
+        PrivacyTools 是一个受社会现况激发的社群网站，它提供保护上网者数据安全的信息。<br />
+        不要信任某家公司会善待保护消费者隐私，时时刻刻作好加密防备。</em>
+    </p>
+    <p class="text-left">
+      Tor v3 (English): <strong>privacy2zbidut4m4jyj3ksdqidzkw3uoip2vhvhbvwxbqux5xy5obyd.onion</strong>
+      (<a href="https://write.privacytools.io/jonah/tor-on-privacytools-io">了解更多</a>)
+    </p>
+    <small>
+      <a href="/privacy/">隐私声明</a> |
+      <a href="/notices/">注意事项 &amp; 免责声明</a> |
+      <a href="https://github.com/privacytoolsIO/brand">品牌资产 &amp; 指导原则</a>
+    </small>
+
+  </div>
+</footer>
+
+  </footer>
+</div>
+
+  <script src="/assets/js/jquery-3.3.1.min.js?v=4"></script>
+<script src="/assets/js/popper.min.js?v=4"></script>
+<script src="/assets/js/bootstrap.min.js?v=4"></script>
+<script src="/assets/js/sortable.min.js?v=4"></script>
+<script src="/assets/js/main.js?v=5"></script>
+
+<!--
+  Matomo is the leading open-source analytics platform:
+  - Free open-source software
+  - 100% data ownership
+  - User privacy protection
+-->
+
+<noscript><img src="https://stats.privacytools.io/matomo.php?idsite=1&amp;rec=1" class="border-0" alt=""/></noscript>
+
+</body>
+</html>
