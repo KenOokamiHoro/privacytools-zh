@@ -7,17 +7,17 @@
 <p>有些软件，如 NoScript 可以阻止这个漏洞。但为了安全起见，直接关闭这个协议也是不错的作法。</p>
 
 <p>
-<a class="btn btn-warning" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">立即测试您的浏览器</a>
+<a class="btn btn-warning" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">在 IPLeak 上测试您的浏览器</a>
 </p>
 
-<h3>如何在火狐浏览器下取消 WebRTC？</h3>
+<h3>如何在 Firefox 下禁用 WebRTC？</h3>
 
 <p>简单说：把 "about:config" 里的的 "media.peerconnection.enabled" 设为 "false"。</p>
 <p><strong>说明：</strong></p>
 
 <ol class="long-string-list">
   <li>在浏览器的网址列输入 "about:config" 并点击 enter 键</li>
-  <li>确信会谨慎使用后，点击"I'll be careful, I promise!"按钮</li>
+  <li>确信会谨慎使用后，点击"接受风险并继续"按钮</li>
   <li>搜索"media.peerconnection.enabled"</li>
   <li>双击这条信息, "Value"字段现在应该变成了"false"</li>
   <li>完成了，再作一次 WebRTC 漏洞测试吧</li>
@@ -38,21 +38,21 @@
 <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://ipleak.net">再次测试 WebRTC 漏洞吧</a>
 </p>
 
-<h3>How to disable WebRTC in Safari?</h3>
+<h3>如何在 Firefox 下禁用 WebRTC？</h3>
 
-<p>Safari is far stricter with WebRTC than other major browsers, and it does not leak your IP address in its default configuration. If you'd like, you can follow these steps just to double-check your browser:</p>
+<p>Safari 默认的设置下已经足够阻止你的 IP 地址通过 WebRTC 泄露。如果你有需要的话，你可以这样禁用 Safari 中的 WebRTC：</p>
 
 <ol class="long-string-list">
-  <li>Choose "Preferences" under the Safari menu in your menu bar.</li>
-  <li>Select the Advanced tab and check the "Show Develop menu in menu bar" box.</li>
-  <li>Exit Preferences and open the Develop menu in your menu bar.</li>
-  <li>In the drop-down menu, open the "WebRTC" submenu and ensure "Enable Legacy WebRTC API" is unchecked. If it's grayed out, even better.</li>
+  <li>从菜单中打开偏好设置。</li>
+  <li>在高级选项中选择“在菜单栏中显示‘开发’菜单”选项。</li>
+  <li>在菜单栏中找到“开发”菜单。</li>
+  <li>打开 "WebRTC" 子菜单，确认 "Enable Legacy WebRTC API" 为未选中。</li>
 </ol>
 
 <h3>如何解决 Google Chrome 底下的 WebRTC 漏洞？</h3>
 
-<p>Chrome 浏览器无法完全取消 WebRTC，但可以通过附加套件变更其路由设置（与防止泄漏）。有两种开源方式：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a> （需依情况来调整设置选项），和  <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>（设置时请选「预防 WebRTC 泄漏本地 IP 地址」）。</p>
+<p>Chrome 浏览器无法完全取消 WebRTC，但可以通过附加套件变更其路由设置（与防止泄漏）。有两种规避方式：<a href="https://chrome.google.com/webstore/detail/webrtc-leak-prevent/eiadekoaikejlgdbkbdfeijglgfdalml">WebRTC Leak Prevent</a> （需依情况来调整设置选项），和  <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>（设置时请选「预防 WebRTC 泄漏本地 IP 地址」）。</p>
 
 <h3>其它的浏览器呢？</h3>
 
-<p>苹果 macOS 操作系统下的 Chrome 与 Internet Explorer 与 Safari 目前尚未采用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不过我们建议在各种设备上最好还是使用火狐浏览器。</a></p>
+<p>苹果 macOS 操作系统下的 Chrome 与 Internet Explorer 目前尚未采用 WebRTC。<a href="#browser"><i class="fas fa-link"></i>不过我们建议在各种设备上最好还是使用 Firefox 浏览器。</a></p>

@@ -1,13 +1,12 @@
 <h1 id="about_config" class="anchor"><a href="#about_config"><i class="fas fa-link anchor-icon"></i></a> FireFox: "about:config" 的隐私设置调整</h1>
 
-<div class="alert alert-success" role="alert">这部份整理 <strong>about:config</strong> 的隐私设置调整，我们将示范如何强化火狐浏览器的隐私保护。</div>
+<div class="alert alert-success" role="alert">这部份整理 <strong>about:config</strong> 的隐私设置调整，我们将示范如何强化 Firefox 的隐私保护。</div>
 
-<h3>准备：</h3>
+<h3>准备开始：</h3>
 
 <ol>
-  <li>
-    在浏览器的网址列输入 "about:config" 并按下 Enter 键</li>
-  <li>点击「我发誓，我一定会小心的！」按钮</li>
+  <li>在浏览器的网址列输入 "about:config" 并按下 Enter 键</li>
+  <li>点击「接受风险并继续」按钮</li>
   <li>依照下方指示操作....</li>
 </ol>
 
@@ -15,60 +14,54 @@
 
 <dl class="long-string-list">
   <dt>privacy.firstparty.isolate = true</dt>
-  <dd><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 项目投入，可将浏览器识别码孤立给主要访问网站，达到阻止跨站追踪之目的。 （若已使用 Firefox 58以下版本的 "Cookie AutoDelete"，请不要激活此功能）</dd>
+  <dd><a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 项目投入的成果，通过一定程度的隔离第一方网站（例如 Cookies）达到阻止跨站追踪之目的。</dd>
 
   <dt>privacy.resistFingerprinting = true</dt>
-  <dd>在 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 努力下，此项功能可更有效地止阻止浏览器指纹记录。 </dd>
+  <dd>在 <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor Uplift</a> 项目投入的成果，此项功能可更有效地止阻止浏览器指纹记录。 </dd>
 
   <dt>privacy.trackingprotection.fingerprinting.enabled = true</dt>
-  <dd>[FF67+] 屏蔽指纹记录</dd>
+  <dd>[FF67+] 启用跟踪保护中屏蔽指纹记录的功能。</dd>
 
   <dt>privacy.trackingprotection.cryptomining.enabled = true</dt>
-  <dd>[FF67+] 阻止加密币挖矿</dd>
+  <dd>[FF67+] 启用跟踪保护中阻止加密货币挖矿程序的功能。</dd>
 
   <dt>privacy.trackingprotection.enabled = true</dt>
   <dd>Mozilla 新内置的跟踪保护功能，使用 Disconnect.me 过滤清单。若已激活 uBlock Origin 第三方过滤器则不必重复打开。</dd>
 
   <dt>browser.send_pings = false</dt>
-  <dd>The attribute would be useful for letting websites track visitors' clicks.</dd>
-
-  <dt>browser.sessionstore.max_tabs_undo = 0</dt>
-  <dd>即便 Firefox 已设置为不保存浏览记录，但最近关闭的分页记录仍会暂时保留在 菜单 -&gt; 浏览记录 -&gt; 最近关闭的分页 的地方</dd>
+  <dd>阻止网站通过跟踪用户点击链接追踪用户</dd>
 
   <dt>browser.urlbar.speculativeConnect.enabled = false</dt>
-  <dd>关闭自动完成网址的预载，当用户在网址栏输入时 Firefox 会先自动找出完整的网址，有时候它所建议的网址并不是用户本意要访问的网站。<a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">数据源</a></dd>
-
+  <dd>关闭自动完成网址的预载，当用户在网址栏输入时 Firefox 会先自动找出完整的网址，有时候它所建议的网址并不是用户本意要访问的网站。<a href="https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/">（参考来源）</a></dd>
 
   <dt>dom.event.clipboardevents.enabled = false</dt>
   <dd>让网站无法知道用户从网页在拷贝、黏贴、裁剪等事件行为，但可以知道网页哪个部份被选取。</dd>
 
   <dt>media.eme.enabled = false</dt>
   <dd>
-  <p>关闭数字版权控制的 HTML5内容回放功能z。此功能会自动地下载 Google 提供的　Widevine Content Decryption 模块。<a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">详细数据</a></p>
-  <p>如果 Firefox 安装激活 Adobe Flash 或 Microsoft Silverlight NPAPI 插件，数字版权管理所控制的内容还是可以播放。</p>
+  <p>阻止播放受数字限制管理限制的 HTML5 内容。也不再会下载 Google 提供的 Widevine 模块。<a href="https://support.mozilla.org/kb/enable-drm#w_opt-out-of-cdm-playback-uninstall-cdms-and-stop-all-cdm-downloads">（详细信息）</a></p>
+  <p>如果 Firefox 安装和激活 Adobe Flash 或 Microsoft Silverlight NPAPI 插件，使用这些技术的受数字限制管理所控制的内容还是可以播放。</p>
   </dd>
 
   <dt>media.gmp-widevinecdm.enabled = false</dt>
-  <dd>关闭 Google 所提供 Widevine Content Decryption 模块，它用于回放受数字版权管理控制的 HTML5 内容。 <a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">详情</a></dd>
+  <dd>关闭 Google 所提供 Widevine Content Decryption 模块，它用于播放受数字限制管理限制的 HTML5 内容。 <a href="https://support.mozilla.org/kb/enable-drm#w_disable-the-google-widevine-cdm-without-uninstalling">（详细信息）</a></dd>
 
   <dt>media.navigator.enabled = false</dt>
-  <dd>可追踪设备上的麦克风与摄影机使用状态</dd>
+  <dd>阻止网站追踪设备上的麦克风与摄影机使用状态</dd>
 
   <dt>network.cookie.cookieBehavior = 1</dt>
   <dd>
-  关闭 cookies
+  限制或禁用 Cookies
   <ul>
-    <li>0 = 缺省接受所有 cookies </li>
-    <li>1 = 仅接受原访问网站之 cookies（封鑜第三方网站）</li>
-    <li>2 = 缺省关闭所有 cookies </li>
+    <li>0 = 接受所有 cookies ，这是默认选项。</li>
+    <li>1 = 仅接受原访问网站之 cookies（阻止第三方网站）</li>
+    <li>2 = 拒绝所有 cookies </li>
   </ul>
   </dd>
 
-
-
   <dt>network.http.referer.XOriginPolicy = 2</dt>
   <dd>
-  当网站域名完全符合时，仅发送参照地址表头（<code>Referer</code>）。 （提醒：如留意到明显断裂，可试由 <code>1</code> 结合下方 <code>XOriginTrimmingPolicy</code> 来调整）<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">来源出处</a>
+  当网站域名完全符合时，仅发送参照地址表头（<code>Referer</code>）。 （提醒：如留意到明显断裂，可试由 <code>1</code> 结合下方 <code>XOriginTrimmingPolicy</code> 来调整）<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">（参考来源）</a>
   <ul>
     <li>0 = 在参照位置中，全都发送完整网址</li>
     <li>1 = 仅在相同的延伸顶级域名（eTLD）网站之间发送参照位置</li>
@@ -78,7 +71,7 @@
 
   <dt>network.http.referer.XOriginTrimmingPolicy = 2</dt>
   <dd>
-  不同域名之间发送参照位置（<code>Referer</code>）时，只送出表头栏规格（scheme）、主机、端口。<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">来源出处</a>
+  不同域名之间发送参照位置（<code>Referer</code>）时，只送出表头栏规格（scheme）、主机、端口。<a href="https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/">（参考来源）</a>
   <ul>
     <li>0 = 送出参照位置完整的网址</li>
     <li>1 = 只送传不带查找字符串的网址数据</li>
@@ -86,11 +79,8 @@
   </ul>
   </dd>
 
-  <dt>想找 TRR, DoH 或 ESNI 的信息</dt>
-  <dd>它们已被搬移至<a href="/providers/dns/#icanndns"> DNS 页面</a>.</dd>
-
   <dt>webgl.disabled = true</dt>
-  <dd>WebGL 有潜在的安全风险。<a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">来源出处</a></dd>
+  <dd>WebGL 有潜在的安全风险。<a href="https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern">（参考来源）</a></dd>
 
   <dt>browser.sessionstore.privacy_level = 2</dt>
   <dd>
@@ -103,14 +93,14 @@
   </dd>
 
   <dt>beacon.enabled = false</dt>
-  <dd>Disables sending additional analytics to web servers. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Details</a></dd>
+  <dd>阻止通过 Beacon 方法向服务器传送数据。<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">（了解详情）</a></dd>
 
   <dt>browser.safebrowsing.downloads.remote.enabled = false</dt>
-  <dd>Prevents Firefox from sending information about downloaded executable files to Google Safe Browsing to determine whether it should be blocked for safety reasons. <a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work#w_what-information-is-sent-to-mozilla-or-its-partners-when-phishing-and-malware-protection-are-enabled">Details</a></dd>
+  <dd>阻止浏览器向 Google 安全浏览发送关于下载的文件的信息来确定文件是否安全。<a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work#w_what-information-is-sent-to-mozilla-or-its-partners-when-phishing-and-malware-protection-are-enabled">（了解详情）</a></dd>
 
-  <dt>Disable Firefox prefetching pages it thinks you will visit next:</dt>
+  <dt>禁用 Firefox 的预先载入功能:</dt>
   <dd>
-  Prefetching causes cookies from the prefetched site to be loaded and other potentially unwanted behavior. Details <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ">here</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">here</a>.
+  预先载入会导致预先载入的网站的 Cookie 保存下来，者可能会导致潜在的意外行为。详细信息可以参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ">这里</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">这里</a>。
   <ul>
     <li>network.dns.disablePrefetch = true</li>
     <li>network.dns.disablePrefetchFromHTTPS = true</li>
@@ -120,14 +110,14 @@
   </dd>
 
   <dt>network.IDN_show_punycode = true</dt>
-  <dd>Not rendering IDNs as their Punycode equivalent leaves you open to phishing attacks that can be very difficult to notice. <a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">Source</a></dd>
+  <dd>把 IDN 强制表述成等价的 Punycode 形式以避免因为难以区分而造成的钓鱼攻击。<a href="https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/#more-42636">（参考来源）</a></dd>
 
-  <dt>Looking for TRR, DoH or ESNI?</dt>
-  <dd>They have moved to <a href="/providers/dns/#dns">our DNS page</a>.</dd>
+  <dt>想找 TRR, DoH 或 ESNI 的信息</dt>
+  <dd>它们已被搬移至<a href="/providers/dns/#icanndns"> DNS 页面</a>.</dd>
 
-<h3 id="user.js">Firefox user.js Templates</h3>
+<h3 id="user.js">Firefox user.js 模板</h3>
 <ul>
-   <li><a href="https://github.com/ghacksuserjs/ghacks-user.js">ghacks-user.js</a> - An ongoing comprehensive user.js template for configuring and hardening Firefox privacy, security and anti-fingerprinting.</li>
+   <li><a href="https://github.com/ghacksuserjs/ghacks-user.js">ghacks-user.js</a> - 正在进行中的为 Firefox 强化安全、隐私和对抗指纹追踪的 user.js 文件计划。</li>
 </ul>
 
 

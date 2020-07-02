@@ -1,13 +1,18 @@
-<h1 id="darknets" class="anchor"><a href="#darknets"><i class="fas fa-link anchor-icon"></i></a> 自足网络</h1>
+<h1 id="darknets" class="anchor"><a href="#darknets"><i class="fas fa-link anchor-icon"></i></a> 非中心化网络和匿名网络</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>您现在浏览的都是明网 <a href="https://en.wikipedia.org/wiki/Surface_Web">clearnet</a>，如希望能够连入<a href="https://en.wikipedia.org/wiki/Dark_web">Dark web</a>暗网，此处有相关介绍。strong>
+  <strong>你现在浏览的网站在互联网上有时被称作<a href="https://en.wikipedia.org/wiki/Surface_Web">”明网（clearnet）”</a>，这里提供一些访问其它非中心化网络和匿名网络的工具。</strong>
 </div>
+
+<div class="alert alert-info" role="info">
+  <strong>译者注：匿名网络有时会被错误的称作“暗网”。</strong>
+</div>
+
 
 {% include cardv2.html
   title="Tor"
   image="/assets/img/svg/3rd-party/tor.svg"
-  description="The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor's users employ this network by connecting through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy. Tor is an effective censorship circumvention tool."
+  description="Tor 网络是由一群志愿者营运的服务器社群，让人们可以改善其在使用互联网的隐私和安全。用户利用 Tor 网络链接到一组虚拟隧道而非直接连入，好让组织和个人在公共网络上分享信息又不会伤害自身隐私。Tor 也是一个能有效避开网络审查的工具。 "
   website="https://www.torproject.org/"
   tor="http://expyuzz4wqqyqhjn.onion"
   forum="https://forum.privacytools.io/t/discussion-tor/1589"
@@ -24,10 +29,10 @@
 %}
 
 {% include cardv2.html
-  title="I2P Anonymous Network"
+  title="I2P 匿名网络"
   image="/assets/img/svg/3rd-party/i2p.svg"
   image-dark="/assets/img/svg/3rd-party/i2p-dark.svg"
-  description="The Invisible Internet Project (I2P) is a computer network layer that allows applications to send messages to each other pseudonymously and securely. Uses include anonymous Web surfing, chatting, blogging, and file transfers. The software that implements this layer is called an I2P router and a computer running I2P is called an I2P node. The software is free and open-source and is published under multiple licenses."
+  description="Invisible Internet Project (I2P) 是一个电脑网络层，它可让应用程序相互安全化名地发送消息，其应用包括：匿名的网站浏览、聊天、网志和文件发送。这个软件所运行的这层叫作 I2P 路由，当电脑运行 I2P 时，即称之为 I2P 节点。它是免费开源的软件，其发布版本有多种授权方式。 "
   website="https://geti2p.net/"
   forum="https://forum.privacytools.io/t/discussion-i2p/1590"
   i2p="http://i2p-projekt.i2p/"
@@ -44,9 +49,9 @@
 %}
 
 {% include cardv2.html
-  title="The Freenet Project"
+  title="The Freenet Project - 自由网计划"
   image="/assets/img/svg/3rd-party/freenet.svg"
-  description="Freenet is a peer-to-peer platform for censorship-resistant communication. It uses a decentralized distributed data store to keep and deliver information, and has a suite of free software for publishing and communicating on the Web without fear of censorship. Both Freenet and some of its associated tools were originally designed by Ian Clarke, who defined Freenet's goal as providing freedom of speech on the Internet with strong anonymity protection."
+  description="Freenet 是一个点对点的平台以抵抗内容审查的通信。它采用去中心化的分布式数据保存来保存和发送信息，亦有自由免费软件套件用于网络发表或是网页通信而无须担心审查。自由网和一些它的相关工具一开始是由 Ian Clarke 所设计，他认为自由网的目的乃在于通过顽强的匿名保护，提供互联网的言论自由空间 "
   website="https://freenetproject.org/"
   forum="https://forum.privacytools.io/t/discussion-freenet/1591"
   windows="https://freenetproject.org/pages/download.html#windows"
@@ -58,46 +63,46 @@
   github="https://github.com/freenet/"
 %}
 
-<h3>Worth Mentioning</h3>
+<h3>值得关注</h3>
 
 <ul>
   <li>
-    <a href="https://zeronet.io/">ZeroNet</a> - Open, free, and uncensorable websites, using Bitcoin cryptography and BitTorrent network.
+    <a href="https://zeronet.io/">ZeroNet</a> - 开放、自由与未经审查的网站，使用比特币密码学与 BitTorrent 协定网络。
     {% include badge.html
     color="danger"
     icon="fas fa-exclamation-triangle"
-    tooltip="Your IP address isn't hidden by default and won't be, unless you enforce Tor usage."
-    text="Not anonymous"
+    tooltip="你的 IP 地址默认不会隐藏, 除非你强制使用 Tor。"
+    text="非匿名"
     %}
   </li>
-  <li><a href="https://retroshare.cc/">RetroShare</a> - An open source, cross-platform, friend-to-friend, secure, and decentralized communication platform.</li>
-  <li><a href="https://i2pbote.xyz/">I2P-Bote</a> - End-to-end encrypted decentralized mail system within the I2P network.</li>
-  <li><a href="https://gnunet.org/">GNUnet</a> - GNUnet provides a strong foundation of free software for a global, distributed network that provides security and privacy.</li>
+  <li><a href="https://retroshare.cc/">RetroShare</a> - 开源跨平台，朋友对朋友之间的安全，去中心式的通信平台。</li>
+  <li><a href="https://i2pbote.xyz/">I2P-Bote</a> - 基于 I2P 网络，支持端到端加密的邮件系统。</li>
+  <li><a href="https://gnunet.org/">GNUnet</a> - GNUnet 为全球分布式网络提供了一个坚实的基础，以确保其安全和隐私保护。</li>
   <li>
-    <a href="https://ipfs.io/">IPFS</a> <em>and</em> <a href="https://github.com/ipfs-shipyard/ipfs-companion">IPFS Companion</a>- A peer-to-peer hypermedia protocol to make the web faster, safer, and more open. IPFS Companion is a browser extension for redirecting queries to a gateway of your choice (generally local).
+    <a href="https://ipfs.io/">IPFS</a> <em>和</em> <a href="https://github.com/ipfs-shipyard/ipfs-companion">IPFS Companion</a>- 点对点的超媒体协定，可让网页更快、安全和开放。IPFS Companion 为浏览器附加组件，可以在浏览 IPFS 资源时重新指向到用户所选择的 Gateway 。
     {% include badge.html
     color="warning"
     icon="fas fa-exclamation-triangle"
     link="https://github.com/privacytools/privacytools.io/pull/361#issuecomment-344414022"
-    text="Supercookie warning"
+    text="Supercookie 警告"
     %}
   </li>
   <li>
     <a href="https://yggdrasil-network.github.io/">Yggdrasil</a>
-    - An early-stage implementation of a fully end-to-end encrypted IPv6 network. It is lightweight, self-arranging, supported on multiple platforms, and allows pretty much any IPv6-capable application to communicate securely with other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet connectivity - it also works over IPv4.
+    - 仍在初期阶段的 IPv6 网络完整端对端加密运行。它是一个轻量、自行安排、跨平台支持，可让众多的 IPv6 应用与其它 Yggdrasil 节点安全地沟通。Yggdrasil 不一定要透由 IPv6 连接 - 也可以运行在 IPv4。
 
     {% include badge.html
     color="warning"
     icon="far fa-question-circle"
-    tooltip="The project is currently in early stages but it is being actively developed."
-    text="Experimental"
+    tooltip="这是仍在开发的早期项目。"
+    text="实验性"
     %}
     {% include badge.html
     color="danger"
     icon="fas fa-exclamation-triangle"
     link=""
-    tooltip="Yggdrasil doesn't provide anonymity by default. Your peers know your IP address unless you configure it to only use Tor/I2P peers."
-    text="Not anonymous by default"
+    tooltip="Yggdrasil 默认不提供匿名性设定，你的对端能获取你的 IP 地址。你可以通过设置 Yggdrasil 只使用 Tor/I2P 对端来规避这个风险。"
+    text="非匿名"
     %}
   </li>
 </ul>

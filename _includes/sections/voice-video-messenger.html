@@ -1,7 +1,7 @@
-<h1 id="voip" class="anchor"><a href="#voip"><i class="fas fa-link anchor-icon"></i></a> Video/Voice Calling</h1>
+<h1 id="voip" class="anchor"><a href="#voip"><i class="fas fa-link anchor-icon"></i></a> 音频/视频通话</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>If you are currently using a Video/Voice Calling app like Google Hangouts, Skype, Viber or <a href="https://blog.privacytools.io/protecting-your-privacy-while-using-zoom-at-home/">Zoom</a>, you should pick an alternative here.</strong> Please note that many of the above instant messengers also support {% include badge.html color="info" text="VoIP" %}. The software listed below are <em>primarily</em> Voice/Video focused.
+  <strong>如果您仍在使用 Skype、Viber 、 <a href="https://blog.privacytools.io/protecting-your-privacy-while-using-zoom-at-home/">Zoom</a> 或 Google Hangouts 等影音会议即时通信软件，不妨考虑其它的替代品吧。</strong> 这里列出的是<em>专注于</em>视频通话的软件，前文中推荐的即时通讯软件很多也有视频通话功能。留意 {% include badge.html color="info" text="VoIP" %} 标签。
 </div>
 
 {% include cardv2.html
@@ -9,7 +9,7 @@
   image="/assets/img/svg/3rd-party/linphone.svg"
   website="https://www.linphone.org/"
   privacy-policy="https://www.linphone.org/terms-and-privacy"
-  description="Linphone is an open-source SIP Phone and a free voice over IP service, available on mobile and desktop environments and on web browsers. It supports ZRTP for end-to-end encrypted voice and video communication."
+  description="Linphone 是个开源 SIP 电话，它可利用网络服务来拨打免费语音电话, 其能运行在手机与桌机环境和网页浏览器。它支持 ZRTP 的端点到端点之间的影音加密通信。 "
   forum="https://forum.privacytools.io/t/discussion-linphone/751"
   github="https://github.com/BelledonneCommunications"
   windows="https://www.linphone.org/technical-corner/linphone?qt-technical_corner=2#qt-technical_corner"
@@ -24,7 +24,7 @@
   title="Mumble"
   image="/assets/img/svg/3rd-party/mumble.svg"
   website="https://mumble.info/"
-  description="Mumble is an open-source, low-latency, and high quality voice chat application primarily intended for use while gaming. Note that while Mumble doesn't log messages or record by default, <a href=\"https://github.com/mumble-voip/mumble/issues/1813\">it's missing end-to-end encryption</a>, so self-hosting is recommended."
+  description=" Mumble 为开源、低延迟高品质之语音聊天软件，它主要用在打电玩游戏。请注意 Mumble 本身缺省不存留消息与活动记录。 <a href=\"https://github.com/mumble-voip/mumble/issues/1813\">可惜不支持点对点加密</a>, 所以最好自行搭架此软件。 "
   forum="https://forum.privacytools.io/t/discussion-mumble/1289"
   github="https://github.com/mumble-voip/"
   windows="https://www.mumble.info/downloads"
@@ -34,35 +34,35 @@
   ios="https://apps.apple.com/us/app/mumble/id443472808?ls=1"
 %}
 
-<h3>Worth Mentioning</h3>
+<h3>值得关注</h3>
 
 <ul>
   <li>
-    <a href="https://jitsi.org/jitsi-meet/">Jitsi Meet</a> - Jitsi Meet is a free and open-source multiplatform voice (VoIP), video conferencing, and instant messaging application.
+    <a href="https://jitsi.org/jitsi-meet/">Jitsi Meet</a> - 一款免费开源的跨平台网络电话（VoIP），视频会议与即时通信应用软件。
 
     {% include badge.html
     color="warning"
     icon="fas fa-exclamation-triangle"
     text="Requires WebRTC"
-    tooltip="Our Firefox tweaks recommend disabling WebRTC as it can be used to leak your IP address even behind a VPN, which is why Tor Browser disables it."
+    tooltip="基于 WebRTC 有泄露 IP 地址的风险，我们提供的 Firefox 调整指南和 Tor 浏览器都禁用了 WebRTC。"
     %}
 
     {% include badge.html
     color="warning"
     icon="fas fa-exclamation-triangle"
     link="https://jitsi.org/security"
-    text="Multiparty meetings are not E2EE"
+    text="多端会议不支持端到端加密"
     %}
 
-    See also <a href="https://github.com/jitsi/jitsi-meet/wiki/Jitsi-Meet-Instances">list of public Jitsi Meet instances</a>.
+    另见 <a href="https://github.com/jitsi/jitsi-meet/wiki/Jitsi-Meet-Instances">公共 Jitsi 实例列表</a>。
   </li>
 </ul>
-<h3>Related Information</h3>
+<h3>相关信息</h3>
 
 <ul>
-  <li>More information about Mumble:</li>
+  <li>关于 Mumble 的更多信息：</li>
   <ul>
-  <li><a href="https://wiki.mumble.info/wiki/Running_Murmur">Running Mumble Server</a> and <a href="https://wiki.mumble.info/wiki/Murmur.ini">its config file</a>, particularly <a href="https://wiki.mumble.info/wiki/Murmur.ini#obfuscate">obfuscating IPv4 addresses</a> and <a href="https://wiki.mumble.info/wiki/Murmur.ini#Process_Administrivia">logging</a></li>
-  <li><a href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/Mumble">Torifying Mumble</a>
+  <li><a href="https://wiki.mumble.info/wiki/Running_Murmur">架设 Mumble</a> 和 <a href="https://wiki.mumble.info/wiki/Murmur.ini">调整配置文档</a>, 特别地 <a href="https://wiki.mumble.info/wiki/Murmur.ini#obfuscate">混淆 IPv4 地址</a> 和 <a href="https://wiki.mumble.info/wiki/Murmur.ini#Process_Administrivia">日志</a>。</li>
+  <li><a href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/Mumble">为洋葱服务特化 Mumble</a>
   </ul>
 </ul>

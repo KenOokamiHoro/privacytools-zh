@@ -8,7 +8,7 @@
   include cardv2.html
   title="Riot"
   image="/assets/img/svg/3rd-party/riotim.svg"
-  description='<a href="//about.riot.im">Riot.im</a> is the reference client for the <a href="//matrix.org/docs/guides/introduction">Matrix</a> network. The <a href="//matrix.org/docs/spec">Matrix open standard</a> is an open-source standard for secure, decentralized, real-time communication.<br />'
+  description='<a href="//about.riot.im">Riot.im</a> 是 <a href="//matrix.org/docs/guides/introduction">Matrix</a>协议的参考实现客户端。<a href="//matrix.org/docs/spec">Matrix </a>是一种注重安全、非中心化和实时的开放源代码的通讯协议。'
   labels="text==VoIP"
   website="https://about.riot.im/"
   privacy-policy="https://riot.im/privacy"
@@ -27,8 +27,8 @@
   include cardv2.html
   title="Rocket.chat"
   image="/assets/img/svg/3rd-party/rocketchat.svg"
-  description="Rocket.chat is an self-hostable open source platform for team communication. It has optional federation and experimental E2EE."
-  labels="color==warning::link==https://rocket.chat/docs/user-guides/end-to-end-encryption/::text==Experimental E2EE::tooltip==Regarding E2EE their documentation states 'This feature is currently in alpha. It's also not yet supported on mobile'. There is no forward secrecy so compromised decryption password would leak all messages. Federation was also added afterwards, potentially causing room for mistakes.|text==VoIP"
+  description="Rocket.chat 是可自行搭建的开放源代码团队沟通方案，也可选的支持联邦联结。"
+  labels="color==warning::link==https://rocket.chat/docs/user-guides/end-to-end-encryption/::text==实验性端到端加密支持::tooltip==官方的声明：端到端加密目前仍在实验中，不支持移动设备和前向安全。因此泄露密码同时也会泄露你的聊天记录。|text==VoIP"
   website="https://rocket.chat/"
   privacy-policy="https://rocket.chat/privacy"
   forum="https://forum.privacytools.io/t/discussion-rocket-chat/1223"
@@ -39,25 +39,4 @@
   fdroid="https://f-droid.org/packages/chat.rocket.android"
   googleplay="https://play.google.com/store/apps/details?id=chat.rocket.android"
   ios="https://itunes.apple.com/app/rocket-chat/id1148741252"
-%}
-
-{%
-  include cardv2.html
-  title="Keybase"
-  image="/assets/img/svg/3rd-party/keybase.svg"
-  description='Keybase provides a hosted team chat with E2EE. Its protocol has also been <a href="https://keybase.io/docs-assets/blog/NCC_Group_Keybase_KB2018_Public_Report_2019-02-27_v1.3.pdf">indepedently audited (PDF)</a>. Keybase can help you prove you own social media accounts through the use of cryptographic signing of "<a href="https://en.wikipedia.org/wiki/Keybase#Identity_proofs">identity proofs</a>".'
-  labels="color==warning::link==https://github.com/keybase/client/issues/6374::text==Warning::tooltip==This software relies on a closed-source central server.| color==info::link==https://github.com/privacytools/privacytools.io/issues/1894::text==Ownership change::tooltip==Keybase has recently been acquired by Zoom."
-  website="https://keybase.io/"
-  privacy-policy="https://keybase.io/docs/privacypolicy"
-  forum="https://forum.privacytools.io/t/discussion-keybase/1224"
-  tor="http://keybase5wmilwokqirssclfnsqrjdsi7jdir5wy7y7iu3tanwmtp6oid.onion/"
-  github="https://github.com/Keybase"
-  windows="https://keybase.io/docs/the_app/install_windows"
-  mac="https://keybase.io/docs/the_app/install_macos"
-  linux="https://keybase.io/docs/the_app/install_linux"
-  freebsd="https://www.freshports.org/security/keybase/"
-  googleplay="https://play.google.com/store/apps/details?id=io.keybase.ossifrage"
-  ios="https://apps.apple.com/app/keybase-crypto-for-everyone/id1044461770"
-  firefox="https://addons.mozilla.org/firefox/addon/keybase-for-firefox/"
-  chrome="https://chrome.google.com/webstore/detail/keybase-for-reddit/ognfafcpbkogffpmmdglhbjboeojlefj"
 %}

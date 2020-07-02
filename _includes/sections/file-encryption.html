@@ -1,12 +1,12 @@
 <h1 id="encrypt" class="anchor"><a href="#encrypt"><i class="fas fa-link anchor-icon"></i></a> 文件加密软件</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>如果你尚未对常用的硬盘、电子邮件或文件库予以加密，请赶快从这挑选一个加密软件。</strong>
+  <strong>如果你尚未对常用的硬盘、电子邮件或文件予以加密，请赶快从这挑选一个加密软件。</strong>
 </div>
 
 {%
   include cardv2.html
-  title="VeraCrypt - Disk Encryption"
+  title="VeraCrypt - 磁盘加密"
   image="/assets/img/svg/3rd-party/veracrypt.svg"
   image-dark="/assets/img/svg/3rd-party/veracrypt-dark.svg"
   description="<strong>VeraCrypt</strong>开放代码的免费软件工具，用来快速加密。它为文件创建一个虚拟的加密磁盘、加密磁区或是在开机前授权设置整个设备的硬盘都予以加密。 VeraCrypt 源自目前已无进展的 TrueCrypt 项目，初次发布日是 2013 年 6 月 23日。据开发者表示，原本 TrueCrypt 代码在审查后发现的问题已经解决，大幅地改善了安全性。"
@@ -20,9 +20,9 @@
 
 {%
   include cardv2.html
-  title="GNU Privacy Guard - Email Encryption"
+  title="GNU Privacy Guard - 电子邮件加密"
   image="/assets/img/svg/3rd-party/gnupg.svg"
-  description="<strong>GnuPG</strong> 采 GPL 授权，替代 PGP 密码学软件套件。GnuPG 可兼容 RFC 4880，它是一个目前 IETF OpenPGP 标准追踪规格。目前 PGP（以及 Veridis' Filecrypt）的版本可以和 GnuPG 以及其它 OpenPGP 兼容系统互相操作。GnuPG 是自由软件基金会 GNU 软件项目中的一部份，曾接受德国政府的经费赞助。"
+  description="<strong>GnuPG</strong> 采用 GPL 授权，替代 PGP 密码学软件套件。GnuPG 可兼容 RFC 4880，它是一个目前 IETF OpenPGP 标准追踪规格。目前 PGP（以及 Veridis' Filecrypt）的版本可以和 GnuPG 以及其它 OpenPGP 兼容系统互相操作。GnuPG 是自由软件基金会 GNU 软件项目中的一部份，曾接受德国政府的经费赞助。"
   website="https://gnupg.org/"
   forum="https://forum.privacytools.io/t/discussion-gnupg-file-encryption/1533"
   git="https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git"
@@ -36,39 +36,17 @@
   googleplay="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"
 %}
 
-{%
-  include cardv2.html
-  title="7 Zip"
-  image="/assets/img/svg/3rd-party/7zip.svg"
-  description='<strong>7-Zip</strong> is a free and open-source file archiver, a utility used to place groups of files within compressed containers. On Linux, MacOS etc. the command-line tool <a href="http://p7zip.sourceforge.net/"><strong>p7zip</strong></a> is used and integrates into various interfaces such as <a href="https://wiki.gnome.org/Apps/FileRoller">FileRoller</a>, <a href="https://github.com/ib/xarchiver">Xarchiver</a>, <a href="https://kde.org/applications/utilities/ark">Ark</a>.'
-  website="https://7-zip.org"
-  forum="https://forum.privacytools.io/t/discussion-7-zip/3024"
-  source="https://sourceforge.net/projects/sevenzip/files/"
-  windows="https://7-zip.org/download.html"
-  linux="https://sourceforge.net/projects/p7zip/files"
-  freebsd="https://www.freshports.org/archivers/p7zip"
-  openbsd="https://sourceforge.net/projects/p7zip"
-  netbsd="https://sourceforge.net/projects/p7zip"
-%}
-
-<h3>Worth Mentioning</h3>
+<h3>值得关注</h3>
 
 <ul>
-  <li><a href="https://cryptomator.org/">Cryptomator</a> - Free client-side AES encryption for your cloud files. Open source software: No backdoors, no registration.
+  <li><a href="https://cryptomator.org/">Cryptomator</a> - 免费的客户端 AES 加密软件，可以用来加密你的云端文档。
     {% include badge.html
     color="warning"
     icon="fas fa-exclamation-triangle"
     link="https://github.com/cryptomator/cryptomator-android/issues/1#issuecomment-257979375"
-    tooltip="Cryptomator's mobile apps are not open-source."
+    tooltip="Cryptomator 的手机应用是私有软件。"
     %}</li>
-  <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - A full disk encryption system for Linux using dm-crypt as the disk encryption backend. Included by default in Ubuntu. Available for Windows and Linux.</li>
-  <li><a href="https://www.dyne.org/software/tomb/">Tomb</a> - A simple zsh script for making LUKS containers on the commandline.</li>
-  <li><a href="https://hat.sh/">Hat.sh</a> - A cross-platform, serverless JavaScript web application that provides secure file encryption using the AES-256-GCM algorithm in your browser. It can also be downloaded and run offline.</li>
-  <li><a href="https://www.keka.io/">Keka</a> - A macOS-only, file archiver with the ability to encrypt files.
-    {% include badge.html
-    color="warning"
-    icon="fas fa-exclamation-triangle"
-    link="https://github.com/aonez/Keka#so-where-is-the-source-code"
-    tooltip="This software is no longer open source."
-    %}</li>
+  <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">Linux Unified Key Setup (LUKS)</a> - 适用于 GNU/Linux 的磁盘加密工具。</li>
+  <li><a href="https://www.dyne.org/software/tomb/">Tomb</a> - 用来创建 LUKS 加密容器的简单 zsh 脚本。</li>
+  <li><a href="https://hat.sh/">Hat.sh</a> - 跨平台，无需服务器的 Web 应用，通过 AES-256-GCM 在浏览器上加密文件，它也可以离线运行。</li>
 </ul>

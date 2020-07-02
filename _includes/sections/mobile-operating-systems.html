@@ -1,16 +1,16 @@
 <h1 id="mobile_os" class="anchor"><a href="#mobile_os"><i class="fas fa-link anchor-icon"></i></a> 手机操作系统</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>虽然以下的操作系统提供原代码，但安装 Google Apps 可能会影响你的设置。</strong>
+  <strong>虽然以下的操作系统是开放原代码的，但安装 Google Apps 可能会影响你的设置。</strong>
 </div>
 
 {% include cardv2.html
 title="GrapheneOS"
 image="/assets/img/svg/3rd-party/grapheneos.svg"
 image-dark="/assets/img/svg/3rd-party/grapheneos-dark.svg"
-description='GrapheneOS (前身为 CopperheadOS) 自由开源、重视安全和隐私的手机操作系统，其基础来自 Android 开源项目，目前重点工作在提升更强大的硬件安全保护。'
+description='GrapheneOS (前身为 CopperheadOS) 是自由开源、重视安全和隐私的手机操作系统，其基础来自 Android 开源项目，目前重点工作在提升更强大的硬件安全保护。'
 badges="info:AOSP"
-labels="warning:contrib:This software may depend on or recommend non-free software."
+labels="color==warning::text==部分自由::tooltip==此软件可能依赖一些私有软件。"
 website="https://grapheneos.org/"
 github="https://github.com/GrapheneOS/"
 %}
@@ -20,7 +20,7 @@ title="LineageOS"
 image="/assets/img/svg/3rd-party/lineageos.svg"
 description='LineageOS 是一个以 Android 为基础，为手机与平板电脑上的开源操作系统。它依据 Google 所发布的 Android 正式版为开发基础，为一自由开源软件， CyanogenMod 项目的延续。'
 badges="info:AOSP"
-labels="warning:contrib:This software may depend on or recommend non-free software."
+labels="color==warning::text==部分自由::tooltip==此软件可能依赖一些私有软件。"
 website="https://www.lineageos.org/"
 github="https://github.com/LineageOS"
 %}
@@ -30,7 +30,7 @@ title="Ubuntu Touch"
 image="/assets/img/svg/3rd-party/ubuntu.svg"
 description="Ubuntu Touch 是运行于手机与平板电脑的自由开源操作系统，可说是目有主流市场外的另一个替代选项，唯目前可<a href=https://devices.ubuntu-touch.io/>支持的</a>硬件设备非常有限。"
 badges="info:GNU/Linux"
-labels="warning:contrib:This software may depend on or recommend non-free software."
+labels="color==warning::text==部分自由::tooltip==此软件可能依赖一些私有软件。"
 website="https://ubuntu-touch.io/"
 github="https://github.com/ubports"
 %}
@@ -43,7 +43,7 @@ github="https://github.com/ubports"
     color="info"
     text="AOSP"
     %}
-    - An open-source operating system based on Android, aiming to replace all proprietary components with free software.
+    - 基于 Android 的自由操作系统，以完全替代 Android 中的私有组件为目标。
   </li>
 
   <li>
@@ -55,24 +55,24 @@ github="https://github.com/ubports"
     {% include badge.html
     color="warning"
     icon="far fa-question-circle"
-    text="contrib"
-    tooltip="This software may depend on or recommend non-free software."
+    text="部分自由"
+    tooltip="此软件可能依赖一些私有软件。"
     %}
-    - A free-software operating system for smartphones and tablet computers, based on the Android mobile platform.
+    - 基于 AOSP 的另一个开放源代码的 Android 系统。
   </li>
 
   <li>
     <a href="https://microg.org/">MicroG</a>
     {% include badge.html
     color="info"
-    text="Add-on Package"
+    text="额外组件"
     %}
     {% include badge.html
     color="warning"
     icon="far fa-question-circle"
-    text="contrib"
-    tooltip="This software may depend on or recommend non-free software."
+    text="部分自由"
+    tooltip="此软件可能依赖一些私有软件。"
     %}
-    - A project that aims to reimplement the proprietary Google Play Services in the Android operating system with a FLOSS replacement. The microG project also maintains a fork of LineageOS with microG and F-Droid preinstalled at <a href="https://lineage.microg.org/">Lineage for microG</a>.
+    - 以自由和开放源代码的实现替代私有的 Google Play 服务的计划。microG 也维护包含 microG 的 LineageOS 构建， <a href="https://lineage.microg.org/">Lineage for microG</a>。
   </li>
 </ul>

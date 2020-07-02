@@ -1,30 +1,24 @@
-<h1 id="im" class="anchor">
-  <a href="#im"><i class="fas fa-link anchor-icon"></i></a>
-  Encrypted Instant Messengers
-</h1>
+<h1 id="im" class="anchor"><a href="#im"><i class="fas fa-link anchor-icon"></i></a> 加密的即时通信</h1>
 
 <div class="alert alert-warning" role="alert">
-  <strong>If you are currently using an Instant Messenger like Telegram, LINE, Viber, <a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a>, or plain SMS, you should pick an alternative here.</strong></div>
+  <strong>如果您只知道 一般行动短信 SMS、<a href="https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns">WhatsApp</a>、Viber、LINE、Telegram 或 Threema 即时通信，不妨从下列的推荐考虑其它替代软件。</strong></div>
 
-<p>We only recommend instant messenger programs or apps that support <a href="https://en.wikipedia.org/wiki/End-to-end_encryption">end-to-end encryption (E2EE)</a>. When E2EE is used, all transmissions (messages, voice, video, etc.) are encrypted <strong>before</strong> they are sent from your device. E2EE protects both the authenticity and confidentiality of the transmission as they pass through any part of the network (servers, etc.).</p>
+<p>我们只推荐支持<a href="https://en.wikipedia.org/wiki/End-to-end_encryption">端对端加密 (end-to-end encryption, E2EE)</a>的即时通信。当使用 E2EE ,所有的传输（消息、语音、影像等）都经过<strong>加密后</strong>才会送出。 E2EE 可同时保护传输在任何网络流通的真实性与私密度。</p>
 
-<p>All the client programs/apps we chose are <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a> unless otherwise mentioned. This to ensure that the code can be independently verified by experts now and in the future.</p>
+<p>除特别注明外，这里所选出来的客户端程序/应用软件都是 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">免费开源的软件</a>。 如此才可以确保其源代码可以被专家独立查验。</p>
 
-<p>We have described the three main types of messaging programs that exist: Centralized, Federated and Peer-to-Peer (P2P), with the advantages and disadvantages of each.</p>
+<p>现有的即时通信软件可简单分成三大类：集中型、联邦式和对等组网络，下方整理其各自的优缺点。</p>
 
-<h2 id="centralized" class="anchor">
-  <a href="#centralized"><i class="fas fa-link anchor-icon"></i></a>
-  Centralized
-</h2>
+<h2 id="centralized" class="anchor"><a href="#centralized"><i class="fas fa-link anchor-icon"></i></a> 集中型</h2>
 
-<p>Centralized messengers are those where every participant is on the same server or network of servers controlled by the same organization.</p>
+<p>集中式的通信软件由某家公司或组织在他们控制的服务器上提供加入者相关的服务。</p>
 
 {%
   include cardv2.html
   title="Signal"
   image="/assets/img/svg/3rd-party/signal.svg"
-  description='Signal is a mobile app developed by Signal Messenger LLC. The app provides instant messaging, as well as voice and video calling. All communications are E2EE unless you choose to send as SMS. Its protocol has also been <a href="https://eprint.iacr.org/2016/1013.pdf">indepedently audited (PDF)</a>'
-  labels="color==warning::link==https://github.com/nextcloud/end_to_end_encryption/issues/111::text==Requires phone number::tooltip==Signal requires your phone number as an personal identifier which means anyone you communicate with will see it.|text==VoIP"
+  description='Signal Messenger LLC 开发的手机应用软件，Signal 提供即时消息，包括语音和影像通话。除非用户选择寄送 SMS 短信，不然全部的通信皆通过 E2EE。它的协议通过<a href="https://eprint.iacr.org/2016/1013.pdf">独立审查（报告文档）</a>'
+  labels="warning:<a>须提供手机号码</a>:Signal 要求以手机号作为个人识别码，这意谓任何通信对象都可以看到您的号码。|success:VoIP"
   website="https://signal.org/"
   privacy-policy="https://signal.org/legal/"
   forum="https://forum.privacytools.io/t/discussion-signal/664"
@@ -37,46 +31,26 @@
   ios="https://apps.apple.com/app/signal-private-messenger/id874139669"
 %}
 
-{%
-  include cardv2.html
-  title="Keybase"
-  image="/assets/img/svg/3rd-party/keybase.svg"
-  description='Keybase provides a hosted team chat with E2EE. Its protocol has also been <a href="https://keybase.io/docs-assets/blog/NCC_Group_Keybase_KB2018_Public_Report_2019-02-27_v1.3.pdf">indepedently audited (PDF)</a>. Keybase can help you prove you own social media accounts though the use of cryptographic signing of "<a href="https://en.wikipedia.org/wiki/Keybase#Identity_proofs">identity proofs</a>".'
-  labels="color==warning::link==https://github.com/keybase/client/issues/6374::text==Warning::tooltip==This software relies on a closed-source central server.| color==info::link==https://github.com/privacytools/privacytools.io/issues/1894::text==Ownership change::tooltip==Keybase has recently been acquired by Zoom."
-  website="https://keybase.io/"
-  privacy-policy="https://keybase.io/docs/privacypolicy"
-  forum="https://forum.privacytools.io/t/discussion-keybase/1224"
-  tor="http://keybase5wmilwokqirssclfnsqrjdsi7jdir5wy7y7iu3tanwmtp6oid.onion/"
-  github="https://github.com/Keybase"
-  windows="https://keybase.io/docs/the_app/install_windows"
-  mac="https://keybase.io/docs/the_app/install_macos"
-  linux="https://keybase.io/docs/the_app/install_linux"
-  freebsd="https://www.freshports.org/security/keybase/"
-  googleplay="https://play.google.com/store/apps/details?id=io.keybase.ossifrage"
-  ios="https://apps.apple.com/app/keybase-crypto-for-everyone/id1044461770"
-  firefox="https://addons.mozilla.org/firefox/addon/keybase-for-firefox/"
-  chrome="https://chrome.google.com/webstore/detail/keybase-for-reddit/ognfafcpbkogffpmmdglhbjboeojlefj"
-%}
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-    <h3>Advantages</h3>
+    <h3>优点</h3>
     <ul>
-      <li>New features and changes can be implemented more quickly.</li>
-      <li>Easier to get started with and to find contacts.</li>
+      <li>新功能可被快速采用。</li>
+      <li>容易上手与找到联系对象</li>
     </ul>
     </div>
   <div class="col-md-6">
-    <h3>Disadvantages</h3>
+    <h3>缺点</h3>
     <ul>
-      <li>Centralized services could be more susceptible to <a href="#exploiting-centralized-networks">legislation requiring backdoor access</a>.</li>
-      <li>Can include <a href="https://drewdevault.com/2018/08/08/Signal.html">restricted control or access</a>. This can include things like:</li>
+      <li>集中式服务容易让当权者<a href="#exploiting-centralized-networks">要求开放后门访问</a>。</li>
+      <li><a href="https://drewdevault.com/2018/08/08/Signal.html">受限的控制或存支取</a>，例如：</li>
       <ul>
-        <li>Being <a href="https://github.com/LibreSignal/LibreSignal/issues/37#issuecomment-217211165">forbidden from connecting third-party clients</a> to the centralized network that might provide for greater customization or better user experience. Often defined in Terms and Conditions of usage.</li>
-        <li>Poor or no documentation for third-party developers.</li>
+          <li>它们可以在使用条款中禁止 <a href="https://github.com/LibreSignal/LibreSignal/issues/37#issuecomment-217211165">第三方用户的链接请求</a>，后者往往能提供更多的客制化服务或最佳的用户体验。</li>
+          <li>第三方开发者无法获得必要的文档数据。</li>
       </ul>
-      <li>The <a href="https://blog.privacytools.io/delisting-wire">ownership</a>, privacy policy, and operations of the service can change easily when a single entity controls it, potentially compromising the service later on.</li>
+      <li>单一控制下，<a href="https://blog.privacytools.io/delisting-wire">所有权</a>、隐私政策和服务营运可轻易改变，恐怕随后造成服务劣化。</li>
     </ul>
   </div>
   </div>
@@ -85,16 +59,16 @@
 <div>
   <h2 id="federated" class="anchor">
     <a href="#federated"><i class="fas fa-link anchor-icon"></i></a>
-    Federated
+    Federated （联邦式）
   </h2>
 
-  <p>Federated messengers use multiple, independent servers that are able to talk to each other (email is one example of a federated service). Federation allows system administrators to control their own server and still be a part of the larger communications network.</p>
+  <p>联邦式通信软件使用多方、各自独立的服务器，它们之间能互相通话（例如电子邮件即为职邦型服务的好例子）。这类通信设计可让糸统管理员控制自家服务器，同时为广大通信社群里的一份子。</p>
 
 {%
   include cardv2.html
   title="Riot"
   image="/assets/img/svg/3rd-party/riotim.svg"
-  description='<a href="//about.riot.im">Riot.im</a> is the reference client for the <a href="//matrix.org/docs/guides/introduction">Matrix</a> network. The <a href="//matrix.org/docs/spec">Matrix open standard</a> is an open-source standard for secure, decentralized, real-time communication.'
+  description='<a href="//about.riot.im">Riot.im</a> 是 <a href="//matrix.org/docs/guides/introduction">Matrix</a>协议的参考实现客户端。<a href="//matrix.org/docs/spec">Matrix </a>是一种注重安全、非中心化和实时的开放源代码的通讯协议。'
   labels="text==VoIP"
   website="https://about.riot.im/"
   privacy-policy="https://riot.im/privacy"
@@ -112,47 +86,44 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3>Advantages</h3>
+      <h3>优点</h3>
       <ul>
-        <li>Allows for greater control over your own data when running your own server.</li>
-        <li>Allows you to choose who to trust your data with by choosing between multiple "public" servers.</li>
-        <li>Often allows for third party clients which can provide a more native, customized, or accessible experience.</li>
-        <li>Generally a less juicy target for governments wanting <a href="#exploiting-centralized-networks">backdoor access to everything</a> as the trust is decentralized. The server may be hosted independently from the organization developing the software.</li>
-        <li>Server software can be verified that it matches public source code, assuming you have access to the server or you trust the person who does (e.g., a family member)</li>
-        <li>Third-party developers can contribute code and add new features, instead of waiting for a private development team to do so.</li>
+        <li>自己运行服务器更能掌控自己的数据。</li>
+        <li>让用户自己挑选所信任的公开服务器。</li>
+        <li>通常可让第三方软件提供更道地，自定或亲和的使用体验。</li>
+        <li>当信任变成非集中式，较不易成让政府置入<a href="#exploiting-centralized-networks">后门取得所有数据</a>。 此类分布式独立服务器可能由非原软件开发组织所架设。</li>
+        <li>若您或所信任的人有权限访问服务器，可验查服务器软件是否符合公开的源代码。</li>
+        <li>第三方开发者可以提交代码与添加功能，不必等待私人开发团队。</li>
       </ul>
     </div>
     <div class="col-md-6">
-      <h3>Disadvantages</h3>
+      <h3>缺点</h3>
       <ul>
-        <li>Adding new features is more complex, because these features need to be standardized and tested to ensure they work with all servers on the network.</li>
-        <li>Some metadata may be available (e.g., information like "who is talking to whom," but not actual message content if E2EE is used).</li>
-        <li>Federated servers generally require trusting your server's administrator. They may be a hobbyist or otherwise not a "security professional," and may not serve standard documents like a privacy policy or terms of service detailing how your data is utilized.</li>
-        <li>Server administrators sometimes choose to block other servers, which are a source of unmoderated abuse or break general rules of accepted behavior. This will hinder your ability to communicate with users on those servers.</li>
+        <li>添加功能更为复杂，它们须经标准化与测试来确保能在所有的服务器上运行。</li>
+        <li>可以取得一些元数据（像是"谁与谁通话"之类的数据。因为使用 E2EE，实际的通信内容则不会被看到）。</li>
+		    <li>邦联中的服务器通常表示对网管人员的信任，但他们可能只是兴趣啫好者而非网络安全专业人士，不会认真看待隐私政策或服务条款中的个资使用细节等标准文档。</li>
+        <li>服务器管理员可决定屏蔽其它服务器，此将影响用户与该服务器用户的通信（通常是因该服务器无人管造成滥用或是破坏规则的行为）.</li>
       </ul>
     </div>
   </div>
 </div>
 
 <div>
-  <h4>Worth Mentioning</h4>
+  <h4>值得关注</h4>
 
   <ul>
-    <li><a href="https://status.im">Status.im</a> - Encrypted instant messenger with an integrated <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a> wallet (cryptocurrency) that also includes support for <a href="https://our.status.im/tag/dapps">DApps (decentralized apps)</a> (web apps in a curated store). Uses the <a href="https://our.status.im/status-launches-private-peer-to-peer-messaging-protocol/">Waku protocol (a fork of Whisper)</a> for P2P communication. Only available for iOS and Android.</li>
+    <li><a href="https://status.im">Status.im</a> - 基于以太坊 <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a> 钱包（加密数字货币）的即时通讯软件。同时支持 <a href="https://our.status.im/tag/dapps">DApps (去中心化应用)</a> 使用 <a href="https://our.status.im/status-launches-private-peer-to-peer-messaging-protocol/">Waku 协议(Whisper 的分支)</a> 进行 P2P 沟通。目前支持 iOS 和 Android </li>
   </ul>
 
-  <h2 id="peer-to-peer" class="anchor">
-    <a href="#peer-to-peer"><i class="fas fa-link anchor-icon"></i></a>
-    Peer to Peer (P2P)
-  </h2>
+  <h2 id="peer-to-peer" class="anchor"><a href="#peer-to-peer"><i class="fas fa-link anchor-icon"></i></a> 对等式网络 (P2P)</h2>
 
-  <p>Peer-to-Peer instant messengers connect directly to each other without requiring third-party servers. Clients (peers) usually find each other through the use of a <a href="https://en.wikipedia.org/wiki/Distributed_computing">distributed computing</a> network. Examples of this include <a href="https://en.wikipedia.org/wiki/Distributed_hash_table">DHT (distributed hash table)</a> (used with technologies like <a href="https://en.wikipedia.org/wiki/BitTorrent_(protocol)">torrents</a> and <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>, for example). Another approach is proximity based networks, where a connection is established over WiFi or Bluetooth (for example, Briar or the <a href="https://www.scuttlebutt.nz">Scuttlebutt</a> social networking protocol). Once a peer has found a route to its contact via any of these methods, a direct connection between them is made.</p>
+  <p>Peer-to-Peer 对等式即时讯不通过第三方服务器，节点直接连接。客户端(peers)透由 usually find each other through the use of a <a href="https://en.wikipedia.org/wiki/Distributed_computing">分布式运算</a>网络来找到对方。相关案例包括：<a href="https://en.wikipedia.org/wiki/Distributed_hash_table">DHT (distributed hash table)</a> (用在<a href="https://en.wikipedia.org/wiki/BitTorrent_(protocol)">torrents</a> 和 <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">IPFS</a>)，或是 <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>的 <a href="https://github.com/ethereum/wiki/wiki/Whisper">Whisper</a>协议（与一些新的 DApps 运用）。 其它的方式则大略是基于网络，通过无线信号或蓝牙作链接（例如 Briar 或是 <a href="https://www.scuttlebutt.nz">Scuttlebutt</a> 社交网络协议）。 一旦某名用户通过上述方式找到接通他人的路径，即产生直接连系。</p>
 
 {%
   include cardv2.html
   title="Briar"
   image="/assets/img/svg/3rd-party/briar.svg"
-  description="Encrypted instant messenger that connects to contacts via Wi-Fi, Bluetooth, or Tor over the internet to synchronize messages. Technology such as this has proven to be useful when Internet availability is an issue, such as in times of crisis."
+  description="加密的即时消息，让用户可通过无线信号、蓝牙或是 Tor 网络在互联网上同步消息。一旦遇上断网或是天灾等紧急状况，这类技术往往可派上用场。"
   website="https://briarproject.org"
   privacy-policy="https://briarproject.org/privacy-policy/"
   forum="https://forum.privacytools.io/t/discussion-briar/2114"
@@ -165,8 +136,8 @@
   include cardv2.html
   title="Jami"
   image="/assets/img/svg/3rd-party/jami.svg"
-  description="Encrypted instant messaging and video calling software. All communications are E2EE using <a href=//jami.net/improving-performance-and-security-with-tls-1-3/>TLS 1.3</a> and never stored elsewhere than on user's devices, even when <a href=//jami.net/why-is-jami-truly-distributed/>TURN servers are used</a>."
-  labels="color==warning::link==https://git.jami.net/savoirfairelinux/ring-project/issues/765::text==Warning::tooltip==This software is partially centralized but can be self-hosted.|text==VoIP"
+  description="加密的即时消息与影音通话软件，使用 <a href=//jami.net/improving-performance-and-security-with-tls-1-3/>TLS 1.3</a> 方式加密，同时不在设备上留下记录。"
+  labels="color==warning::link==https://git.jami.net/savoirfairelinux/ring-project/issues/765::text==Warning::tooltip==这是可以自行架设的中心化软件。|text==VoIP"
   website="https://jami.net/"
   privacy-policy="https://jami.net/privacy-policy/"
   forum="https://forum.privacytools.io/t/discussion-jami/2116"
@@ -182,21 +153,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-    <h3>Advantages</h3>
+    <h3>优点</h3>
     <ul>
-      <li>Minimal information is exposed to third parties.</li>
-      <li>Modern P2P platforms implement end-to-end encryption by default. There are no servers that could potentially intercept and decrypt your transmissions, unlike centralized and federated models.</li>
+      <li>第三方只能取得最少量的信息</li>
+      <li>现代 P2P 平台皆缺省运行端对端加密。不像中央或联邦式，会有服务器拦截或解密传输的问题。</li>
     </ul>
     </div>
     <div class="col-md-6">
-      <h3>Disadvantages</h3>
+      <h3>缺点</h3>
       <ul>
-        <li>Reduced feature set:</li>
+        <li>功能可能会有不足：</li>
         <ul>
-          <li>Messages can only be sent when both peers are online, however, your client may store messages locally to wait for the contact to return online.</li>
-          <li>Generally increases battery usage on mobile devices, because the client must stay connected to the distributed network to learn about who is online.</li>
+            <li>当收讯对象上线后才会收到消息，但您的设备可能在会本地端保存未送出的消息以待对方上线。</li>
+            <li>由于要与分散网络维持连接状态，往往会消耗行动设备的电量。</li>
         </ul>
-        <li>Your <a href="https://en.wikipedia.org/wiki/IP_address">IP address</a> and that of the contacts you're communicating with may be visible if you do not use the software in conjunction with a <a href="/software/networks">self contained network</a>, such as <a href="https://www.torproject.org">Tor</a> or <a href="https://geti2p.net/">I2P</a>. Many countries have some form of mass surveillance and/or metadata retention.</li>
+        <li>若无使用如 <a href="https://www.torproject.org">Tor</a>或<a href="https://geti2p.net/">I2P</a>这样的<a href="/software/networks">匿名网络</a>，则您与通信对象的 <a href="https://en.wikipedia.org/wiki/IP_address">IP 位置</a>可能会显露出来。许多国家有大规模监控或是保存元数据的作法。</li>
       </ul>
     </div>
   </div>
